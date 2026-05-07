@@ -1,0 +1,1727 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>DPO Master Study Hub — เตรียมสอบ DPO ระดับ 5 (8 พ.ค. 2569)</title>
+<style>
+:root{
+  --primary:#1F4E78; --primary-2:#2E75B6; --accent:#FFF2CC; --accent-edge:#E2C766;
+  --ink:#1f2937; --muted:#6b7280; --border:#d1d5db; --soft:#f8fafc;
+  --ok:#16a34a; --warn:#dc2626; --info:#2563eb; --bg:#f3f4f6;
+  --card:#fff; --highlight:#fef3c7; --highlight-edge:#fbbf24;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{font-family:"Sarabun","Tahoma","Segoe UI",sans-serif;color:var(--ink);background:var(--bg);line-height:1.7;scroll-behavior:smooth}
+header{background:linear-gradient(135deg,var(--primary),var(--primary-2));color:#fff;padding:24px}
+header h1{font-size:24px;margin-bottom:6px}
+header p{font-size:14px;opacity:.95}
+.exam-countdown{display:inline-block;background:rgba(255,255,255,.2);padding:6px 14px;border-radius:999px;font-size:13px;margin-top:8px;font-weight:700}
+nav.tabs{position:sticky;top:0;z-index:100;background:#fff;border-bottom:2px solid var(--primary);padding:0 16px;display:flex;flex-wrap:wrap;gap:0;box-shadow:0 2px 8px rgba(0,0,0,.08)}
+nav.tabs button{appearance:none;border:none;background:transparent;color:var(--ink);padding:14px 18px;font-size:14px;font-weight:600;cursor:pointer;border-bottom:3px solid transparent;transition:all .15s;font-family:inherit}
+nav.tabs button:hover{background:var(--soft);color:var(--primary)}
+nav.tabs button.active{color:var(--primary);border-bottom-color:var(--primary);background:var(--soft)}
+nav.tabs button .badge{display:inline-block;background:var(--primary);color:#fff;padding:2px 8px;border-radius:999px;font-size:11px;margin-left:6px}
+main{max-width:1200px;margin:0 auto;padding:20px 16px}
+.section{display:none;animation:fadeIn .3s}
+.section.active{display:block}
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px;margin-bottom:16px;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+.card h2{color:var(--primary);font-size:20px;margin-bottom:12px;padding-bottom:8px;border-bottom:2px solid var(--primary)}
+.card h3{color:var(--primary-2);font-size:17px;margin:16px 0 8px 0}
+.card h4{color:var(--ink);font-size:15px;margin:12px 0 6px 0;font-weight:700}
+.card p{margin-bottom:8px;font-size:14.5px}
+.card ul,.card ol{margin:8px 0 12px 24px;font-size:14.5px}
+.card li{margin-bottom:4px}
+.card strong{color:var(--primary)}
+.hl{background:var(--highlight);border-left:4px solid var(--highlight-edge);padding:10px 14px;border-radius:6px;margin:10px 0;font-size:14px}
+.hl b{color:#92400e}
+.warn-box{background:#fee2e2;border-left:4px solid var(--warn);padding:10px 14px;border-radius:6px;margin:10px 0;font-size:14px}
+.warn-box b{color:#991b1b}
+.ok-box{background:#dcfce7;border-left:4px solid var(--ok);padding:10px 14px;border-radius:6px;margin:10px 0;font-size:14px}
+.ok-box b{color:#15803d}
+.info-box{background:#dbeafe;border-left:4px solid var(--info);padding:10px 14px;border-radius:6px;margin:10px 0;font-size:14px}
+.info-box b{color:#1d4ed8}
+table{width:100%;border-collapse:collapse;margin:10px 0;font-size:13.5px;background:#fff}
+table th{background:var(--primary-2);color:#fff;padding:8px;text-align:left;border:1px solid var(--primary)}
+table td{padding:8px;border:1px solid var(--border);vertical-align:top}
+table tr:nth-child(even) td{background:var(--soft)}
+.day-plan{background:linear-gradient(135deg,#fff,#f0f9ff);border:2px solid var(--primary-2);border-radius:14px;padding:16px;margin-bottom:14px}
+.day-plan h3{color:var(--primary);margin-bottom:8px}
+.day-plan .time{display:inline-block;background:var(--primary);color:#fff;padding:4px 12px;border-radius:999px;font-size:12px;font-weight:700;margin-right:8px}
+.day-plan .duration{display:inline-block;background:var(--accent);border:1px solid var(--accent-edge);padding:2px 8px;border-radius:6px;font-size:12px;color:#92400e}
+.quiz-toolbar{position:sticky;top:54px;background:#fff;border-bottom:1px solid var(--border);padding:10px;z-index:50;display:flex;gap:8px;flex-wrap:wrap;align-items:center;box-shadow:0 1px 4px rgba(0,0,0,.05);margin:-20px -16px 16px -16px;padding-left:16px;padding-right:16px}
+.btn{appearance:none;border:1px solid var(--border);background:#fff;color:var(--ink);border-radius:8px;padding:8px 14px;font-size:13px;font-weight:600;cursor:pointer;transition:all .15s;font-family:inherit}
+.btn:hover{background:var(--soft)}
+.btn.primary{background:var(--primary);color:#fff;border-color:var(--primary)}
+.btn.primary:hover{background:#173d5e}
+.btn.danger{color:var(--warn);border-color:#fecaca}
+.btn.danger:hover{background:#fef2f2}
+.btn.cat-btn{font-size:12px;padding:6px 12px}
+.btn.cat-btn.active{background:var(--primary-2);color:#fff;border-color:var(--primary-2)}
+.stats{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:14px}
+.stat{background:#fff;border:1px solid var(--border);border-radius:10px;padding:8px 14px;font-size:13px}
+.stat b{color:var(--primary);font-size:16px;display:block}
+.score-badge{display:inline-block;padding:3px 10px;border-radius:999px;font-weight:700;font-size:13px}
+.score-badge.good{background:#dcfce7;color:#15803d}
+.score-badge.fair{background:#fef3c7;color:#a16207}
+.score-badge.bad{background:#fee2e2;color:#b91c1c}
+.q-card{background:#fff;border:1px solid var(--border);border-radius:12px;padding:14px;margin-bottom:10px;transition:all .2s}
+.q-card.correct{border-left:4px solid var(--ok)}
+.q-card.wrong{border-left:4px solid var(--warn)}
+.q-num{font-size:11px;color:var(--muted);font-weight:700}
+.q-cat{display:inline-block;background:var(--accent);border:1px solid var(--accent-edge);border-radius:999px;padding:1px 8px;font-size:10px;margin-left:6px;color:#92400e}
+.q-text{font-size:14.5px;font-weight:600;margin:6px 0 10px 0;line-height:1.6}
+.choices{display:flex;flex-direction:column;gap:6px}
+.choice{display:flex;align-items:flex-start;gap:8px;padding:8px 12px;border:1px solid var(--border);border-radius:8px;cursor:pointer;background:#fff;transition:all .15s;font-size:13.5px;line-height:1.55}
+.choice:hover{background:#f1f5f9}
+.choice.selected{background:#dbeafe;border-color:var(--info)}
+.choice.correct-ans{background:#dcfce7 !important;border-color:var(--ok) !important}
+.choice.wrong-ans{background:#fee2e2 !important;border-color:var(--warn) !important}
+.choice input{margin-top:3px}
+.choice-label{font-weight:700;color:var(--muted);min-width:18px}
+.explain{margin-top:10px;padding:10px;background:var(--soft);border-left:4px solid var(--info);border-radius:6px;font-size:13px;line-height:1.6;display:none}
+.explain.show{display:block}
+.explain b{color:var(--primary)}
+.progress{display:inline-flex;align-items:center;gap:8px;font-size:12px;color:var(--muted)}
+.progress .bar{width:120px;height:6px;background:#e5e7eb;border-radius:999px;overflow:hidden}
+.progress .bar > span{display:block;height:100%;background:var(--ok);width:0;transition:width .3s}
+footer{padding:30px 16px;text-align:center;color:var(--muted);font-size:13px;border-top:1px solid var(--border);margin-top:30px}
+.numbers-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px;margin:10px 0}
+.num-card{background:linear-gradient(135deg,#fef3c7,#fde68a);border:1px solid #f59e0b;border-radius:10px;padding:12px;text-align:center}
+.num-card .big{font-size:24px;font-weight:800;color:#92400e;display:block}
+.num-card .lbl{font-size:12px;color:#78350f;margin-top:4px}
+.matrix-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px;margin:10px 0}
+.matrix-card{background:#fff;border:1px solid var(--border);border-radius:10px;padding:12px;border-top:4px solid var(--primary)}
+.matrix-card h4{color:var(--primary);margin-bottom:6px}
+@media (max-width:640px){
+  nav.tabs{overflow-x:auto;flex-wrap:nowrap;justify-content:flex-start}
+  nav.tabs button{white-space:nowrap;font-size:13px;padding:12px 14px}
+  header h1{font-size:18px}
+  .quiz-toolbar{position:static;margin:0 0 10px 0}
+  table{font-size:12px}
+  .card{padding:14px}
+}
+@media print{
+  nav.tabs,.quiz-toolbar,footer{display:none}
+  .section{display:block !important}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>📚 DPO Master Study Hub — เตรียมสอบ DPO ระดับ 5</h1>
+  <p>หลักสูตรเจ้าหน้าที่คุ้มครองข้อมูลส่วนบุคคล (DPO Training Course) — สถาบันคุณวุฒิวิชาชีพ (TPQI)</p>
+  <span class="exam-countdown">📅 สอบ: ศุกร์ 8 พ.ค. 2569 เวลา 16:00 น. · 559 ข้อสอบ + เก็งข้อสอบ 55 ข้อ!</span>
+</header>
+
+<nav class="tabs">
+  <button class="tab-btn active" data-tab="plan">📅 แผนอ่าน</button>
+  <button class="tab-btn" data-tab="day1">📘 Day 1 อบรม</button>
+  <button class="tab-btn" data-tab="day2">📗 Day 2 อบรม</button>
+  <button class="tab-btn" data-tab="cheat">🎯 Cheat Sheet</button>
+  <button class="tab-btn" data-tab="iso">⚙️ ISO + Audit</button>
+  <button class="tab-btn" data-tab="cases">📋 Cases</button>
+  <button class="tab-btn" data-tab="quiz">🎯 Quiz <span class="badge" id="quiz-count">559</span></button>
+  <button class="tab-btn" data-tab="exam" style="color:#dc2626;font-weight:800">🔥 เก็งข้อสอบ <span class="badge" style="background:#dc2626">55</span></button>
+</nav>
+
+<main>
+
+<!-- ========== TAB 1: READING PLAN ========== -->
+<section class="section active" id="tab-plan">
+  <div class="card">
+    <h2>📅 แผนการอ่านที่แนะนำ — เหลือ 1-2 วัน</h2>
+    <p>ผมจัดลำดับให้คุณตามความสำคัญ — เน้น <b>สไลด์อบรมจริงจากวิทยากร</b> ก่อน เพราะวิทยากรบอกว่าออกสอบ</p>
+
+    <div class="day-plan">
+      <h3>🌙 พุธ 6 พ.ค. (คืนนี้) — 4 ชั่วโมง</h3>
+      <p><span class="time">19:00-21:00</span><span class="duration">2 ชม.</span> อ่าน Tab <b>📘 Day 1 อบรม</b> (อ.ศุภวัชร์) — เน้น Top 15 จุดที่วิทยากรย้ำ</p>
+      <p><span class="time">21:00-22:00</span><span class="duration">1 ชม.</span> อ่าน Tab <b>📗 Day 2 อบรม</b> (อ.นวนรรน) — Cross-border + Cybersecurity + Breach</p>
+      <p><span class="time">22:00-23:00</span><span class="duration">1 ชม.</span> ทำ <b>🎯 Quiz</b> รอบที่ 1 (ตั้งแต่ข้อ 1-150) ดูจุดอ่อน</p>
+    </div>
+
+    <div class="day-plan">
+      <h3>🌅 พฤหัส 7 พ.ค. เช้า — 4 ชั่วโมง</h3>
+      <p><span class="time">8:00-10:00</span><span class="duration">2 ชม.</span> อ่าน Tab <b>⚙️ ISO + Audit</b> — มาตรฐาน 27701/27001/29100/31000</p>
+      <p><span class="time">10:00-12:00</span><span class="duration">2 ชม.</span> อ่าน Tab <b>🎯 Cheat Sheet</b> — ตาราง Lawful Basis / DSR / โทษ</p>
+    </div>
+
+    <div class="day-plan">
+      <h3>☀️ พฤหัส 7 พ.ค. บ่าย — 3 ชั่วโมง</h3>
+      <p><span class="time">13:00-15:00</span><span class="duration">2 ชม.</span> ทำ <b>🎯 Quiz</b> รอบที่ 2 (ทุกข้อ + กรองหมวดที่อ่อน)</p>
+      <p><span class="time">15:00-16:00</span><span class="duration">1 ชม.</span> อ่าน Tab <b>📋 Cases</b> — กรณีศึกษา 7 ล้าน, รพ.1.21 ล้าน, VW, Apple</p>
+    </div>
+
+    <div class="day-plan">
+      <h3>🌃 พฤหัส 7 พ.ค. ค่ำ — 2 ชั่วโมง</h3>
+      <p><span class="time">19:00-20:30</span><span class="duration">1.5 ชม.</span> ทบทวน <b>Day 1 + Day 2</b> ในส่วนที่ยังไม่แม่น</p>
+      <p><span class="time">20:30-21:00</span><span class="duration">30 นาที</span> ทำ Quiz เฉพาะข้อที่เคยตอบผิด</p>
+    </div>
+
+    <div class="day-plan">
+      <h3>🌄 ศุกร์ 8 พ.ค. เช้า — 2 ชั่วโมง</h3>
+      <p><span class="time">9:00-10:30</span><span class="duration">1.5 ชม.</span> อ่าน <b>🎯 Cheat Sheet</b> ครบ + ตัวเลขสำคัญ</p>
+      <p><span class="time">10:30-11:00</span><span class="duration">30 นาที</span> ทบทวน Top 15 จุดออกสอบ</p>
+    </div>
+
+    <div class="day-plan" style="border-color:var(--warn);background:linear-gradient(135deg,#fff,#fef2f2)">
+      <h3>⏰ ก่อนสอบ 1 ชั่วโมง</h3>
+      <p>📌 อ่าน <b>"Last-minute Tips"</b> ใน Cheat Sheet</p>
+      <p>📌 ทบทวน <b>ตัวเลขสำคัญ</b>: 30 วัน / 72 ชม. / 90 วัน / 100,000 / 5-3-1 ล้าน</p>
+      <p>📌 ทบทวน <b>กรณีศึกษา 5 คดี</b> ที่วิทยากรเน้น</p>
+      <p>📌 เตรียมร่างกาย — กินอาหารเบา ๆ + พักผ่อน 15 นาที</p>
+    </div>
+
+    <div class="ok-box" style="margin-top:14px">
+      <b>💪 สอบ 16:00 น. — สู้ ๆ! โชคดีครับ</b>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>📋 รายการไฟล์ที่ใช้สอบ (อยู่ในโฟลเดอร์)</h2>
+    <ol>
+      <li><b>01_สรุป_พรบ_PDPA_2562_ม1-96</b> — สรุปทุกมาตรา</li>
+      <li><b>02_สรุปประกาศ_กคส_และพรฎ</b> — ประกาศ กคส. + พ.ร.ฎ.</li>
+      <li><b>03_Master_CheatSheet_ก่อนสอบ</b> — สรุปย่อ</li>
+      <li><b>04_Interactive_Quiz_PDPA_DPO_Exam.html</b> — Quiz เก่า 200 ข้อ</li>
+      <li><b>05_เสริมระดับ5_ISO_Operational_Audit_Ethics</b> — ISO + Audit</li>
+      <li><b>06_สรุปจากสไลด์อบรมจริง</b> — Day 1 จริง ⭐</li>
+      <li><b>07_DPO_Master_Study_Hub.html</b> — ไฟล์นี้! รวมทุกอย่าง + Quiz 504</li>
+    </ol>
+  </div>
+</section>
+
+<!-- ========== TAB 2: DAY 1 ========== -->
+<section class="section" id="tab-day1">
+  <div class="card">
+    <h2>📘 Day 1 อบรม — อ.ศุภวัชร์ มาลานนท์ (6 พ.ค. 2569)</h2>
+    <p style="color:var(--muted);font-size:13px">วิทยากร: AIGP, FIP, CIPP/E, CIPM, CIPT — กรรมการผู้เชี่ยวชาญ คณะที่ 1</p>
+
+    <h3>🔥 บทที่ 1: ขอบเขตการใช้บังคับ (ม.4-6)</h3>
+
+    <h4>ม.4 — ข้อยกเว้น 6 กรณี</h4>
+    <ol>
+      <li><b>(1)</b> ประโยชน์ส่วนตน/ครอบครัว (Private Use)</li>
+      <li><b>(2)</b> หน่วยงานรัฐ — ความมั่นคงรัฐ/ปลอดภัยประชาชน/ฟอกเงิน/นิติวิทยาศาสตร์/ไซเบอร์</li>
+      <li><b>(3)</b> สื่อมวลชน/ศิลปกรรม/วรรณกรรม (จริยธรรมวิชาชีพ/ประโยชน์สาธารณะ)</li>
+      <li><b>(4)</b> สภา/วุฒิสภา/รัฐสภา/คณะกรรมาธิการ</li>
+      <li><b>(5)</b> ศาล/สอบสวน/อัยการ/บังคับคดี/กระบวนการยุติธรรมอาญา</li>
+      <li><b>(6)</b> บริษัทข้อมูลเครดิตและสมาชิก</li>
+    </ol>
+    <div class="hl"><b>🎯 ม.4 วรรคสาม:</b> แม้ได้รับยกเว้น (2)-(6) ยังต้อง<b>จัดให้มีมาตรการรักษาความมั่นคงปลอดภัย</b>ตามมาตรฐานที่ กคส. กำหนด</div>
+
+    <h4>ม.5 — Territorial Scope</h4>
+    <p><b>ในราชอาณาจักร (วรรค 1):</b> Controller/Processor อยู่ในไทย — ใช้บังคับไม่ว่าประมวลผลที่ใด</p>
+    <p><b>นอกราชอาณาจักร (วรรค 2):</b></p>
+    <ol>
+      <li>เสนอสินค้า/บริการให้คนในไทย</li>
+      <li>เฝ้าติดตามพฤติกรรม (Monitoring) ของคนในไทย</li>
+    </ol>
+
+    <h4>ม.6 — นิยาม</h4>
+    <p><b>"ข้อมูลส่วนบุคคล"</b> = ข้อมูลที่ระบุตัวบุคคลธรรมดาได้ (ทางตรง/ทางอ้อม) — <b>ไม่รวมผู้ตาย</b></p>
+    <div class="hl"><b>🎯 EDPB 4 ขั้นตอน:</b> Information → Relating to → Identified/Identifiable → Natural Person</div>
+
+    <h4>Direct vs Indirect Identifiers</h4>
+    <table>
+      <tr><th>Direct (ทางตรง)</th><th>Indirect (ทางอ้อม)</th></tr>
+      <tr><td>ชื่อ-สกุล, เลขบัตรประชาชน, พาสปอร์ต, ทะเบียนรถ, ภาพใบหน้าระบุตัวได้, Email, Username</td><td>วันเกิด/อายุ, ตำแหน่งงาน, IP Address, ที่อยู่, สถานที่ทำงาน, วันเข้ารับบริการ</td></tr>
+    </table>
+
+    <div class="warn-box"><b>⚠️ Encrypted Data ยังเป็นข้อมูลส่วนบุคคล!</b> (ข้อหารือ 5/2568 บริษัท Y) — แม้เข้ารหัสหรือเป็น Log ก็ยังอยู่ใต้ PDPA</div>
+
+    <h4>Sensitive Data ม.26 — 11 ประเภท</h4>
+    <ol>
+      <li>เชื้อชาติ</li><li>เผ่าพันธุ์</li><li>ความคิดเห็นทางการเมือง</li>
+      <li>ลัทธิ ศาสนา ปรัชญา</li><li>พฤติกรรมทางเพศ</li><li>ประวัติอาชญากรรม</li>
+      <li>ข้อมูลสุขภาพ</li><li>ความพิการ</li><li>สหภาพแรงงาน</li>
+      <li><b>ข้อมูลพันธุกรรม (Genetic)</b></li><li><b>ข้อมูลชีวภาพ (Biometric)</b></li>
+    </ol>
+    <div class="info-box"><b>Face Recognition</b> = Biometric / <b>CCTV ทั่วไป</b> = Personal Data ทั่วไป (ม.6) ถ้าไม่ได้ใช้ระบบจดจำใบหน้า</div>
+  </div>
+
+  <div class="card">
+    <h3>🔥 บทที่ 2: วงจรชีวิต + ฐานทางกฎหมาย</h3>
+
+    <h4>GDPR/PDPA Principles 7 ข้อ</h4>
+    <table>
+      <tr><th>หลักการ</th><th>มาตรา</th></tr>
+      <tr><td>Lawfulness, Fairness, Transparency</td><td>ม.24, 26, 23, 25</td></tr>
+      <tr><td>Purpose Limitation</td><td>ม.21</td></tr>
+      <tr><td>Data Minimisation</td><td>ม.22</td></tr>
+      <tr><td>Accuracy</td><td>ม.35</td></tr>
+      <tr><td>Storage Limitation</td><td>ม.23(3), 37(3)</td></tr>
+      <tr><td>Integrity & Confidentiality</td><td>ม.37</td></tr>
+      <tr><td><b>Accountability</b></td><td>ม.39, 41</td></tr>
+    </table>
+
+    <h4>ม.24 — ฐาน 7 ฐาน</h4>
+    <table>
+      <tr><th>ฐาน</th><th>ภาษาไทย</th><th>ตัวอย่างใช้</th></tr>
+      <tr><td>(1)</td><td>วิจัย/สถิติ/จดหมายเหตุ</td><td>งานวิจัย</td></tr>
+      <tr><td>(2)</td><td>Vital Interest</td><td>ผู้ป่วยฉุกเฉินหมดสติ</td></tr>
+      <tr><td>(3)</td><td>Contract (รวม Pre-contract)</td><td>สัญญาจ้าง</td></tr>
+      <tr><td>(4)</td><td>Public Task</td><td>ภารกิจรัฐ</td></tr>
+      <tr><td>(5)</td><td>Legitimate Interest + LIA</td><td>CCTV, B2B Contact</td></tr>
+      <tr><td>(6)</td><td>Legal Obligation</td><td>ภาษี, ประกันสังคม</td></tr>
+      <tr><td>(7)/ม.19</td><td>Consent</td><td>Direct Marketing</td></tr>
+    </table>
+
+    <h4>LIA — 3 Tests (สำคัญมาก!)</h4>
+    <ol>
+      <li><b>Purpose Test</b> — ระบุประโยชน์โดยชอบฯ ได้หรือไม่</li>
+      <li><b>Necessity Test</b> — จำเป็นไหม + มีวิธีอื่นที่กระทบสิทธิน้อยกว่าไหม</li>
+      <li><b>Balancing Test</b> — ชั่งนำ้ หนัก: ประโยชน์องค์กร vs สิทธิเสรีภาพ</li>
+    </ol>
+
+    <h4>ม.26 — Sensitive Data 21 ฐาน</h4>
+    <ul>
+      <li><b>วรรคหนึ่ง:</b> Explicit Consent (ฐานหลัก)</li>
+      <li><b>(1)</b> Vital Interest (เจ้าของยินยอมไม่ได้)</li>
+      <li><b>(2)</b> มูลนิธิ/สมาคม</li>
+      <li><b>(3)</b> เปิดเผยต่อสาธารณะ + Explicit Consent</li>
+      <li><b>(4)</b> ก่อตั้ง/ต่อสู้สิทธิเรียกร้อง</li>
+      <li><b>(5)(ก)</b> เวชศาสตร์ป้องกัน/อาชีวเวชศาสตร์ — 7 sub-cases</li>
+      <li><b>(5)(ข)</b> ประโยชน์สาธารณะด้านสาธารณสุข</li>
+      <li><b>(5)(ค)</b> คุ้มครองแรงงาน/ประกันสังคม/หลักประกันสุขภาพ — 6 sub-cases</li>
+      <li><b>(5)(ง)</b> วิจัย/สถิติ</li>
+      <li><b>(5)(จ)</b> ประโยชน์สาธารณะที่สำคัญ</li>
+    </ul>
+
+    <div class="warn-box"><b>⚠️ Switching Lawful Basis ห้าม!</b> ถ้าเลือกใช้ Consent แล้วลูกค้าไม่ให้ → <b>ไม่สามารถสลับไปใช้ LI ได้อีก</b> (ข้อหารือ 5/2566)</div>
+  </div>
+
+  <div class="card">
+    <h3>🔥 บทที่ 3: Controller vs Processor</h3>
+    <table>
+      <tr><th>Controller (ม.6)</th><th>Processor (ม.6)</th></tr>
+      <tr><td>มีอำนาจตัดสินใจ — กำหนด <b>Mean + Purpose</b></td><td>ทำตามคำสั่ง/ในนามของ Controller</td></tr>
+      <tr><td>"Decisive Influence"</td><td>ปฏิบัติตามสัญญาจ้าง</td></tr>
+    </table>
+
+    <div class="hl"><b>🎯 หลักการสำคัญ:</b>
+      <ul>
+        <li>สถานภาพเกิดจาก<b>ข้อเท็จจริง</b>ไม่ใช่การแต่งตั้ง</li>
+        <li>นิติบุคคลเป็น Controller — ผู้บริหารไม่ใช่</li>
+        <li>ส่วนงานภายในไม่เป็น Controller แยกจากนิติบุคคล</li>
+        <li>มหาวิทยาลัย = Controller (คณะไม่ใช่)</li>
+      </ul>
+    </div>
+
+    <h4>ม.40 วรรคสอง — Processor ทำนอกคำสั่ง</h4>
+    <p>= ถือเป็น <b>Controller</b> สำหรับการประมวลผลส่วนนั้น</p>
+  </div>
+
+  <div class="card">
+    <h3>🔥 บทที่ 4: DPA / DSA</h3>
+
+    <h4>DPA — Data Processing Agreement (ม.40 วรรคสาม)</h4>
+    <div class="warn-box"><b>บังคับทำ!</b> Controller ↔ Processor ต้องทำเป็นหนังสือ</div>
+    <ol>
+      <li>ปฏิบัติตามคำสั่ง (documented instructions only)</li>
+      <li>รักษาความลับ</li>
+      <li>มาตรการ Security</li>
+      <li>ขออนุญาตก่อนใช้ Sub-processor</li>
+      <li>ช่วยเหลือเรื่อง Breach Notification</li>
+      <li>ลบ/ส่งคืนข้อมูล</li>
+      <li>ช่วยเหลือ DSR</li>
+      <li>แสดงการปฏิบัติตาม PDPA</li>
+      <li>Right to Audit</li>
+      <li>การเยียวยา</li>
+    </ol>
+
+    <h4>DSA — Data Sharing Agreement</h4>
+    <div class="info-box"><b>ไม่บังคับ — Optional</b> (Best Practice) ระหว่าง Controller ↔ Controller</div>
+  </div>
+
+  <div class="card">
+    <h3>🔥 บทที่ 5: DSR (ม.30-36)</h3>
+    <table>
+      <tr><th>มาตรา</th><th>สิทธิ</th><th>ใช้กับฐาน</th></tr>
+      <tr><td>ม.30</td><td>ขอเข้าถึง/สำเนา</td><td>ทุกฐาน</td></tr>
+      <tr><td>ม.31</td><td>Data Portability</td><td><b>Consent + Contract เท่านั้น</b></td></tr>
+      <tr><td>ม.32(1)</td><td>คัดค้าน Public Task / LI</td><td>ม.24(4),(5)</td></tr>
+      <tr><td>ม.32(2)</td><td>คัดค้าน Direct Marketing</td><td><b>เด็ดขาด!</b></td></tr>
+      <tr><td>ม.32(3)</td><td>คัดค้านวิจัย</td><td>ม.24(1)</td></tr>
+      <tr><td>ม.33</td><td>ลบ/ทำลาย</td><td>4 กรณี</td></tr>
+      <tr><td>ม.34</td><td>ระงับการใช้</td><td>4 กรณี</td></tr>
+      <tr><td>ม.36</td><td>ขอแก้ไข</td><td>(ตาม ม.35)</td></tr>
+    </table>
+
+    <h4>ม.33 วรรคสอง — ข้อยกเว้นการลบ 7 ข้อ</h4>
+    <ol>
+      <li>เสรีภาพในการแสดงความคิดเห็น</li>
+      <li>ม.24(1) วิจัย/สถิติ</li>
+      <li>ม.24(4) ภารกิจประโยชน์สาธารณะ</li>
+      <li>ม.26(5)(ก) เวชศาสตร์/อาชีวเวชศาสตร์</li>
+      <li>ม.26(5)(ข) ประโยชน์สาธารณะด้านสาธารณสุข</li>
+      <li>ก่อตั้ง/ต่อสู้สิทธิเรียกร้อง</li>
+      <li>ปฏิบัติตามกฎหมาย</li>
+    </ol>
+
+    <h4>กำหนดเวลา</h4>
+    <ul>
+      <li><b>ม.30 ตอบกลับ:</b> 30 วัน</li>
+      <li><b>ประกาศการลบ:</b> 90 วัน</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ========== TAB 3: DAY 2 ========== -->
+<section class="section" id="tab-day2">
+  <div class="card">
+    <h2>📗 Day 2 อบรม — อ.นวนรรน ธีระอัมพรพันธุ์ (7 พ.ค. 2569)</h2>
+    <p style="color:var(--muted);font-size:13px">ภาควิชาระบาดวิทยาคลินิกและชีวสถิติ คณะแพทยศาสตร์โรงพยาบาลรามาธิบดี ม.มหิดล</p>
+
+    <h3>📑 หัวข้อ 1: Cross-Border Data Transfer (ม.28 + ม.29)</h3>
+
+    <h4>ประกาศ กคส. ม.28 (พ.ศ. 2566)</h4>
+    <p>📅 ประกาศ 25 ธ.ค. 2566 — บังคับใช้พ้น <b>90 วัน</b></p>
+    <ul>
+      <li><b>มาตรฐานการคุ้มครองที่เพียงพอ</b> (Adequate Personal Data Protection Standards)</li>
+      <li><b>ข้อยกเว้น</b> (Derogations)</li>
+      <li><b>คำวินิจฉัยปัญหา / Whitelist</b> (Adequacy Decisions)</li>
+    </ul>
+
+    <h4>ประกาศ กคส. ม.29 (พ.ศ. 2566)</h4>
+    <p>📅 ประกาศ 25 ธ.ค. 2566 — บังคับใช้พ้น <b>90 วัน</b></p>
+    <ul>
+      <li><b>BCR</b> (Binding Corporate Rules) — เครือกิจการ/ธุรกิจเดียวกัน</li>
+      <li><b>Appropriate Safeguards</b> (มาตรการคุ้มครองที่เหมาะสม)</li>
+    </ul>
+
+    <h4>Data Transit vs Data Transfer</h4>
+    <div class="info-box"><b>Transit:</b> ส่งผ่านโดยไม่มีเจตนาให้เข้าถึง — <b>ไม่ใช่ Transfer</b><br>
+    <b>Transfer:</b> Cloud Service / Remote Access จากต่างประเทศ = ใช่ Transfer</div>
+
+    <h4>Appropriate Safeguards (ม.29 วรรคสาม) — 3 รูปแบบ</h4>
+    <ol>
+      <li><b>Accepted Contractual Clauses</b>
+        <ul>
+          <li><b>(A)</b> Ad-hoc Contractual Clauses (คู่สัญญาจัดทำเอง)</li>
+          <li><b>(B)</b> Foreign/International Standard Clauses
+            <ul>
+              <li>(B.1) ASEAN MCC (Model Contractual Clauses)</li>
+              <li>(B.2) EU GDPR SCC (Standard Contractual Clauses)</li>
+              <li>(B.3) อื่น ๆ ที่อาจประกาศเพิ่ม</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><b>Certification</b> (รอประกาศเพิ่มเติม) — เกี่ยวกับ Cross-border โดยเฉพาะ</li>
+      <li><b>Binding & Enforceable Legal Instrument</b> ระหว่างหน่วยงานรัฐ</li>
+    </ol>
+
+    <div class="hl"><b>🎯 ความเข้าใจผิดที่บ่อย:</b> Certification ม.29 ต้องเป็น Cross-border Certification ไม่ใช่ ISO 27001 หรือ Privacy Certification ทั่วไป</div>
+  </div>
+
+  <div class="card">
+    <h3>🛡️ หัวข้อ 2: PDPA, Cybersecurity & Breach</h3>
+
+    <h4>Privacy vs Information Security</h4>
+    <ul>
+      <li><b>Privacy:</b> "ความสามารถในการปกปิดตัวเองหรือข้อมูลของตน"</li>
+      <li><b>Information Security:</b> "ป้องกันข้อมูลและระบบจากการเข้าถึง/ใช้/เปิดเผย/รบกวน/แก้ไข/ทำลาย โดยไม่ได้รับอนุญาต"</li>
+    </ul>
+
+    <h4>CIA Triad (หลักการของ Information Security)</h4>
+    <div class="matrix-grid">
+      <div class="matrix-card"><h4>C — Confidentiality</h4><p>การรักษาความลับ</p></div>
+      <div class="matrix-card"><h4>I — Integrity</h4><p>ความครบถ้วนและถูกต้อง</p></div>
+      <div class="matrix-card"><h4>A — Availability</h4><p>สภาพพร้อมใช้งาน</p></div>
+    </div>
+
+    <h4>Simplified Attack Scenarios — 3 จุด</h4>
+    <ol>
+      <li><b>"ต้นทาง & ปลายทาง"</b> (Users & Endpoints) — Phishing, Malware, Social Engineering</li>
+      <li><b>"ระหว่างทาง"</b> (Network) — Eavesdropping, MITM, Replay</li>
+      <li><b>"กลางหัวใจ"</b> (Servers) — Vulnerabilities, DoS, Privilege escalation</li>
+    </ol>
+
+    <h4>Safeguarding — 7 ด้าน</h4>
+    <table>
+      <tr><th>ด้าน</th><th>มาตรการสำคัญ</th></tr>
+      <tr><td><b>Administrative</b></td><td>นโยบาย, Governance, DRP/BCP, Legal</td></tr>
+      <tr><td><b>Physical</b></td><td>Lock, ห้อง Server, Mobile Security</td></tr>
+      <tr><td><b>User</b></td><td>Strong Password, Least Privilege, Awareness</td></tr>
+      <tr><td><b>System</b></td><td>Antivirus, IDS/IPS, Patches, SOC, SIEM</td></tr>
+      <tr><td><b>Software</b></td><td>Secure by Design, Testing, WAF</td></tr>
+      <tr><td><b>Network</b></td><td>Access Control, Encryption in Transit</td></tr>
+      <tr><td><b>Data</b></td><td>Encryption at Rest, Backups</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h3>🎯 NIST Cybersecurity Framework 2.0 — 6 Functions</h3>
+    <ol>
+      <li><b>Govern</b> — เพิ่มใหม่ใน 2.0</li>
+      <li><b>Identify</b></li>
+      <li><b>Protect</b></li>
+      <li><b>Detect</b></li>
+      <li><b>Respond</b></li>
+      <li><b>Recover</b></li>
+    </ol>
+
+    <h4>4 คาถาหลักของ Cybersecurity</h4>
+    <ol>
+      <li><b>Multiple Domains of Security</b> (Defense in Depth)</li>
+      <li><b>Govern + Detect + Respond + Recover</b> (NIST CSF)</li>
+      <li><b>People + Process + Technology</b></li>
+      <li><b>Risk-Based Approach</b></li>
+    </ol>
+
+    <h4>User Security — 3 A's</h4>
+    <ul>
+      <li><b>Identification</b> — User ID</li>
+      <li><b>Authentication</b> — Password, Biometric</li>
+      <li><b>Authorization</b> — Least Privilege</li>
+    </ul>
+
+    <h4>MFA Factors</h4>
+    <ul>
+      <li><b>Something you know</b> — Password, PIN</li>
+      <li><b>Something you have</b> — Token, Mobile</li>
+      <li><b>Something you are</b> — Biometrics</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>🔐 Password Policy ที่แนะนำ</h3>
+
+    <h4>Old Standard</h4>
+    <ul>
+      <li>8+ ตัว, Complexity 3 ใน 4, No meaning</li>
+    </ul>
+
+    <h4>New Standard (Passphrase)</h4>
+    <ul>
+      <li>15-20+ ตัว, 5-6 คำสุ่ม, ไม่ใช้ pattern</li>
+    </ul>
+
+    <h4>Expiration</h4>
+    <div class="warn-box"><b>⚠️ Misconception:</b> 3 เดือน — ทำให้ users เขียนบนกระดาษ</div>
+    <ul>
+      <li><b>Old:</b> 6-8 เดือน</li>
+      <li><b>New:</b> No Expiration (เว้นถูก compromise)</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>📢 การแจ้งเหตุการละเมิด (Breach Notification)</h3>
+
+    <h4>3 ประเภทการละเมิด</h4>
+    <ol>
+      <li><b>Confidentiality Breach</b> — รั่วไหล/เข้าถึงโดยมิชอบ</li>
+      <li><b>Integrity Breach</b> — แก้ไขให้ไม่ถูกต้อง</li>
+      <li><b>Availability Breach</b> — สูญหาย/เข้าไม่ได้</li>
+    </ol>
+
+    <h4>กำหนดเวลา</h4>
+    <div class="numbers-grid">
+      <div class="num-card"><span class="big">72 ชม.</span><span class="lbl">แจ้งสำนักงาน</span></div>
+      <div class="num-card"><span class="big">15 วัน</span><span class="lbl">เกิน 72 ชม.</span></div>
+      <div class="num-card"><span class="big">ไม่ชักช้า</span><span class="lbl">แจ้ง Data Subject</span></div>
+    </div>
+
+    <h4>กรณียกเว้นไม่ต้องแจ้งเจ้าของข้อมูล</h4>
+    <ul>
+      <li>ข้อมูล Encrypted ที่ถอดไม่ได้</li>
+      <li>แก้ไข/ลดความเสี่ยงแล้ว</li>
+      <li>ภาระเกินสมควร → Public Notice</li>
+    </ul>
+
+    <div class="warn-box"><b>🎯 Burden of Proof:</b> Controller ต้องส่งหลักฐานให้ PDPC ตรวจสอบเหตุยกเว้น (ข้อ 9 วรรคสอง)</div>
+  </div>
+
+  <div class="card">
+    <h3>🎯 โจทย์สมมติ Breach (4 ข้อจากวิทยากร)</h3>
+
+    <h4>โจทย์ #1: Marketplace ขายข้อมูล</h4>
+    <p><b>สถานการณ์:</b> มีคนโพสต์ขายข้อมูล รพ. — sample 10 คน (ชื่อ, สกุล, username, email, hashed password)</p>
+    <div class="info-box"><b>💡 แนวคำตอบ:</b> Confidentiality Breach — แจ้ง สคส. 72 ชม. / Hashed password = ลดความเสี่ยง อาจไม่ต้องแจ้ง Data Subject</div>
+
+    <h4>โจทย์ #2: PDPC Eagle Eye ส่งหนังสือมา</h4>
+    <p><b>สถานการณ์:</b> เอกสารบนเว็บมหาวิทยาลัย — ชื่อ-เลขประชาชน-สาขาแพทย์ประจำบ้าน 27 คน</p>
+    <div class="info-box"><b>💡 แนวคำตอบ:</b> เลขประชาชน = ความเสี่ยงสูง → แจ้ง สคส. + Data Subject</div>
+
+    <h4>โจทย์ #3: Directory Server ถูก Hack</h4>
+    <p><b>สถานการณ์:</b> Export 1.2 GB — ข้อมูลบุคลากร 20,000 ราย (ชื่อ-สกุล-สังกัด-email)</p>
+    <div class="info-box"><b>💡 แนวคำตอบ:</b> Confidentiality Breach — แจ้ง สคส. 72 ชม. / ประเมินก่อนแจ้ง Data Subject</div>
+
+    <h4>โจทย์ #4: เว็บถูกฝัง URL พนัน</h4>
+    <p><b>สถานการณ์:</b> ตรวจ log → ไม่พบการเข้าถึง DB</p>
+    <div class="info-box"><b>💡 แนวคำตอบ:</b> Security Incident (อาจไม่ใช่ Personal Data Breach) — ต้องแก้ไขทันที</div>
+  </div>
+</section>
+
+<!-- ========== TAB 4: CHEAT SHEET ========== -->
+<section class="section" id="tab-cheat">
+  <div class="card">
+    <h2>🎯 Master Cheat Sheet — ก่อนสอบ</h2>
+
+    <h3>📌 ตัวเลขสำคัญที่ต้องจำ</h3>
+    <div class="numbers-grid">
+      <div class="num-card"><span class="big">30</span><span class="lbl">วัน — ตอบ DSR / อุทธรณ์</span></div>
+      <div class="num-card"><span class="big">72</span><span class="lbl">ชม. — แจ้ง Breach</span></div>
+      <div class="num-card"><span class="big">15</span><span class="lbl">วัน — Breach เกิน 72 ชม.</span></div>
+      <div class="num-card"><span class="big">90</span><span class="lbl">วัน — ลบ / Audit Log</span></div>
+      <div class="num-card"><span class="big">100K</span><span class="lbl">Large Scale (DPO)</span></div>
+      <div class="num-card"><span class="big">2 เท่า</span><span class="lbl">Punitive Damages</span></div>
+      <div class="num-card"><span class="big">3 ปี</span><span class="lbl">อายุความแพ่ง (รู้)</span></div>
+      <div class="num-card"><span class="big">10 ปี</span><span class="lbl">อายุความสูงสุด</span></div>
+      <div class="num-card"><span class="big">120/3</span><span class="lbl">CPE ชม./3 ปี</span></div>
+      <div class="num-card"><span class="big">10 ปี</span><span class="lbl">ผู้เยาว์ Consent เอง</span></div>
+      <div class="num-card"><span class="big">1 มิ.ย. 65</span><span class="lbl">วันบังคับใช้</span></div>
+      <div class="num-card"><span class="big">6 หน่วย</span><span class="lbl">สมรรถนะ ระดับ 5</span></div>
+    </div>
+
+    <h3>💰 โทษ "5-3-1"</h3>
+    <table>
+      <tr><th>มาตรา</th><th>ความผิด</th><th>ปรับสูงสุด</th></tr>
+      <tr><td>ม.83</td><td>Lawful Basis ทั่วไป (ม.21-25, 27, 37(4))</td><td><b>3 ล้าน</b></td></tr>
+      <tr><td>ม.84</td><td><b>Sensitive (ม.26) + Cross-border (ม.28)</b></td><td><b>5 ล้าน</b></td></tr>
+      <tr><td>ม.85</td><td>DSR (ม.30-36), RoPA (ม.39), DPO (ม.41-42)</td><td><b>1 ล้าน</b></td></tr>
+      <tr><td>ม.86</td><td>Processor (ม.40)</td><td>1-3 ล้าน</td></tr>
+      <tr><td>ม.87</td><td>ขัดขวางคำสั่ง</td><td>500K</td></tr>
+    </table>
+
+    <h3>⚖️ โทษอาญา</h3>
+    <table>
+      <tr><th>ม.</th><th>ความผิด</th><th>โทษ</th></tr>
+      <tr><td>ม.79 วรรค 1</td><td>ใช้/เปิดเผย Sensitive ทำให้เสียหาย/อับอาย</td><td>จำคุก ≤6 เดือน + ปรับ ≤500K</td></tr>
+      <tr><td>ม.79 วรรค 2</td><td>เพื่อแสวงหาประโยชน์มิควรได้</td><td>จำคุก ≤1 ปี + ปรับ ≤1 ล้าน</td></tr>
+      <tr><td>ม.81</td><td>ผู้บริหาร (สั่งการ/ละเว้น)</td><td>รับโทษเช่นเดียวกัน</td></tr>
+    </table>
+
+    <h3>🎯 Lawful Basis Decision Tree</h3>
+    <div class="info-box">
+      <b>เห็น Sensitive Data?</b> → ม.26 (Explicit Consent หรือ 5 ข้อยกเว้น)<br>
+      <b>เห็น "ปฏิบัติตามกฎหมาย"</b> → ม.24(6)<br>
+      <b>เห็น "สัญญาจ้าง / Pre-contract"</b> → ม.24(3)<br>
+      <b>เห็น "อันตรายต่อชีวิต"</b> → ม.24(2)<br>
+      <b>เห็น "ภารกิจรัฐ"</b> → ม.24(4)<br>
+      <b>เห็น "LIA + Balancing"</b> → ม.24(5)<br>
+      <b>เห็น "วิจัย/สถิติ"</b> → ม.24(1)<br>
+      <b>ไม่มีฐานอื่น</b> → ม.24(7) Consent
+    </div>
+
+    <h3>🔑 Quick Tips ก่อนตอบโจทย์</h3>
+    <div class="hl">
+      <ol>
+        <li>เห็น <b>"Sensitive"</b> → ม.26 ทันที</li>
+        <li>เห็น <b>"Direct Marketing"</b> → ม.32(2) สิทธิเด็ดขาด</li>
+        <li>เห็น <b>"Data Portability"</b> → ม.31 (Consent + Contract เท่านั้น)</li>
+        <li>เห็น <b>"ลบ"</b> → ม.33 + ตรวจวรรคสอง 7 ข้อยกเว้น</li>
+        <li>เห็น <b>"ระงับใช้"</b> → ม.34</li>
+        <li>เห็น <b>"แก้ไข"</b> → ม.36 (Opinion ไม่ได้)</li>
+        <li>เห็น <b>"ต่างประเทศ"</b> → ม.28 (Adequate) หรือ ม.29 (BCR)</li>
+        <li>เห็น <b>"นิติบุคคล"</b> → ไม่ใช่ "บุคคล" ตาม ม.6</li>
+        <li>เห็น <b>"ข้อมูลผู้ตาย"</b> → ไม่ใช่ Personal Data</li>
+        <li>เห็น <b>"Encrypted"</b> → <b>ยังเป็น Personal Data</b> (ข้อหารือ 5/2568)</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ========== TAB 5: ISO ========== -->
+<section class="section" id="tab-iso">
+  <div class="card">
+    <h2>⚙️ ISO Standards + Audit Framework</h2>
+
+    <h3>📋 มาตรฐาน ISO ที่ออกข้อสอบ</h3>
+    <div class="matrix-grid">
+      <div class="matrix-card">
+        <h4>⭐ ISO/IEC 27701</h4>
+        <p><b>PIMS</b> — Privacy Information Management System</p>
+        <p>Extension ของ ISO 27001 — Compliance ทั้ง GDPR + PDPA</p>
+        <p><b>Annex A</b> — 31 Controls สำหรับ Controller<br>
+        <b>Annex B</b> — 18 Controls สำหรับ Processor</p>
+      </div>
+      <div class="matrix-card">
+        <h4>ISO/IEC 27001:2022</h4>
+        <p><b>ISMS</b> — Information Security Management</p>
+        <p><b>93 Controls</b> (จาก 114 ใน 2013) แบ่ง 4 หมวด:</p>
+        <ul>
+          <li>Organizational (37)</li>
+          <li>People (8)</li>
+          <li>Physical (14)</li>
+          <li>Technological (34)</li>
+        </ul>
+      </div>
+      <div class="matrix-card">
+        <h4>ISO/IEC 29100</h4>
+        <p>Privacy Framework — <b>11 Principles</b></p>
+        <p>4 Roles: PII Principal / Controller / Processor / Third Party</p>
+      </div>
+      <div class="matrix-card">
+        <h4>ISO/IEC 29134</h4>
+        <p>DPIA Guidelines — 5 Steps:</p>
+        <ol>
+          <li>Identify</li>
+          <li>Analyse</li>
+          <li>Evaluate</li>
+          <li>Treat</li>
+          <li>Document & Review</li>
+        </ol>
+      </div>
+      <div class="matrix-card">
+        <h4>ISO 31000</h4>
+        <p>Risk Management — <b>4T</b>:</p>
+        <ul>
+          <li><b>Treat</b> (ลด)</li>
+          <li><b>Transfer</b> (โอน เช่น ทำประกัน)</li>
+          <li><b>Tolerate</b> (ยอมรับ)</li>
+          <li><b>Terminate</b> (เลี่ยง)</li>
+        </ul>
+      </div>
+      <div class="matrix-card">
+        <h4>ISO/IEC 27005</h4>
+        <p>IS Risk Management — ใช้ร่วม ISO 27001</p>
+      </div>
+      <div class="matrix-card">
+        <h4>COSO ERM</h4>
+        <p>Enterprise Risk Management — 5 องค์ประกอบ + 20 หลักการ</p>
+      </div>
+      <div class="matrix-card">
+        <h4>ENISA</h4>
+        <p>European Union Agency for Cybersecurity — Breach Severity (Low/Medium/High/Very High)</p>
+      </div>
+      <div class="matrix-card">
+        <h4>ISACA</h4>
+        <p>Information Systems Audit — COBIT, CISA, CDPSE</p>
+      </div>
+      <div class="matrix-card">
+        <h4>TDPG</h4>
+        <p>Thailand Data Protection Guidelines — แนวปฏิบัติไทย (3.0, 3.1)</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>🛡️ มาตรการ TOMs</h3>
+    <table>
+      <tr><th>ประเภท</th><th>คำอธิบาย</th><th>ตัวอย่าง</th></tr>
+      <tr><td><b>Organizational</b></td><td>นโยบาย กระบวนการ</td><td>Policy, Training, RACI, DPA, Audit</td></tr>
+      <tr><td><b>Technical</b></td><td>เทคนิค</td><td>Encryption, Access Control, MFA, Backup</td></tr>
+      <tr><td><b>Physical</b></td><td>กายภาพ</td><td>ห้อง Server, CCTV, Lock, ทำลายเอกสาร</td></tr>
+    </table>
+
+    <h3>🎯 Control Categories</h3>
+    <ul>
+      <li><b>Preventive</b> — ป้องกัน (Encryption, Access Control)</li>
+      <li><b>Detective</b> — ตรวจพบ (IDS, SIEM, Audit Log)</li>
+      <li><b>Corrective</b> — แก้ไข (Backup, Patch)</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>🔍 Audit (หน่วยสมรรถนะ 10501)</h3>
+
+    <h4>5 ด้านที่ต้องตรวจ</h4>
+    <ol>
+      <li>การดำเนินการของผู้ปฏิบัติการ</li>
+      <li>มาตรการเทคนิค (Technical Controls)</li>
+      <li>กระบวนการขององค์กร</li>
+      <li>การประมวลผลข้อมูลส่วนบุคคล</li>
+      <li>ความสอดคล้องตามข้อกำหนด</li>
+    </ol>
+
+    <h4>Audit Lifecycle</h4>
+    <ol>
+      <li>Planning</li>
+      <li>Risk Assessment</li>
+      <li>Fieldwork</li>
+      <li>Documentation</li>
+      <li>Reporting</li>
+      <li>Follow-up (CAPA)</li>
+    </ol>
+  </div>
+
+  <div class="card">
+    <h3>👥 DPO + จริยธรรม</h3>
+
+    <h4>3 กรณีต้องแต่งตั้ง DPO (ม.41)</h4>
+    <ol>
+      <li>หน่วยงานรัฐ</li>
+      <li>Large-scale Monitoring (Core + Regular + Large)</li>
+      <li>Core Activity = Sensitive Data</li>
+    </ol>
+
+    <h4>หน้าที่ DPO 4 ข้อ (ม.42)</h4>
+    <ol>
+      <li>ให้คำแนะนำ</li>
+      <li>ตรวจสอบการดำเนินงาน</li>
+      <li>ประสานงานกับ สคส.</li>
+      <li>รักษาความลับ</li>
+    </ol>
+
+    <div class="warn-box"><b>ห้ามเลิกจ้าง DPO เพราะปฏิบัติหน้าที่ตาม พ.ร.บ.</b> (ม.41 วรรค 6)</div>
+
+    <h4>จริยธรรม 6 ข้อของ DPO</h4>
+    <ol>
+      <li>Integrity (ซื่อสัตย์)</li>
+      <li>Objectivity (เป็นกลาง)</li>
+      <li>Confidentiality (รักษาความลับ)</li>
+      <li>Professional Competence</li>
+      <li>Independence</li>
+      <li>Accountability</li>
+    </ol>
+  </div>
+</section>
+
+<!-- ========== TAB 6: CASES ========== -->
+<section class="section" id="tab-cases">
+  <div class="card">
+    <h2>📋 กรณีศึกษาที่วิทยากรเน้น (ออกสอบ!)</h2>
+
+    <h3>💸 คดี 7 ล้านบาท</h3>
+    <div class="warn-box"><b>3 ความผิดรวม:</b>
+      <ol>
+        <li><b>ม.37(1)</b> Security ไม่เหมาะสม → 3 ล้าน</li>
+        <li><b>ม.37(4)</b> ไม่แจ้ง Breach 72 ชม. → 3 ล้าน</li>
+        <li><b>ม.41(2)</b> ไม่แต่งตั้ง DPO (ข้อมูลเกิน 100,000 ราย) → 1 ล้าน</li>
+      </ol>
+      <b>รวม 7 ล้านบาท + ปรับปรุง People/Process/Technology</b>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>🏥 โรงพยาบาล 1.21 ล้านบาท (เวชระเบียนหลุด)</h3>
+    <ol>
+      <li>เวชระเบียนผู้ป่วยถูกนำไปทำถุงขนมโตเกียว — กว่า 1,000 ฉบับ</li>
+      <li>ขั้นตอนทำลายเอกสารกับธุรกิจครอบครัว — ไม่ได้ติดตาม/ตรวจสอบ</li>
+      <li>ข้อมูลสุขภาพ (ม.26) รั่วไหล</li>
+      <li>ผู้รับจ้างทำลายนำไปพักที่บ้าน + ไม่แจ้งเหตุ</li>
+    </ol>
+    <div class="hl"><b>โทษ:</b>
+      <ul>
+        <li>โรงพยาบาล (Controller) = 1,210,000 บาท</li>
+        <li>ผู้รับจ้างทำลาย (Processor) = 16,940 บาท</li>
+        <li><b>รวม 1,226,940 บาท</b></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>🏛️ หน่วยงานรัฐ 153K (Web App ถูก Hack)</h3>
+    <ol>
+      <li>หน่วยงานรัฐมี Web App — ถูกโจมตี — ข้อมูล 200,000 รายไป Dark Web</li>
+      <li>ใช้รหัสผ่านอ่อนแอ — ไม่ประเมินความเสี่ยง</li>
+      <li><b>ไม่มี DPA กับบริษัทพัฒนาระบบ</b></li>
+      <li>บริษัทพัฒนาไม่ได้ออกแบบ Security ตั้งแต่ต้น</li>
+    </ol>
+    <p><b>โทษ:</b> ทั้งหน่วยงานรัฐ + บริษัทพัฒนา = หน่วยงานละ 153,120 บาท</p>
+  </div>
+
+  <div class="card">
+    <h3>🚗 VW (DPA Lower Saxony — 1.1 ล้านยูโร)</h3>
+    <ol>
+      <li>ทดสอบขับขี่ที่มีกล้องบันทึก — <b>ไม่แจ้งผู้ใช้ถนน</b></li>
+      <li><b>ไม่มี DPA</b> กับบริษัททดสอบ</li>
+      <li><b>RoPA ไม่สมบูรณ์</b></li>
+      <li><b>ไม่ทำ DPIA</b></li>
+    </ol>
+  </div>
+
+  <div class="card">
+    <h3>🍎 Apple Deletion Request (DPC Ireland)</h3>
+    <p><b>หลังลบ Apple ID:</b></p>
+    <ol>
+      <li>เก็บ <b>past transaction</b> เพื่อรายงานการเงิน</li>
+      <li>เก็บข้อมูลตามคำสั่งศาล</li>
+      <li>เก็บ <b>One-way hash ของ Email</b> (Security/Fraud Prevention)</li>
+      <li>เป็นหลักฐานว่า Apple ปฏิบัติตามคำขอลบแล้ว</li>
+    </ol>
+    <div class="ok-box"><b>คำตัดสิน DPC:</b> Apple มี Legitimate Interest + Data Minimization OK — แต่ต้อง<b>โปร่งใสใน Notice</b></div>
+  </div>
+
+  <div class="card">
+    <h3>🚙 Scania VIN (Case C-319/22 EU CJEU)</h3>
+    <ol>
+      <li>สมาคมอู่ซ่อมอิสระฟ้อง Scania — ขอ VIN</li>
+      <li>Scania อ้างว่า VIN = Personal Data</li>
+    </ol>
+    <div class="hl"><b>คำตัดสิน CJEU:</b>
+      <ul>
+        <li>VIN <b>เป็น</b> Personal Data — เพราะเชื่อมโยงกับเจ้าของรถได้</li>
+        <li>แต่สำหรับอู่ซ่อมอิสระ — VIN <b>ไม่ใช่</b> Personal Data หากไม่มี means เชื่อมโยง</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>📜 ข้อหารือ PDPC สำคัญ (10+ ฉบับ)</h3>
+    <table>
+      <tr><th>เลขที่</th><th>เรื่อง</th><th>สาระสำคัญ</th></tr>
+      <tr><td>22/2566</td><td>สถานีตำรวจภูธร ข.</td><td>ความรับผิดอาญาของกรรมการ (ม.81)</td></tr>
+      <tr><td>5/2568</td><td>บริษัท Y</td><td>การแต่งตั้ง DPO รวมในเครือกิจการ</td></tr>
+      <tr><td>10/2568</td><td>ธนาคาร X</td><td>ฐานคุ้มครองแรงงาน ม.26(5)(ค)</td></tr>
+      <tr><td>4/2568</td><td>บริษัท Z</td><td>การถอน Consent ผ่าน App</td></tr>
+      <tr><td>3/2569</td><td>AIT</td><td>ฐานสำหรับวิจัยอุบัติเหตุ + LIA</td></tr>
+      <tr><td>4/2569</td><td>สธ.</td><td>DSA + ความรับผิดอาญากรรมการ</td></tr>
+      <tr><td>1/2569</td><td>กรมการขนส่ง</td><td>LIA + ข้อมูลผู้เยาว์</td></tr>
+      <tr><td>6/2566</td><td>ธนาคาร ม.</td><td>Consent ผู้เยาว์</td></tr>
+      <tr><td>5/2566</td><td>ธนาคาร จ.</td><td>Switching Lawful Basis ห้าม</td></tr>
+      <tr><td>9/2566</td><td>บริษัท ญ.</td><td>LI สำหรับสั่งจ่ายเช็ค</td></tr>
+      <tr><td>17/2567</td><td>บริษัท X</td><td>การตีความแจ้ง Breach</td></tr>
+      <tr><td>1/2568</td><td>กกต.</td><td>ทะเบียนผู้มีสิทธิเลือกตั้ง</td></tr>
+      <tr><td>2/2569</td><td>กรมสุขภาพจิต</td><td>แลกเปลี่ยนข้อมูลผู้ป่วย</td></tr>
+      <tr><td>14/2566</td><td>โรงพยาบาล B</td><td>พนักงานสอบสวนขอข้อมูล (ม.4(2)+(5))</td></tr>
+    </table>
+  </div>
+</section>
+
+<!-- ========== TAB 7: QUIZ ========== -->
+<section class="section" id="tab-quiz">
+  <div class="quiz-toolbar">
+    <button class="btn primary" id="btn-check-all">✓ ตรวจคำตอบ</button>
+    <button class="btn" id="btn-reveal-all">👁 แสดงเฉลย</button>
+    <button class="btn" id="btn-hide-all">🙈 ซ่อนเฉลย</button>
+    <button class="btn danger" id="btn-reset">↺ ล้างคำตอบ</button>
+    <button class="btn" id="btn-shuffle">🔀 สลับข้อ</button>
+    <div style="flex:1"></div>
+    <div class="progress">
+      <div class="bar"><span id="progress-bar"></span></div>
+      <span id="progress-text">0/0</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="stats">
+      <div class="stat">รวม: <b id="stat-total">0</b></div>
+      <div class="stat">ตอบแล้ว: <b id="stat-answered">0</b></div>
+      <div class="stat">ถูก: <b id="stat-correct" style="color:var(--ok)">0</b></div>
+      <div class="stat">ผิด: <b id="stat-wrong" style="color:var(--warn)">0</b></div>
+      <div class="stat">% ถูกต้อง: <span id="stat-percent" class="score-badge bad">0%</span></div>
+    </div>
+
+    <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px">
+      <button class="btn cat-btn active" data-cat="all">ทั้งหมด</button>
+      <button class="btn cat-btn" data-cat="ขอบเขต">ขอบเขต/นิยาม</button>
+      <button class="btn cat-btn" data-cat="Lawful">Lawful Basis</button>
+      <button class="btn cat-btn" data-cat="Sensitive">Sensitive ม.26</button>
+      <button class="btn cat-btn" data-cat="DSR">DSR</button>
+      <button class="btn cat-btn" data-cat="Controller">Controller/Processor</button>
+      <button class="btn cat-btn" data-cat="Cross">Cross-border</button>
+      <button class="btn cat-btn" data-cat="Security">Security</button>
+      <button class="btn cat-btn" data-cat="Breach">Breach</button>
+      <button class="btn cat-btn" data-cat="DPO">DPO</button>
+      <button class="btn cat-btn" data-cat="โทษ">โทษ</button>
+      <button class="btn cat-btn" data-cat="ISO">ISO</button>
+      <button class="btn cat-btn" data-cat="Case">Case</button>
+      <button class="btn cat-btn" data-cat="รายมาตรา" style="background:#fef3c7;border-color:#f59e0b">⭐ รายมาตรา</button>
+      <button class="btn cat-btn" data-cat="ประกาศ" style="background:#fef3c7;border-color:#f59e0b">⭐ ประกาศ</button>
+      <button class="btn cat-btn" data-cat="ฐานเข้ม" style="background:#fef3c7;border-color:#f59e0b">⭐ ฐาน Lawful</button>
+      <button class="btn cat-btn" data-cat="ลบเข้ม" style="background:#fef3c7;border-color:#f59e0b">⭐ ลบ/ทำลาย</button>
+      <button class="btn cat-btn" data-cat="Crossเข้ม" style="background:#fef3c7;border-color:#f59e0b">⭐ Cross เข้ม</button>
+      <button class="btn cat-btn" data-cat="DSRเข้ม" style="background:#fef3c7;border-color:#f59e0b">⭐ DSR เข้ม</button>
+      <button class="btn cat-btn" data-cat="Sec/Breach/DPO" style="background:#fef3c7;border-color:#f59e0b">⭐ Sec/DPO</button>
+      <button class="btn cat-btn" data-cat="ScenarioPro" style="background:#fee2e2;border-color:#dc2626">🔥 Scenario Pro</button>
+      <button class="btn cat-btn" data-cat="กฎหมายเชื่อม" style="background:#fee2e2;border-color:#dc2626">🔥 กม.เชื่อม</button>
+      <button class="btn cat-btn" data-cat="ตัวเลข" style="background:#fee2e2;border-color:#dc2626">🔥 ตัวเลข</button>
+      <button class="btn cat-btn" data-cat="MockTest" style="background:#fee2e2;border-color:#dc2626">🔥 Mock Test</button>
+      <button class="btn cat-btn" data-cat="เก็งข้อสอบ" style="background:#dc2626;color:#fff;border-color:#991b1b">🔥 เก็งข้อสอบ (กรรมการ)</button>
+    </div>
+  </div>
+
+  <div id="quiz-list"></div>
+</section>
+
+
+<!-- ========== TAB: เก็งข้อสอบ ========== -->
+<section class="section" id="tab-exam">
+  <div class="card">
+    <h2>🔥 เก็งข้อสอบจากแนวกรรมการ — 55 ข้อ</h2>
+
+    <div class="warn-box">
+      <b>📌 ข้อมูลจากกรรมการออกข้อสอบ:</b><br>
+      ข้อสอบจริงมี <b>50 ข้อ</b> · เกณฑ์ผ่าน <b>75% หรือ 38 ข้อ</b> · ตัวอย่างจริง 5 ข้อจาก WAYGROUND อยู่ในข้อ 1-5
+    </div>
+
+    <h3>📊 สัดส่วนหมวดข้อสอบ</h3>
+    <table>
+      <tr><th>หมวด</th><th>จำนวนข้อสอบจริง</th><th>เก็งของผม</th></tr>
+      <tr><td><b>ฐานทางกฎหมาย</b></td><td>8</td><td>8 + (1 จากตัวอย่าง #3)</td></tr>
+      <tr><td><b>สิทธิ DSR (ม.30-36)</b></td><td>6</td><td>6</td></tr>
+      <tr><td><b>ประกาศ Security 2565</b></td><td>9</td><td>9 + (1 จากตัวอย่าง #4)</td></tr>
+      <tr><td><b>ประกาศ Breach 2565</b></td><td>10</td><td>10</td></tr>
+      <tr><td><b>Cross-border ม.28-29</b></td><td>5</td><td>5</td></tr>
+      <tr><td><b>กลไกบังคับใช้</b></td><td>3</td><td>3</td></tr>
+      <tr><td><b>หลักการพื้นฐาน</b></td><td>1</td><td>1</td></tr>
+      <tr><td><b>ประกาศการลบ 2567</b></td><td>1</td><td>1</td></tr>
+      <tr><td><b>ม.26 ประเภท Sensitive</b></td><td>1</td><td>1</td></tr>
+      <tr><td><b>ม.5</b></td><td>1</td><td>1</td></tr>
+      <tr><td><b>ม.4</b></td><td>1</td><td>1</td></tr>
+      <tr><td><b>ม.40</b></td><td>2</td><td>2 + (1 จากตัวอย่าง #1)</td></tr>
+      <tr><td><b>ม.41</b></td><td>1</td><td>1 + (1 จากตัวอย่าง #2)</td></tr>
+      <tr><td><b>ม.42</b></td><td>1</td><td>1 + (1 จากตัวอย่าง #5)</td></tr>
+      <tr><td><b>รวม</b></td><td><b>50</b></td><td><b>55</b></td></tr>
+    </table>
+
+    <div class="hl">
+      <b>💡 วิธีใช้ Tab นี้:</b>
+      <ol>
+        <li>กดปุ่ม <b>🎯 Quiz</b> ด้านบน</li>
+        <li>เลือกฟิลเตอร์ <b>"🔥 เก็งข้อสอบ (กรรมการ)"</b></li>
+        <li>จะเห็นเฉพาะ 55 ข้อนี้</li>
+        <li>5 ข้อแรกคือตัวอย่างจริงจากกรรมการ</li>
+        <li>50 ข้อหลังเก็งตามสัดส่วนที่กรรมการกำหนด</li>
+      </ol>
+    </div>
+
+    <div class="ok-box">
+      <b>🎯 เป้าหมาย:</b> ทำให้ได้ ≥ 38 ข้อ จาก 50 ข้อ (75%)<br>
+      <b>📌 เคล็ดลับ:</b> เน้นหมวดที่มีคะแนนเยอะก่อน:
+      <ul>
+        <li>Breach (10 ข้อ) ← มากที่สุด</li>
+        <li>Security (9 ข้อ)</li>
+        <li>ฐานทางกฎหมาย (8 ข้อ)</li>
+        <li>DSR (6 ข้อ)</li>
+        <li>Cross-border (5 ข้อ)</li>
+      </ul>
+      รวม 38 ข้อ — ถ้าทำได้หมด = ผ่านพอดี!
+    </div>
+
+    <h3>⚡ Quick Tips ก่อนสอบ</h3>
+    <div class="info-box">
+      <b>5 ตัวเลขสำคัญที่ต้องจำ:</b>
+      <ul>
+        <li><b>30 วัน</b> — ตอบ DSR (ม.30)</li>
+        <li><b>72 ชั่วโมง</b> — แจ้ง Breach</li>
+        <li><b>15 วัน</b> — Breach เกิน 72 ชม.</li>
+        <li><b>90 วัน</b> — ลบข้อมูล / Audit Log</li>
+        <li><b>5-3-1 ล้าน</b> — โทษ ม.84/83/85</li>
+      </ul>
+    </div>
+
+    <div class="warn-box">
+      <b>📌 ที่กรรมการเน้นใน 5 ข้อตัวอย่าง:</b>
+      <ol>
+        <li><b>DPA</b> ทำเมื่อจ้าง Vendor พัฒนาระบบ → <b>(b)</b></li>
+        <li><b>DPO ม.41</b> ไม่ใช่เกณฑ์ — ระบบอัตโนมัติเฉย ๆ → <b>(a)</b></li>
+        <li><b>ฐานยื่นภาษี</b> = Legal Obligation → <b>(b)</b></li>
+        <li><b>Compliance Audit</b> = Organizational Measure → <b>(a)</b></li>
+        <li><b>หน้าที่ DPO</b> ม.42 = ตรวจสอบการดำเนินงาน → <b>(c)</b></li>
+      </ol>
+    </div>
+
+    <p style="margin-top:14px;text-align:center">
+      <b style="color:var(--primary);font-size:16px">👉 กดปุ่ม "🎯 Quiz" ด้านบน แล้วเลือกฟิลเตอร์ "🔥 เก็งข้อสอบ" เพื่อทำข้อสอบ</b>
+    </p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <p><b>DPO Master Study Hub</b> — เตรียมสอบ DPO ระดับ 5 (TPQI)</p>
+  <p>สอบศุกร์ 8 พ.ค. 2569 16:00 น. · 504 ข้อสอบ · บันทึกใน localStorage</p>
+  <p style="margin-top:10px;color:var(--primary);font-weight:700">💪 โชคดีกับการสอบครับ! สู้ ๆ</p>
+</footer>
+
+<script>
+document.querySelectorAll(".tab-btn").forEach(btn=>{
+  btn.addEventListener("click",()=>{
+    const tab=btn.dataset.tab;
+    document.querySelectorAll(".tab-btn").forEach(b=>b.classList.remove("active"));
+    document.querySelectorAll(".section").forEach(s=>s.classList.remove("active"));
+    btn.classList.add("active");
+    document.getElementById("tab-"+tab).classList.add("active");
+    window.scrollTo({top:0,behavior:"smooth"});
+  });
+});
+</script>
+
+<script>
+const QUESTIONS=[
+{q:"พ.ร.บ. PDPA บังคับใช้เต็มรูปแบบเมื่อใด",cat:"ขอบเขต",c:["27 พ.ค. 2562","27 พ.ค. 2563","1 มิ.ย. 2564","1 มิ.ย. 2565"],ans:3,ex:"ตอบ ง. 1 มิ.ย. 2565 — เลื่อน 2 ครั้งจากเดิม"},
+{q:"ข้อมูลส่วนบุคคลตาม ม.6 ของไทย รวมถึงข้อมูลของใคร",cat:"ขอบเขต",c:["รวมผู้ตาย","ไม่รวมผู้ตาย","เฉพาะคนไทย","ทั้งบุคคลธรรมดาและนิติบุคคล"],ans:1,ex:"ม.6 ไม่รวมข้อมูลของผู้ถึงแก่กรรม"},
+{q:"กรณีใดได้รับยกเว้น พ.ร.บ. ตาม ม.4(1)",cat:"ขอบเขต",c:["บริษัทรับสมัครงาน","บุคคลเก็บรายชื่อเพื่อนในมือถือเพื่อใช้ส่วนตัว","ห้างทำสมาชิก","สมาคมไม่แสวงกำไร"],ans:1,ex:"ม.4(1) ยกเว้นเพื่อประโยชน์ส่วนตน/ครอบครัวล้วน ๆ"},
+{q:"ม.5 Extra-territorial Scope ใช้กับใคร",cat:"ขอบเขต",c:["บริษัทไทยเท่านั้น","ผู้อยู่ต่างประเทศที่เสนอสินค้าให้คนในไทย หรือ Monitor พฤติกรรมคนในไทย","ทุกบริษัทที่ใช้ Cloud","คนไทยในต่างประเทศ"],ans:1,ex:"ม.5 วรรค 2 — Extra-territorial"},
+{q:"ม.4 วรรคสาม กำหนดอะไรกับหน่วยงานที่ได้รับยกเว้น (2)-(6)",cat:"ขอบเขต",c:["ไม่ต้องทำอะไร","ต้องจัดให้มีมาตรการรักษาความมั่นคงปลอดภัย","ต้องแต่งตั้ง DPO","ต้องแจ้ง สคส."],ans:1,ex:"ม.4 วรรคสาม — มาตรการ Security ตามมาตรฐาน กคส."},
+{q:"กรณีตำรวจขอข้อมูลเพื่อสอบสวนคดีอาญา ใช้ฐานยกเว้นใด",cat:"ขอบเขต",c:["ม.4(1)","ม.4(2) + ม.4(5)","ม.4(3)","ไม่มียกเว้น"],ans:1,ex:"ข้อหารือ 14/2566 — รวม ม.4(2) ความปลอดภัยประชาชน + ม.4(5) กระบวนการยุติธรรมอาญา"},
+{q:"นาย B เก็บข้อมูลของผู้ตายเพื่อทำชีวประวัติ",cat:"ขอบเขต",c:["ต้องปฏิบัติตาม PDPA","ไม่ใช่ Personal Data ตาม ม.6","ต้องขอ Consent","ต้องแจ้ง สคส."],ans:1,ex:"ข้อมูลผู้ตายไม่ใช่ Personal Data"},
+{q:"VIN (Vehicle Identification Number) ตาม Case Scania",cat:"ขอบเขต",c:["ไม่ใช่ Personal Data","เป็น Personal Data — เพราะเชื่อมโยงกับเจ้าของรถได้","เป็น Sensitive","ขึ้นกับสี"],ans:1,ex:"Case C-319/22 — CJEU ตัดสิน VIN = Personal Data ในมือผู้ผลิต"},
+{q:"Encrypted Data ตาม PDPA",cat:"ขอบเขต",c:["ไม่ใช่ Personal Data","ยังเป็น Personal Data หากระบุตัวได้","Anonymous Data","ขึ้นกับ Algorithm"],ans:1,ex:"ข้อหารือ 5/2568 — Encrypted/Hashed ยังเป็น Personal Data"},
+{q:"Pseudonymous Data ต่างจาก Anonymous",cat:"ขอบเขต",c:["เหมือนกัน","Pseudo = Token (Re-identify ได้) / Anony = ลบความเชื่อมโยง","Pseudo ใช้ AI","Anony เร็วกว่า"],ans:1,ex:"Pseudo อยู่ใน PDPA / Anony ออกจาก PDPA"},
+{q:"คณะกรรมการ กคส. มีกรรมการผู้ทรงคุณวุฒิกี่คน",cat:"ขอบเขต",c:["5","7","9","11"],ans:2,ex:"ม.8 — 9 คน"},
+{q:"\"พนักงานเจ้าหน้าที่\" ตาม PDPA หมายถึง",cat:"ขอบเขต",c:["DPO","ผู้ที่รัฐมนตรีแต่งตั้ง","พนักงานบริษัท","ตำรวจ"],ans:1,ex:"ม.6 — ที่รัฐมนตรีแต่งตั้ง"},
+{q:"รัฐมนตรีรักษาการ พ.ร.บ. PDPA",cat:"ขอบเขต",c:["รมว.ยุติธรรม","รมว.DES","นายกรัฐมนตรี","รมว.มหาดไทย"],ans:1,ex:"ม.7 — รมว.ดิจิทัลเพื่อเศรษฐกิจและสังคม"},
+{q:"ข้อใดเป็น Direct Identifier",cat:"ขอบเขต",c:["IP Address","วันเกิด","เลขบัตรประชาชน","ตำแหน่งงาน"],ans:2,ex:"ประกาศการลบ ข้อ 6(1)"},
+{q:"ข้อใดเป็น Indirect Identifier",cat:"ขอบเขต",c:["ชื่อ","ทะเบียนรถ","IP Address","Email"],ans:2,ex:"ประกาศการลบ ข้อ 6(2)"},
+{q:"คณะกรรมการ กคส. มีวาระกี่ปี",cat:"ขอบเขต",c:["2 ปี","3 ปี","4 ปี","5 ปี"],ans:2,ex:"ม.10 — 4 ปี (ไม่เกิน 2 วาระ)"},
+{q:"คณะแพทย์ของมหาวิทยาลัยเป็น Controller หรือไม่",cat:"ขอบเขต",c:["เป็น","ไม่ใช่ — มหาวิทยาลัยเป็น Controller","ขึ้นกับคำสั่ง","ทั้งคณะและมหาวิทยาลัยเป็น Joint"],ans:1,ex:"ข้อหารือ ม.อ. — มหาวิทยาลัยเป็นนิติบุคคล คณะไม่เป็น"},
+{q:"พ.ร.ฎ. ม.4 วรรคสอง พ.ศ.2566 ยกเว้นหน่วยงานใด",cat:"ขอบเขต",c:["มหาดไทย","ป.ป.ช., ป.ป.ท., สรรพากร, ศุลกากร, สรรพสามิต","ทุกกระทรวง","ตำรวจ"],ans:1,ex:"พ.ร.ฎ. ม.6+ม.7 — ยกเว้นหมวด 2+3"},
+{q:"กรณีใช้บัตรเครดิตแบบ Loyalty Card ที่ตรวจประวัติได้",cat:"ขอบเขต",c:["ไม่ใช่ Monitoring","Regular and Systematic Monitoring","Anonymous","ไม่อยู่ใต้ PDPA"],ans:1,ex:"ประกาศ DPO ม.41(2) — เป็น Regular Systematic Monitoring"},
+{q:"PDPA ไทยใช้ใดเป็นต้นแบบหลัก",cat:"ขอบเขต",c:["HIPAA","GDPR EU","PIPL จีน","APPI ญี่ปุ่น"],ans:1,ex:"GDPR คือต้นแบบหลัก"},
+{q:"การติดตั้ง CCTV เพื่อความปลอดภัย ใช้ฐานใด",cat:"Lawful",c:["ม.24(2)","ม.24(3)","ม.24(5) Legitimate Interest + LIA","ม.24(7)"],ans:2,ex:"ม.24(5) LI + ทำ LIA + ติดป้าย"},
+{q:"การจ่ายเงินเดือน ใช้ฐานใดเป็นหลัก",cat:"Lawful",c:["ม.24(7)","ม.24(3) Contract","ม.24(5)","ม.24(2)"],ans:1,ex:"สัญญาจ้าง + ม.24(6) Legal สำหรับภาษี"},
+{q:"LIA มี 3 Tests อะไรบ้าง",cat:"Lawful",c:["Privacy/Security/Compliance","Purpose/Necessity/Balancing","Risk/Impact/Control","Consent/Contract/Legal"],ans:1,ex:"3 Tests สำคัญของ LIA"},
+{q:"ผู้เยาว์อายุ 12 ปี ขอ Consent",cat:"Lawful",c:["ให้เองได้ทุกกรณี","ต้องได้ความยินยอมจากผู้ใช้อำนาจปกครอง เว้นแต่ทำเองได้ตาม ปพพ.","ห้ามเก็บ","ใช้ LI"],ans:1,ex:"ม.19 + ปพพ. — เกณฑ์ 10 ปี"},
+{q:"การถอน Consent มีผลอย่างไร",cat:"Lawful",c:["ทำให้ทั้งหมดเป็นโมฆะ","คืนเงิน","ไม่กระทบที่ทำไปแล้ว","ลงโทษ"],ans:2,ex:"ม.19 — ไม่กระทบความชอบของการประมวลผลที่ทำไปแล้ว"},
+{q:"หาก Switching Lawful Basis จาก Consent → LI",cat:"Lawful",c:["ทำได้","ไม่ได้ — ต้องเลือกฐานตั้งแต่ต้น","ทำได้แค่ครั้งเดียว","ขึ้นกับลูกค้า"],ans:1,ex:"ข้อหารือ 5/2566 ธนาคาร จ. — Switching ห้าม"},
+{q:"การยื่นภาษีต่อกรมสรรพากร ใช้ฐาน",cat:"Lawful",c:["ม.24(3)","ม.24(5)","ม.24(6) Legal Obligation","ม.24(7)"],ans:2,ex:"ปฏิบัติตามประมวลรัษฎากร"},
+{q:"การติดต่อพนักงานบริษัทลูกค้า B2B",cat:"Lawful",c:["ม.24(3)","ม.24(5) LI","ม.24(6)","ม.24(7)"],ans:1,ex:"ข้อมูลผู้ติดต่อ B2B = LI"},
+{q:"ฐานทางกฎหมายใดที่ \"ถอนได้ตลอด\"",cat:"Lawful",c:["Contract","Legal","LI","Consent"],ans:3,ex:"Consent ถอนได้ตลอด"},
+{q:"เก็บข้อมูลจากแหล่งอื่น (ไม่ใช่ Data Subject) ตาม ม.25",cat:"Lawful",c:["ห้ามเด็ดขาด","แจ้งภายใน 30 วัน + Consent หรือใช้ ม.24/26","แจ้ง 7 วัน","ไม่ต้องทำอะไร"],ans:1,ex:"ม.25 — แจ้ง 30 วัน"},
+{q:"ส่ง SMS โฆษณาให้ลูกค้า ใช้ฐานใด",cat:"Lawful",c:["LI","Contract","ม.24(7) Consent","Public Task"],ans:2,ex:"Direct Marketing = Consent"},
+{q:"การจ้าง Vendor ขนส่งสินค้า + ส่งข้อมูลผู้รับ ใช้ฐาน",cat:"Lawful",c:["Consent","ม.24(3) Contract","LI","Legal"],ans:1,ex:"จำเป็นเพื่อปฏิบัติตามสัญญาซื้อ-ขาย"},
+{q:"การประเมินการทำงานของลูกจ้าง (Performance) ใช้ฐาน",cat:"Lawful",c:["Consent","ม.24(3) Contract + LI","Public Task","Vital Interest"],ans:1,ex:"ฐานสัญญาจ้าง + บริหาร HR"},
+{q:"Whistle Blowing System ใช้ฐานใด",cat:"Lawful",c:["Consent","LI","Public Task","Vital"],ans:1,ex:"UK ICO — LI ตัวอย่าง"},
+{q:"การประมวลผลเพื่อวิจัยทางการแพทย์ ใช้ฐาน ม.26 ใด",cat:"Lawful",c:["วรรคหนึ่ง","ม.26(5)(ก)","ม.26(5)(ง) วิจัย","ม.26(5)(จ)"],ans:2,ex:"ม.26(5)(ง) — วิจัยทางวิทยาศาสตร์"},
+{q:"ตาม Reasonable Expectation Test ใครคาดหมายไม่ได้",cat:"Lawful",c:["CCTV ในธนาคาร","CCTV ในห้องสุขา","พนักงานทราบว่าถูก Background Check","ลูกค้ารับ Newsletter ที่สมัคร"],ans:1,ex:"CCTV ห้องสุขา = เกินคาดหมาย"},
+{q:"กรณี Up-sale ผลิตภัณฑ์เกี่ยวเนื่อง (ATM ↔ Mobile Banking)",cat:"Lawful",c:["Consent เท่านั้น","LI ได้ ผ่าน LIA","Public Task","Vital"],ans:1,ex:"ข้อหารือ 5/2566 — LI ได้ผ่าน LIA"},
+{q:"Forced Consent ตาม ม.19 วรรคสี่ ใช้ในกรณี",cat:"Lawful",c:["ห้ามเด็ดขาด","กำหนดเป็นเงื่อนไขในการเข้าทำสัญญาที่จำเป็นต่อการให้บริการ","ใช้กับเด็ก","ใช้เฉพาะรัฐ"],ans:1,ex:"ม.19 วรรคสี่ — Consent บังคับได้หากจำเป็น"},
+{q:"การคัดกรอง KYC ของกรรมการคู่ค้า ใช้ฐานใดสำหรับ Sensitive",cat:"Lawful",c:["LI","Explicit Consent ม.26 วรรคหนึ่ง","Vital","Public Task"],ans:1,ex:"ประวัติคดี = Sensitive ต้อง Explicit Consent"},
+{q:"การใช้ AI Profiling ทำโฆษณา (Behavioral Advertising)",cat:"Lawful",c:["LI ได้","Consent เท่านั้น","Contract","Vital"],ans:1,ex:"EDPB Guidelines 1/2024 — เกินคาดหมาย ต้อง Consent"},
+{q:"ข้อใดเป็น Sensitive Data ตาม ม.26",cat:"Sensitive",c:["ชื่อ","เลขบัตรประชาชน","ข้อมูลสุขภาพ","ที่อยู่"],ans:2,ex:"ม.26 — ข้อมูลสุขภาพ"},
+{q:"Face Recognition ที่ใช้ระบุตัวเป็นข้อมูลใด",cat:"Sensitive",c:["ทั่วไป","Biometric Sensitive","Genetic","ไม่ใช่ Personal"],ans:1,ex:"ม.26 วรรคสอง — Biometric"},
+{q:"CCTV ทั่วไปที่ไม่ใช่ Face Recognition",cat:"Sensitive",c:["Sensitive","Personal Data ทั่วไป","ไม่ใช่ Personal","Biometric"],ans:1,ex:"CCTV ทั่วไป = Personal Data ทั่วไป"},
+{q:"การตรวจประวัติอาชญากรรมผู้สมัครงาน บริษัทเอกชนต้องใช้ฐาน",cat:"Sensitive",c:["LI","Explicit Consent ม.26 วรรคหนึ่ง","Contract","Legal"],ans:1,ex:"บริษัทเอกชน — Explicit Consent"},
+{q:"ม.26 มีข้อยกเว้นวรรคห้ากี่กลุ่ม",cat:"Sensitive",c:["3","4","5","6"],ans:2,ex:"5 กลุ่ม: (1) Vital (2) มูลนิธิ (3) เปิดเผย (4) สิทธิเรียกร้อง (5) กฎหมาย"},
+{q:"การตรวจสุขภาพประจำปี ใช้ฐาน",cat:"Sensitive",c:["Explicit Consent","ม.26(5)(ก) อาชีวเวชศาสตร์","ม.26(5)(ค)","ม.26(1)"],ans:1,ex:"อาชีวเวชศาสตร์ตามกฎหมายแรงงาน"},
+{q:"การส่งใบรับรองแพทย์ให้กองทุนเงินทดแทน",cat:"Sensitive",c:["Explicit Consent","ม.26(5)(ก)","ม.26(5)(ค) คุ้มครองแรงงาน","ม.26(5)(ง)"],ans:2,ex:"พ.ร.บ.เงินทดแทน + คุ้มครองแรงงาน"},
+{q:"ส่งข้อมูลสุขภาพให้บริษัทประกันกลุ่ม (External)",cat:"Sensitive",c:["ม.26(5)(ค)","Explicit Consent ม.26 วรรคหนึ่ง","ม.26(5)(ก)","Contract"],ans:1,ex:"ข้อหารือ DGA — บริษัทประกัน = บุคคลอื่น ต้อง Explicit Consent"},
+{q:"การเก็บข้อมูลเพื่อการรักษาในโรงพยาบาล",cat:"Sensitive",c:["Vital เท่านั้น","Explicit Consent + ม.26(5)(ก) การรักษา","Public Task","Legal"],ans:1,ex:"ม.26(5)(ก) — การรักษาทางการแพทย์"},
+{q:"ความเชื่อทางศาสนาในใบสมัครงาน",cat:"Sensitive",c:["เก็บได้","ห้ามเก็บโดยไม่จำเป็น (Data Minimization)","เก็บได้หากเปิดเผย","เก็บได้ถ้าบริษัทศาสนา"],ans:1,ex:"ม.22 + ม.26 — ไม่จำเป็นต้องเก็บ"},
+{q:"ข้อมูลพันธุกรรม (Genetic) จัดเป็น",cat:"Sensitive",c:["ทั่วไป","Sensitive ตาม ม.26","ไม่ใช่ Personal","Biometric"],ans:1,ex:"ม.26 — Genetic Data"},
+{q:"\"การเก็บประวัติอาชญากรรม\" ตาม ม.26 วรรคสอง",cat:"Sensitive",c:["ห้ามเด็ดขาด","ห้าม เว้นแต่ภายใต้หน่วยงานที่มีอำนาจตามกฎหมาย หรือมีมาตรการคุ้มครองที่เหมาะสม","ทำได้เสมอ","ใช้ LI"],ans:1,ex:"ม.26 วรรคสอง"},
+{q:"ห้องน้ำในที่ทำงานติด CCTV",cat:"Sensitive",c:["ทำได้ถ้าติดป้าย","ห้าม — ละเมิดสิทธิอย่างร้ายแรง","ทำได้ถ้าเป็นพนักงานหญิง","ทำได้ในเครือเดียวกัน"],ans:1,ex:"ละเมิดความเป็นส่วนตัวขั้นพื้นฐาน"},
+{q:"กรณีบุคคลให้ Consent ลบประวัติ — ใช้ฐาน",cat:"Sensitive",c:["ม.26(3) เปิดเผยต่อสาธารณะ + Explicit Consent","Vital","Public","Legal"],ans:0,ex:"ม.26(3) — เปิดเผยด้วย Explicit Consent"},
+{q:"การประมวลผลข้อมูลของกลุ่ม LGBTQ+",cat:"Sensitive",c:["ทั่วไป","Sensitive (พฤติกรรมทางเพศ) หากใช้ระบุพฤติกรรมทางเพศ","Biometric","ไม่ต้องคุ้มครอง"],ans:1,ex:"ข้อหารือ 10/2568 — ขึ้นกับวัตถุประสงค์"},
+{q:"ระยะเวลาตอบกลับ DSR ม.30",cat:"DSR",c:["7 วัน","15 วัน","30 วัน","60 วัน"],ans:2,ex:"ม.30 — 30 วัน"},
+{q:"Data Portability ม.31 ใช้กับฐานใด",cat:"DSR",c:["ทุกฐาน","Consent + Contract เท่านั้น","Legal","Public Task"],ans:1,ex:"ม.31 จำกัด"},
+{q:"Direct Marketing คัดค้านได้ไหม",cat:"DSR",c:["ปฏิเสธได้","สิทธิเด็ดขาด ปฏิเสธไม่ได้","ต้องส่งเอกสาร","มีค่าใช้จ่าย"],ans:1,ex:"ม.32(2) — เด็ดขาด"},
+{q:"พนักงานขอแก้ Performance คะแนนต่ำ",cat:"DSR",c:["แก้ทันที","ปฏิเสธ — Opinion ไม่ใช่ข้อเท็จจริง บันทึกใน RoPA","ลบทั้งหมด","ส่งให้ DPO"],ans:1,ex:"ม.36 ใช้กับ Factual ไม่ใช่ Opinion"},
+{q:"พนักงานขอแก้หมู่เลือดที่ผิด",cat:"DSR",c:["ปฏิเสธ","แก้ไขทันที + แจ้ง Processor","ขอ Consent ใหม่","ส่งให้สำนักงาน"],ans:1,ex:"ม.36 — ข้อเท็จจริงต้องแก้ไข"},
+{q:"ม.33 วรรคสอง ข้อยกเว้นการลบมีกี่ข้อ",cat:"DSR",c:["5","6","7","8"],ans:2,ex:"7 ข้อยกเว้น"},
+{q:"อดีตพนักงานขอลบสลิปเงินเดือน 5 ปี",cat:"DSR",c:["ลบทันที","ปฏิเสธ — กฎหมายบัญชี/ภาษี","ลบบางส่วน","ส่งสำนักงาน"],ans:1,ex:"ม.33 วรรคสอง — ปฏิบัติตามกฎหมาย"},
+{q:"พนักงานบาดเจ็บฟ้องบริษัท ขอระงับใช้รายงาน",cat:"DSR",c:["ระงับ","ปฏิเสธ — ใช้ต่อสู้สิทธิ","Need Info","ลบ"],ans:1,ex:"ม.33/34 วรรคสอง — สิทธิเรียกร้อง"},
+{q:"ผู้มาติดต่อขอ CCTV ทั้งหมด",cat:"DSR",c:["ให้ทั้งหมด","Partial + Mask + แนะนำผ่านพนักงานสอบสวน","ปฏิเสธ","ลบ"],ans:1,ex:"ม.30 วรรคสอง — กระทบบุคคลอื่น"},
+{q:"ลูกค้ากด Unsubscribe Newsletter",cat:"DSR",c:["รอ 30 วัน","หยุดทันที + ใส่ Suppression List","ปฏิเสธ","ขอเหตุผล"],ans:1,ex:"ม.32(2) สิทธิเด็ดขาด"},
+{q:"กรณีตอบ DSR ไม่ทัน 30 วัน",cat:"DSR",c:["ปฏิเสธ","ขยายได้ + แจ้งเหตุผล","คืนเงิน","ลงโทษ"],ans:1,ex:"ขยายเวลาได้กรณีจำเป็น"},
+{q:"ค่าธรรมเนียม DSR",cat:"DSR",c:["คิดทุกครั้ง","ครั้งแรกฟรี — ซ้ำซ้อน/มากเกินคิดได้","ฟรีทุกครั้ง","ขึ้นกับประเภท"],ans:1,ex:"ครั้งแรกฟรี"},
+{q:"พนักงานขอเข้าถึงผลสัมภาษณ์ + ความเห็นกรรมการ",cat:"DSR",c:["ให้ทั้งหมด","Partial + Mask ความเห็นกรรมการ","ปฏิเสธ","ส่งกรรมการตอบ"],ans:1,ex:"ม.30 วรรคสอง"},
+{q:"การ Anonymize ข้อมูล มีสิทธิ DSR ไหม",cat:"DSR",c:["มี","ไม่มี — ออกจาก PDPA","มีบางส่วน","ขึ้นกับเจ้าของ"],ans:1,ex:"Anonymized ออกจากขอบเขต"},
+{q:"มอบอำนาจให้ทนายใช้สิทธิ DSR",cat:"DSR",c:["ห้าม","ทำได้ + ตรวจหนังสือมอบอำนาจ","ทำได้เฉพาะ Sensitive","ทำเองเท่านั้น"],ans:1,ex:"มอบอำนาจได้ ม.20"},
+{q:"Controller ตาม ม.6 หมายถึง",cat:"Controller",c:["ผู้ทำตามคำสั่ง","ผู้กำหนดวัตถุประสงค์ + วิธีการ","ผู้รักษาความลับ","DPO"],ans:1,ex:"ม.6 — Mean + Purpose"},
+{q:"Processor ทำนอกคำสั่ง Controller",cat:"Controller",c:["ไม่มีผล","ถือเป็น Controller สำหรับการนั้น","ต้องคืนข้อมูล","แจ้ง สคส."],ans:1,ex:"ม.40 วรรคสอง"},
+{q:"DPA บังคับทำหรือไม่",cat:"Controller",c:["ไม่บังคับ","บังคับ ม.40 วรรคสาม","ขึ้นกับสัญญา","เฉพาะรัฐ"],ans:1,ex:"ม.40 วรรค 3 — บังคับ"},
+{q:"Sub-processor ต้องทำอย่างไร",cat:"Controller",c:["ทำได้อิสระ","ต้องได้รับอนุญาต Controller + DPA ทอด","ห้ามใช้","แจ้งสำนักงาน"],ans:1,ex:"DPA ต้องครอบคลุม Sub-processor"},
+{q:"ส่วนงานภายในนิติบุคคลเป็น Controller แยก?",cat:"Controller",c:["เป็นแยก","ไม่ — นิติบุคคลเดียวเป็น Controller เดียว","ขึ้นกับขนาด","ขึ้นกับสัญญา"],ans:1,ex:"ข้อหารือ ปลัดกลาโหม + สสว."},
+{q:"DSA (Data Sharing Agreement) บังคับทำไหม",cat:"Controller",c:["บังคับ","ไม่บังคับ — เป็น Best Practice / Organizational Measure","เฉพาะ Sensitive","เฉพาะ Cross-border"],ans:1,ex:"PDPA ไม่บังคับ DSA"},
+{q:"Apple ใช้ Cloud จากสหรัฐ — Apple ไทย เป็น",cat:"Controller",c:["Processor","Controller (มีอำนาจตัดสินใจในไทย)","Sub-processor","ไม่เกี่ยว"],ans:1,ex:"ขึ้นกับ Decisive Influence"},
+{q:"กรณีใดที่ Joint Controller",cat:"Controller",c:["Cloud Service ทั่วไป","ทั้งสองฝ่ายร่วมกำหนด Mean + Purpose","Outsourcing","Reseller"],ans:1,ex:"ทั้งสองมี Decisive Influence ร่วม"},
+{q:"คณะแพทย์ ม.อ. ให้บริการ — Controller คือ",cat:"Controller",c:["คณะแพทย์","มหาวิทยาลัยสงขลานครินทร์","ทั้งสอง","หัวหน้าภาควิชา"],ans:1,ex:"ม.อ. เป็นนิติบุคคล"},
+{q:"Controller ต่างประเทศที่ขายให้คนไทย ต้องทำอะไร",cat:"Controller",c:["ไม่ต้อง","แต่งตั้งตัวแทนในไทยเป็นหนังสือ + แจ้งสำนักงาน","แค่แจ้งสำนักงาน","สมัครใจ"],ans:1,ex:"ม.37(5) + ม.38"},
+{q:"ม.28 vs ม.29 ต่างกันอย่างไร",cat:"Cross",c:["ม.28 ทั่วไป / ม.29 เครือกิจการ (BCR)","ม.28 รัฐ / ม.29 เอกชน","ไม่ต่าง","ม.28 EU / ม.29 USA"],ans:0,ex:"ม.29 = BCR สำหรับเครือกิจการ"},
+{q:"Standard Contractual Clauses (SCC) ที่ยอมรับได้",cat:"Cross",c:["EU SCC + ASEAN MCC","Apple SCC","Google SCC","Microsoft SCC"],ans:0,ex:"ประกาศ ม.29 — EU SCC + ASEAN MCC"},
+{q:"Data Transit ต่างจาก Data Transfer",cat:"Cross",c:["เหมือนกัน","Transit = ส่งผ่านโดยไม่มีเจตนาเข้าถึง / Transfer = มี","Transit เร็วกว่า","Transfer ใช้ Cloud เท่านั้น"],ans:1,ex:"ประกาศ ม.28-29"},
+{q:"Cloud Service ต่างประเทศ + Remote Access",cat:"Cross",c:["ไม่ใช่ Transfer","ใช่ Transfer (อยู่ใต้ ม.28)","Transit","ไม่ใช่ Personal Data"],ans:1,ex:"นิยามตามประกาศ"},
+{q:"Adequacy Decision (Whitelist) ออกโดย",cat:"Cross",c:["รัฐมนตรี","กคส.","สคส.","DPO"],ans:1,ex:"คณะกรรมการคุ้มครองข้อมูลส่วนบุคคล"},
+{q:"Appropriate Safeguards ตาม ม.29 วรรคสาม มี",cat:"Cross",c:["1 รูปแบบ","2 รูปแบบ","3 รูปแบบ (Contractual + Certification + Public Org Agreement)","4 รูปแบบ"],ans:2,ex:"3 รูปแบบ"},
+{q:"Certification ตาม ม.29 ต้องเป็นเรื่องใด",cat:"Cross",c:["ISO 27001","Cross-border Transfer โดยเฉพาะ","Privacy ทั่วไป","Information Security"],ans:1,ex:"ต้องเฉพาะ Cross-border"},
+{q:"BCR ต้องผ่านความเห็นชอบจากใคร",cat:"Cross",c:["รัฐมนตรี","สำนักงาน คคส.","ครม.","DPO"],ans:1,ex:"ม.29 วรรคสอง"},
+{q:"ม.28 ข้อยกเว้นมีกี่กรณี",cat:"Cross",c:["3","4","5","6"],ans:3,ex:"6 ข้อยกเว้น (Derogations)"},
+{q:"ASEAN MCC คือ",cat:"Cross",c:["ASEAN Model Contractual Clauses","ASEAN Master Cloud Contract","ASEAN Model Compliance Code","ASEAN Mutual Cooperation"],ans:0,ex:"Standard Clauses ของอาเซียน"},
+{q:"CIA Triad ประกอบด้วย",cat:"Security",c:["Control/Integrity/Audit","Confidentiality/Integrity/Availability","Compliance/Information/Access","Care/Identity/Authority"],ans:1,ex:"พื้นฐานของ Information Security"},
+{q:"NIST Cybersecurity Framework 2.0 มีกี่ Functions",cat:"Security",c:["4","5","6 (เพิ่ม Govern)","7"],ans:2,ex:"Govern + Identify + Protect + Detect + Respond + Recover"},
+{q:"3 A's ของ User Security",cat:"Security",c:["Access/Audit/Action","Identification/Authentication/Authorization","Antivirus/Anti-malware/Anti-spam","API/App/Audit"],ans:1,ex:"3A สำคัญ"},
+{q:"Multi-Factor Authentication ใช้กี่ Factor",cat:"Security",c:["Something you know","Know + Have","Know + Have + Are","Know + Are"],ans:2,ex:"3 Types: Know/Have/Are"},
+{q:"New Password Standard แนะนำ",cat:"Security",c:["8 ตัว 3 เดือน","Passphrase 15-20 ตัว ไม่หมดอายุ","16 ตัว 6 เดือน","12 ตัว 1 ปี"],ans:1,ex:"NIST แนะนำ Passphrase + No Expiration"},
+{q:"Defense in Depth คือ",cat:"Security",c:["มาตรการเดียวที่แข็งแกร่ง","หลายชั้นมาตรการ (Multiple Layers)","Physical only","Network only"],ans:1,ex:"คาถา #1 ของ Cybersecurity"},
+{q:"3 Domains ที่สมดุลใน Cybersecurity",cat:"Security",c:["People/Process/Technology","Past/Present/Future","Policy/Procedure/Practice","Plan/Protect/Predict"],ans:0,ex:"คาถา #3"},
+{q:"Risk Treatment 4T",cat:"Security",c:["Treat/Test/Track/Trust","Treat/Transfer/Tolerate/Terminate","Threat/Treat/Test/Trust","Tolerate/Test/Track/Treat"],ans:1,ex:"ISO 31000"},
+{q:"\"กลางหัวใจ\" ในการโจมตี หมายถึง",cat:"Security",c:["Endpoints","Network","Servers","Database"],ans:2,ex:"Server attacks"},
+{q:"\"ระหว่างทาง\" ในการโจมตี หมายถึง",cat:"Security",c:["Endpoints","Network (Eavesdropping/MITM)","Server","Cloud"],ans:1,ex:"Network attacks"},
+{q:"แจ้ง Breach ต่อ สคส. ภายใน",cat:"Breach",c:["24 ชม.","48 ชม.","72 ชม.","30 วัน"],ans:2,ex:"ม.37(4) + ประกาศ"},
+{q:"กรณี Breach เกิน 72 ชม. ต้อง",cat:"Breach",c:["ปกปิด","แจ้งภายใน 15 วัน + ระบุเหตุผล","ปรับ","แจ้ง Data Subject เท่านั้น"],ans:1,ex:"15 วัน + เหตุผล"},
+{q:"3 ประเภท Breach",cat:"Breach",c:["High/Med/Low","Confidentiality/Integrity/Availability","External/Internal/Mixed","Tech/Process/People"],ans:1,ex:"CIA Breach"},
+{q:"ความเสี่ยงสูง = แจ้ง Data Subject เมื่อใด",cat:"Breach",c:["7 วัน","30 วัน","ไม่ชักช้า","ภายใน 1 ปี"],ans:2,ex:"\"โดยไม่ชักช้า\" + แนวทางเยียวยา"},
+{q:"ข้อมูล Encrypted รั่ว — ต้องแจ้ง Data Subject?",cat:"Breach",c:["ต้องแจ้ง","อาจไม่ต้องแจ้ง — ถ้าเข้ารหัสและถอดไม่ได้","ห้ามแจ้ง","ใน 24 ชม."],ans:1,ex:"ประกาศ — ลดความเสี่ยงแล้ว"},
+{q:"ภาระการพิสูจน์เหตุยกเว้นการแจ้ง Breach",cat:"Breach",c:["สคส.","Controller (Burden of Proof)","DPO","Auditor"],ans:1,ex:"ข้อ 9 วรรคสอง"},
+{q:"Personal Data Breach นิยามตามประกาศ",cat:"Breach",c:["Hacker เท่านั้น","สูญหาย/เข้าถึง/ใช้/เปลี่ยน/แก้ไข/เปิดเผย โดยมิชอบ","เฉพาะ External Attack","เฉพาะ Sensitive"],ans:1,ex:"นิยามครอบคลุม 6 อย่าง"},
+{q:"กรณี \"USB หาย\"",cat:"Breach",c:["ไม่ใช่ Breach","Availability/Confidentiality Breach — ต้องประเมิน + แจ้ง 72 ชม.","แจ้ง DPO เท่านั้น","ปกปิด"],ans:1,ex:"Loss of Device"},
+{q:"Breach Response 4 Phases (NIST)",cat:"Breach",c:["Plan/Do/Check/Act","Preparation/Detection/Containment+Recovery/Post-Incident","Identify/Protect/Detect/Respond","Read/Write/Update/Delete"],ans:1,ex:"NIST IR Lifecycle"},
+{q:"Data Forensics คือ",cat:"Breach",c:["Backup","การจัดเก็บหลักฐานดิจิทัล + Chain of Custody","Encryption","Anonymization"],ans:1,ex:"กระบวนการเก็บหลักฐาน"},
+{q:"กรณีใดต้องแต่งตั้ง DPO",cat:"DPO",c:["ทุกบริษัท","หน่วยงานรัฐ + Large Monitoring + Sensitive","เฉพาะใหญ่","เฉพาะรัฐ"],ans:1,ex:"ม.41 — 3 กรณี"},
+{q:"Large Scale ตามประกาศ DPO ม.41(2)",cat:"DPO",c:["10,000","50,000","100,000+","1,000,000"],ans:2,ex:"100,000 รายขึ้นไป"},
+{q:"DPO รายงานต่อใคร",cat:"DPO",c:["HR Manager","CFO","ผู้บริหารสูงสุด","DPO อื่น"],ans:2,ex:"ม.41 — รายงาน CEO/MD"},
+{q:"DPO ของเครือกิจการแต่งตั้งกี่คน",cat:"DPO",c:["แต่ละบริษัท","1 คนได้สำหรับทั้งกลุ่ม","อย่างน้อย 2","ตามจำนวนพนักงาน"],ans:1,ex:"ข้อหารือ 5/2568"},
+{q:"DPO รวมทุกกิจกรรมของบริษัท หรือเฉพาะที่ทำให้ต้องตั้ง?",cat:"DPO",c:["เฉพาะที่ทำให้ต้องตั้ง","ครอบคลุมทุกกิจกรรม","เฉพาะ Sensitive","เฉพาะ Marketing"],ans:1,ex:"ข้อหารือ 5/2568 — ทุกกิจกรรม"},
+{q:"DPO สามารถถูกเลิกจ้าง?",cat:"DPO",c:["ได้ทุกกรณี","ห้าม — เพราะปฏิบัติหน้าที่ตาม พ.ร.บ.","ตามดุลพินิจ","ขึ้นกับสัญญา"],ans:1,ex:"ม.41 วรรค 6"},
+{q:"หน้าที่ DPO 4 ข้อ",cat:"DPO",c:["บัญชี/ตรวจ/รายงาน/ฝึก","ให้คำแนะนำ/ตรวจ/ประสาน/รักษาความลับ","Coding/Testing/Audit/Report","Plan/Do/Check/Act"],ans:1,ex:"ม.42"},
+{q:"คุณสมบัติ DPO ที่ดี",cat:"DPO",c:["IT เท่านั้น","กฎหมายเท่านั้น","ความรู้ PDPA + เข้าใจธุรกิจ + อิสระ","นักบัญชี"],ans:2,ex:"3 องค์ประกอบ"},
+{q:"DPO ถูกแต่งตั้งจาก",cat:"DPO",c:["ภายในเท่านั้น","ภายนอกเท่านั้น","ภายในหรือภายนอก (Outsource ได้)","กรรมการเท่านั้น"],ans:2,ex:"ม.41 — แต่งตั้งทั้ง 2 แบบ"},
+{q:"จริยธรรม DPO ที่สำคัญที่สุด",cat:"DPO",c:["Integrity","Speed","Innovation","Cost-saving"],ans:0,ex:"ซื่อสัตย์ + รักษาความลับ"},
+{q:"โทษปกครอง Sensitive (ม.84) สูงสุด",cat:"โทษ",c:["1 ล้าน","3 ล้าน","5 ล้าน","10 ล้าน"],ans:2,ex:"ม.84 — 5 ล้าน"},
+{q:"โทษปกครอง DSR (ม.85)",cat:"โทษ",c:["500K","1 ล้าน","3 ล้าน","5 ล้าน"],ans:1,ex:"ม.85 — 1 ล้าน"},
+{q:"Punitive Damages ไม่เกิน",cat:"โทษ",c:["1 เท่า","2 เท่า","3 เท่า","5 เท่า"],ans:1,ex:"ม.78 — 2 เท่า"},
+{q:"อายุความฟ้องคดีแพ่ง",cat:"โทษ",c:["1 ปี","2 ปี","3 ปี","5 ปี"],ans:2,ex:"ม.79 — 3 ปี / ไม่เกิน 10 ปี"},
+{q:"ความรับผิดทางแพ่ง ม.77",cat:"โทษ",c:["ต้องพิสูจน์เจตนา","Strict Liability","ต้องผ่านศาล","ต้องประมาท"],ans:1,ex:"ไม่ต้องพิสูจน์"},
+{q:"กรรมการ/ผู้บริหาร รับผิดเมื่อ",cat:"โทษ",c:["ทุกกรณี","สั่งการ/มีส่วนรู้เห็น/ละเว้น","เมื่อนิติบุคคลผิด","เมื่อ DPO แจ้ง"],ans:1,ex:"ม.81"},
+{q:"คดี 7 ล้าน — ฝ่าฝืน 3 มาตรา",cat:"โทษ",c:["19/20/21","23/24/25","37(1)/37(4)/41(2)","30/31/32"],ans:2,ex:"Security + Breach + DPO"},
+{q:"คดี รพ. 1.21 ล้าน — ความผิดหลัก",cat:"โทษ",c:["ม.41 DPO","ม.37(1) Security + ไม่ติดตาม Processor","ม.31","ม.33"],ans:1,ex:"Security + DPA + Processor"},
+{q:"การอุทธรณ์โทษ",cat:"โทษ",c:["7 วัน","15 วัน","30 วัน","60 วัน"],ans:2,ex:"ม.76"},
+{q:"ขัดขวางคำสั่งกรรมการผู้เชี่ยวชาญ",cat:"โทษ",c:["ตักเตือน","ปรับ 500K (ม.87)","ปรับ 1 ล้าน","จำคุก"],ans:1,ex:"ม.87"},
+{q:"ISO/IEC 27701 คือ",cat:"ISO",c:["ISMS","PIMS (Privacy Information Management)","Risk Management","Audit"],ans:1,ex:"PIMS extension ของ 27001"},
+{q:"ISO 31000 คือ",cat:"ISO",c:["ISMS","Privacy Framework","Risk Management","DPIA"],ans:2,ex:"กรอบบริหารความเสี่ยง"},
+{q:"ISO/IEC 29134 คือ",cat:"ISO",c:["PIMS","DPIA Guidelines","ISMS","Risk Management"],ans:1,ex:"แนวทาง DPIA"},
+{q:"ISO/IEC 29100 มี Privacy Principles กี่ข้อ",cat:"ISO",c:["7","9","11","13"],ans:2,ex:"11 ข้อ"},
+{q:"4T ในการจัดการความเสี่ยง",cat:"ISO",c:["Treat/Test/Track/Trust","Treat/Transfer/Tolerate/Terminate","Test/Trust/Treat/Track","Tolerate/Test/Treat/Track"],ans:1,ex:"ISO 31000"},
+{q:"ISO 27001:2022 มี Controls กี่ controls",cat:"ISO",c:["93","114","133","250"],ans:0,ex:"93 (จาก 114 ใน 2013)"},
+{q:"ISO 27701 Annex A สำหรับ Controller",cat:"ISO",c:["18","31","93","114"],ans:1,ex:"31 controls"},
+{q:"ISO 27701 Annex B สำหรับ Processor",cat:"ISO",c:["18","31","93","114"],ans:0,ex:"18 controls"},
+{q:"ENISA คือ",cat:"ISO",c:["EU Privacy Authority","EU Cybersecurity Agency (Breach Severity)","US NIST","UN Body"],ans:1,ex:"European Union Agency for Cybersecurity"},
+{q:"ISACA คือ",cat:"ISO",c:["Privacy Org","IT Audit (COBIT/CISA)","Cloud","Crypto"],ans:1,ex:"Information Systems Audit and Control Association"},
+{q:"Case 7 ล้านบาท — มี 3 ความผิด",cat:"Case",c:["19+20+21","37(1)+37(4)+41(2)","30+31+32","23+24+25"],ans:1,ex:"Security + Breach + DPO"},
+{q:"Case รพ. 1.21 ล้าน — รั่วเรื่องอะไร",cat:"Case",c:["บัตรประชาชน","เวชระเบียนผู้ป่วยกลายเป็นถุงขนมโตเกียว","Email","Password"],ans:1,ex:"ขั้นตอนทำลายเอกสาร"},
+{q:"Case VW (Lower Saxony) — ค่าปรับ",cat:"Case",c:["100,000 ยูโร","500,000 ยูโร","1,100,000 ยูโร","5,000,000 ยูโร"],ans:2,ex:"DPA Lower Saxony"},
+{q:"Case Apple Deletion — DPC ตัดสินยังไง",cat:"Case",c:["Apple ผิดทั้งหมด","Apple ถูก — แค่ต้องโปร่งใสใน Notice","Apple ต้องคืนเงิน","ปิด Service"],ans:1,ex:"DPC Ireland"},
+{q:"Case Scania VIN — CJEU ตัดสิน",cat:"Case",c:["VIN ไม่ใช่ Personal Data","VIN เป็น Personal Data","VIN เป็น Sensitive","VIN ขึ้นกับสี"],ans:1,ex:"Case C-319/22"},
+{q:"ข้อหารือ 22/2566 — สถานีตำรวจ",cat:"Case",c:["DPO","ความรับผิดอาญาของกรรมการ ม.81","DSR","Cross-border"],ans:1,ex:"ม.81 ความรับผิด"},
+{q:"ข้อหารือ 5/2566 — ธนาคาร จ.",cat:"Case",c:["DPO","Switching Lawful Basis ห้าม","DSR","Sensitive"],ans:1,ex:"Switching ห้าม"},
+{q:"ข้อหารือ 5/2568 — บริษัท Y",cat:"Case",c:["DSA","แต่งตั้ง DPO รวมในเครือ","Cross-border","Breach"],ans:1,ex:"DPO รวม"},
+{q:"ข้อหารือ 10/2568 — ธนาคาร X",cat:"Case",c:["DPO","ฐานคุ้มครองแรงงาน ม.26(5)(ค)","Cross-border","Marketing"],ans:1,ex:"Welfare ตามสัญญา"},
+{q:"ข้อหารือ 4/2568 — บริษัท Z",cat:"Case",c:["DPO","ถอน Consent ผ่าน App","DSA","Breach"],ans:1,ex:"App ต้องถอนได้ง่าย"},
+{q:"Day 2 — โจทย์ #1 ขายข้อมูล รพ.",cat:"Case",c:["ไม่ใช่ Breach","Confidentiality Breach — แจ้ง สคส. 72 ชม.","ไม่ต้องทำอะไร","แจ้ง DPO เท่านั้น"],ans:1,ex:"Web App vulnerability"},
+{q:"Day 2 — โจทย์ #2 PDPC Eagle Eye แจ้งเอกสารบนเว็บ",cat:"Case",c:["ไม่ใช่ Breach","Confidentiality Breach + เลขประชาชน = High Risk","แค่แก้ไข","ปฏิเสธ"],ans:1,ex:"แจ้งทั้ง สคส. + Data Subject"},
+{q:"Day 2 — โจทย์ #4 เว็บฝัง URL พนัน",cat:"Case",c:["Personal Data Breach แน่นอน","Security Incident (อาจไม่ใช่ Personal Data Breach หากไม่ access DB)","แจ้ง สคส. ทันที","แจ้ง Data Subject"],ans:1,ex:"ตรวจ Log ก่อน — ขึ้นกับว่า data ถูก access"},
+{q:"NIST Framework มี Function ใดที่เพิ่มใน 2.0",cat:"Case",c:["Identify","Govern","Protect","Recover"],ans:1,ex:"Govern เพิ่มใหม่ใน 2.0"},
+{q:"Privacy vs Information Security — ต่างกันอย่างไร",cat:"Case",c:["เหมือนกัน","Privacy = Individual seclusion / IS = Protect data & systems","Privacy ใช้กับเอกชน / IS ใช้กับรัฐ","Privacy แพง","Privacy เป็น subset ของ IS"],ans:1,ex:"Wikipedia definitions"},
+{q:"คาถา #4 ของ Cybersecurity",cat:"Case",c:["Risk-Based Approach","Cost-Based","Compliance-Based","Tech-Based"],ans:0,ex:"Risk-Based"},
+{q:"BCR ตามประกาศ ม.29 ต้องมีองค์ประกอบ",cat:"Case",c:["3 ข้อ","5 ข้อ","กระบวนการ + ประเภทข้อมูล + ความรับผิดชอบ + การปกป้อง + Audit","ไม่กำหนด"],ans:2,ex:"ประกาศ BCR"},
+{q:"ASEAN MCC vs EU SCC",cat:"Case",c:["เหมือนกัน","ใช้ตาม Standard ของแต่ละองค์กร — ทั้ง 2 ใช้ใน ม.29 ได้","EU เท่านั้น","ASEAN เท่านั้น"],ans:1,ex:"ประกาศ ม.29 อนุญาตทั้ง 2"},
+{q:"ข้อหารือ 17/2567 — บริษัท X",cat:"Case",c:["DPO","การตีความแจ้ง Breach","DSA","Cross-border"],ans:1,ex:"Breach Interpretation"},
+{q:"ข้อหารือ 2/2569 — กรมสุขภาพจิต",cat:"Case",c:["DPO","แลกเปลี่ยนข้อมูลผู้ป่วยจิตเวชเสี่ยงสูง","Cross-border","Breach"],ans:1,ex:"PDPC Consultation"},
+{q:"ม.1 — พ.ร.บ.PDPA ชื่อเต็ม",cat:"รายมาตรา",c:["พ.ร.บ.ข้อมูลข่าวสาร 2540","พ.ร.บ.คุ้มครองข้อมูลส่วนบุคคล พ.ศ. 2562","พ.ร.บ.คอมพิวเตอร์ 2550","พ.ร.บ.ธุรกรรมอิเล็กทรอนิกส์"],ans:1,ex:"ม.1"},
+{q:"ม.2 — พ.ร.บ.บังคับใช้",cat:"รายมาตรา",c:["ทันที","พ้น 1 ปีหลังประกาศในราชกิจจา","พ้น 2 ปี","พ้น 5 ปี"],ans:1,ex:"ม.2 — เลื่อน 2 ครั้ง บังคับใช้ 1 มิ.ย. 2565"},
+{q:"ม.3 — ยกเว้น 6 กรณี ข้อใดไม่ใช่",cat:"รายมาตรา",c:["บุคคลธรรมดาเพื่อใช้ส่วนตัว","หน่วยงานความมั่นคง","สื่อมวลชน","บริษัทประกันภัย"],ans:3,ex:"บริษัทประกันภัยไม่อยู่ในข้อยกเว้น"},
+{q:"ม.4 วรรคสอง — ผู้ออกพ.ร.ฎ.ยกเว้นบางส่วน",cat:"รายมาตรา",c:["รัฐมนตรี","ครม.","นายกรัฐมนตรี","คณะกรรมการ"],ans:1,ex:"ออกโดยพระราชกฤษฎีกา (ครม.เป็นผู้เสนอ)"},
+{q:"ม.5 วรรค 1 — ผู้อยู่ในไทยประมวลผลในต่างประเทศ",cat:"รายมาตรา",c:["ไม่อยู่ใต้ พ.ร.บ.","อยู่ใต้ พ.ร.บ.","อยู่เฉพาะกรณี Sensitive","ขึ้นกับสัญญา"],ans:1,ex:"ม.5 วรรค 1 — Territorial Scope"},
+{q:"ม.5 วรรค 2 (1) — เสนอสินค้าให้คนในไทย",cat:"รายมาตรา",c:["ต้องมีสาขาในไทย","ไม่ว่ามีค่าตอบแทนหรือไม่","เฉพาะ E-commerce","เฉพาะ B2C"],ans:1,ex:"\"ไม่ว่าจะมีการชำระเงินหรือไม่ก็ตาม\""},
+{q:"ม.6 — \"ข้อมูลส่วนบุคคล\" ไม่รวมข้อมูลใคร",cat:"รายมาตรา",c:["คนต่างชาติ","ผู้เยาว์","ผู้ถึงแก่กรรม","นิติบุคคล"],ans:2,ex:"ม.6 — ไม่รวมผู้ถึงแก่กรรม"},
+{q:"ม.6 — Controller มีอำนาจตัดสินใจเรื่อง",cat:"รายมาตรา",c:["การเก็บ","การใช้","การเปิดเผย","ทั้งสามอย่าง"],ans:3,ex:"ม.6 — เก็บรวบรวม ใช้ เปิดเผย"},
+{q:"ม.7 — ผู้รักษาการ พ.ร.บ.",cat:"รายมาตรา",c:["รมว.ยุติธรรม","รมว.มหาดไทย","รมว.DES","รมว.ยุติธรรม + DES"],ans:2,ex:"ม.7 + ม.96 — DES"},
+{q:"ม.8 — กรรมการโดยตำแหน่งมีกี่คน",cat:"รายมาตรา",c:["3","5","7","9"],ans:1,ex:"ม.8 — 5 คน + กรรมการผู้ทรงคุณวุฒิ 9 คน"},
+{q:"ม.10 — วาระคณะกรรมการ",cat:"รายมาตรา",c:["2 ปี","3 ปี","4 ปี","6 ปี"],ans:2,ex:"ม.10 — 4 ปี ไม่เกิน 2 วาระ"},
+{q:"ม.16 — อำนาจหน้าที่ของคณะกรรมการมีกี่ข้อ",cat:"รายมาตรา",c:["6","8","10","12"],ans:2,ex:"ม.16 — 10 ข้อ"},
+{q:"ม.16(5) — กำหนดหลักเกณฑ์เรื่องใด",cat:"รายมาตรา",c:["DPO","Cross-border","Sensitive Data","Breach"],ans:1,ex:"ม.16(5) — ส่ง/โอนต่างประเทศ"},
+{q:"ม.16(6) — Code of Conduct",cat:"รายมาตรา",c:["ห้าม","ออกได้","เฉพาะรัฐ","เฉพาะ Sensitive"],ans:1,ex:"ม.16(6) — ประกาศข้อปฏิบัติ"},
+{q:"ม.19 — Consent ต้องเป็นรูปแบบใด",cat:"รายมาตรา",c:["ปากเปล่า","หนังสือ หรือ อิเล็กทรอนิกส์","Email เท่านั้น","ลายเซ็นเท่านั้น"],ans:1,ex:"ม.19 — หนังสือ/อิเล็กทรอนิกส์"},
+{q:"ม.19 วรรคสี่ — ห้ามใช้ Consent เป็น",cat:"รายมาตรา",c:["เงื่อนไขในการให้บริการที่ไม่จำเป็นต้องใช้ข้อมูล","หลักฐาน","สัญญา","ใบเสร็จ"],ans:0,ex:"ม.19 วรรคสี่"},
+{q:"ม.19 วรรคห้า — ถอน Consent",cat:"รายมาตรา",c:["ไม่ได้","ทำได้ทุกเมื่อ ง่ายเหมือนตอนให้","ภายใน 30 วัน","ครั้งเดียว"],ans:1,ex:"ม.19 วรรคห้า"},
+{q:"ม.20 — Consent ผู้เยาว์อายุไม่เกิน 10 ปี",cat:"รายมาตรา",c:["ให้เองได้","ผู้ใช้อำนาจปกครอง","ห้ามเก็บ","ใช้ฐานอื่น"],ans:1,ex:"ม.20 + ปพพ."},
+{q:"ม.21 — หลักการจำกัดวัตถุประสงค์",cat:"รายมาตรา",c:["Data Minimization","Purpose Limitation","Storage Limitation","Accuracy"],ans:1,ex:"ม.21 — Purpose Limitation"},
+{q:"ม.22 — หลักการเก็บเท่าที่จำเป็น",cat:"รายมาตรา",c:["Data Minimization","Purpose Limitation","Accuracy","Lawfulness"],ans:0,ex:"ม.22 — Data Minimization"},
+{q:"ม.23 — Privacy Notice ต้องแจ้งกี่รายการ",cat:"รายมาตรา",c:["4","5","6","8"],ans:2,ex:"ม.23 — 6 รายการหลัก"},
+{q:"ม.23(6) — ต้องแจ้งสิทธิตามมาตราใดบ้าง",cat:"รายมาตรา",c:["ม.30","ม.30-36","ม.30-32","ม.30-36 + 73 (ร้องเรียน)"],ans:3,ex:"ม.23(6) — สิทธิ ม.30-36 + ร้องเรียน"},
+{q:"ม.24 — ฐานทางกฎหมายมีกี่ฐาน (ไม่นับ Consent)",cat:"รายมาตรา",c:["4","5","6","7"],ans:2,ex:"ม.24 — 6 ฐาน (1)-(6) + Consent ตาม ม.19"},
+{q:"ม.24(1) — ใช้กับ",cat:"รายมาตรา",c:["จดหมายเหตุ/วิจัย/สถิติ","Vital Interest","Contract","Legal"],ans:0,ex:"ม.24(1)"},
+{q:"ม.24(2) — Vital Interest ใช้เมื่อ",cat:"รายมาตรา",c:["ป้องกันอันตรายต่อชีวิต ร่างกาย สุขภาพ","กฎหมาย","สัญญา","วิจัย"],ans:0,ex:"ม.24(2)"},
+{q:"ม.24(3) — รวม Pre-contract หรือไม่",cat:"รายมาตรา",c:["ไม่รวม","รวม","ขึ้นกับสัญญา","เฉพาะ B2B"],ans:1,ex:"ม.24(3) รวม Pre-contract"},
+{q:"ม.24(5) Legitimate Interest ต้องไม่",cat:"รายมาตรา",c:["มีฐานอื่น","มีน้ำหนักน้อยกว่าสิทธิขั้นพื้นฐาน","แจ้งเจ้าของข้อมูล","ทำเป็นหนังสือ"],ans:1,ex:"ม.24(5) — ต้องไม่ \"สำคัญน้อยกว่าสิทธิขั้นพื้นฐาน\""},
+{q:"ม.25 — แจ้งเจ้าของข้อมูลภายในกี่วัน (เก็บจากแหล่งอื่น)",cat:"รายมาตรา",c:["7","15","30","60"],ans:2,ex:"ม.25 — 30 วัน + Consent หรือใช้ ม.24/26"},
+{q:"ม.26 — ห้ามเก็บข้อมูลใดเป็นพิเศษ (วรรคสอง)",cat:"รายมาตรา",c:["สุขภาพ","ประวัติอาชญากรรม","ศาสนา","สหภาพแรงงาน"],ans:1,ex:"ม.26 วรรคสอง — ประวัติอาชญากรรม"},
+{q:"ม.26 วรรคห้า — ข้อยกเว้นกี่กลุ่ม",cat:"รายมาตรา",c:["3","4","5","6"],ans:2,ex:"5 กลุ่ม: (1) Vital (2) มูลนิธิ (3) เปิดเผย (4) สิทธิเรียกร้อง (5) กฎหมาย"},
+{q:"ม.26(5)(ก) — เกี่ยวข้องกับ",cat:"รายมาตรา",c:["เวชศาสตร์ป้องกัน/อาชีวเวชศาสตร์","ประกันสังคม","วิจัย","ประโยชน์สาธารณะ"],ans:0,ex:"ม.26(5)(ก) — สุขภาพ + แพทย์"},
+{q:"ม.26(5)(ค) — ครอบคลุม",cat:"รายมาตรา",c:["วิจัย","คุ้มครองแรงงาน + ประกันสังคม + หลักประกันสุขภาพ","อาชีวเวชศาสตร์","สาธารณสุข"],ans:1,ex:"ม.26(5)(ค)"},
+{q:"ม.27 — ห้ามใช้/เปิดเผยโดยไม่ได้รับ Consent เว้นแต่",cat:"รายมาตรา",c:["มีฐานยกเว้นตาม ม.24/26","DPO อนุญาต","ผู้บริหารอนุญาต","ครบ 30 วัน"],ans:0,ex:"ม.27"},
+{q:"ม.27 วรรคสอง — ผู้รับโอนข้อมูล",cat:"รายมาตรา",c:["ใช้นอกวัตถุประสงค์ได้","ใช้ตามวัตถุประสงค์ที่แจ้งไว้เท่านั้น","ใช้เสรี","ขึ้นกับสัญญา"],ans:1,ex:"ม.27 วรรคสอง"},
+{q:"ม.28 — ส่งต่างประเทศต้องมี",cat:"รายมาตรา",c:["Adequate Protection หรือข้อยกเว้น","Consent ทุกครั้ง","DPA ทุกครั้ง","แจ้ง สคส. ก่อน"],ans:0,ex:"ม.28"},
+{q:"ม.28 — ข้อยกเว้นมีกี่กรณี",cat:"รายมาตรา",c:["3","4","5","6"],ans:3,ex:"6 ข้อยกเว้น"},
+{q:"ม.29 — สำหรับ",cat:"รายมาตรา",c:["ส่งทั่วไป","BCR — เครือกิจการ","Consent","Contract"],ans:1,ex:"ม.29 — Binding Corporate Rules"},
+{q:"ม.30 — ระยะเวลาตอบสิทธิขอเข้าถึง",cat:"รายมาตรา",c:["7 วัน","15 วัน","30 วัน","60 วัน"],ans:2,ex:"ม.30 — 30 วัน"},
+{q:"ม.31 — Data Portability ใช้กับฐานใด",cat:"รายมาตรา",c:["ทุกฐาน","Consent + Contract","Legal","Vital"],ans:1,ex:"ม.31"},
+{q:"ม.32(2) — Direct Marketing สิทธิคัดค้าน",cat:"รายมาตรา",c:["ปฏิเสธได้","สิทธิเด็ดขาด","ภายใน 7 วัน","ต้องส่งเอกสาร"],ans:1,ex:"ม.32(2) Absolute Right"},
+{q:"ม.33 — สิทธิขอลบมีกี่กรณี",cat:"รายมาตรา",c:["3","4","5","6"],ans:1,ex:"ม.33(1)-(4)"},
+{q:"ม.33 วรรคสอง — ข้อยกเว้นการลบ",cat:"รายมาตรา",c:["3 ข้อ","5 ข้อ","7 ข้อ","ไม่มี"],ans:2,ex:"ม.33 วรรคสอง — 7 ข้อยกเว้น"},
+{q:"ม.34 — สิทธิระงับการใช้ มีกี่กรณี",cat:"รายมาตรา",c:["2","3","4","5"],ans:2,ex:"ม.34 — 4 กรณี"},
+{q:"ม.35 — หลักการ Accuracy",cat:"รายมาตรา",c:["ถูกต้อง เป็นปัจจุบัน สมบูรณ์ ไม่ทำให้เข้าใจผิด","สมบูรณ์","ใช้ได้","ทันสมัย"],ans:0,ex:"ม.35"},
+{q:"ม.36 — ปฏิเสธคำขอแก้ไขต้อง",cat:"รายมาตรา",c:["ตอบเป็นปากเปล่า","บันทึกใน RoPA + เหตุผล","ลบทิ้ง","แจ้ง สคส."],ans:1,ex:"ม.36 + ม.39"},
+{q:"ม.37(1) — มาตรการ Security",cat:"รายมาตรา",c:["เฉพาะเทคนิค","เทคนิค + องค์กร + กายภาพ","เฉพาะองค์กร","ขึ้นกับ Controller"],ans:1,ex:"ม.37(1) ครอบคลุม 3 ด้าน"},
+{q:"ม.37(3) — Storage Limitation",cat:"รายมาตรา",c:["จัดระบบตรวจสอบเพื่อลบ/ทำลาย","ใช้ตลอดไป","Backup เท่านั้น","ขึ้นกับสัญญา"],ans:0,ex:"ม.37(3)"},
+{q:"ม.37(4) — แจ้ง Breach ภายใน",cat:"รายมาตรา",c:["24 ชม.","48 ชม.","72 ชม.","7 วัน"],ans:2,ex:"ม.37(4) + ประกาศ"},
+{q:"ม.39 — RoPA ของ Controller มีรายการกี่ข้อ",cat:"รายมาตรา",c:["6","7","8","10"],ans:2,ex:"ม.39 — 8 รายการ"},
+{q:"ม.40 — DPA บังคับวรรคใด",cat:"รายมาตรา",c:["วรรคหนึ่ง","วรรคสอง","วรรคสาม","วรรคสี่"],ans:2,ex:"ม.40 วรรคสาม — บังคับ"},
+{q:"ม.40 วรรคสอง — Processor ทำนอกคำสั่ง",cat:"รายมาตรา",c:["ไม่ผิด","ถือเป็น Controller สำหรับการนั้น","ส่งคืนข้อมูล","เลิกสัญญา"],ans:1,ex:"ม.40 วรรคสอง"},
+{q:"ม.41(2) — Large-scale Monitoring เกณฑ์",cat:"รายมาตรา",c:["10,000","100,000+","500,000","1,000,000"],ans:1,ex:"ประกาศ — 100,000 รายขึ้นไป"},
+{q:"ม.42 วรรคสอง — สนับสนุน DPO",cat:"รายมาตรา",c:["เลือกได้","ต้องจัดหา + อำนวยความสะดวกในการเข้าถึงข้อมูล","ไม่ต้อง","เฉพาะ Sensitive"],ans:1,ex:"ม.42 วรรคสอง"},
+{q:"ประกาศ Security 2565 — ออกตามมาตราใด",cat:"ประกาศ",c:["ม.16(1)","ม.16(4) + ม.37(1)","ม.39","ม.41"],ans:1,ex:"ม.37(1)"},
+{q:"ประกาศ Security 2565 — ข้อ 4(2) มาตรการประกอบด้วย",cat:"ประกาศ",c:["เทคนิค","Organizational + Technical (รวม Physical)","Physical","ทุกอย่าง"],ans:1,ex:"ข้อ 4(2)"},
+{q:"ประกาศ Security 2565 — Access Control หลัก",cat:"ประกาศ",c:["Need-to-know + Least Privilege","Identity + Authentication","User Management","ทั้งหมด"],ans:0,ex:"ข้อ 4(6)(ก)"},
+{q:"ประกาศ Security 2565 — User Management",cat:"ประกาศ",c:["Registration + De-registration + Provisioning + Review + Removal","Encryption","Logging","Backup"],ans:0,ex:"ข้อ 4(6)(ข)"},
+{q:"ประกาศ Security 2565 — Defense in Depth",cat:"ประกาศ",c:["ชั้นเดียว","Multiple Layers","Single Layer","Adaptive Layer"],ans:1,ex:"ข้อ 4(5)"},
+{q:"ประกาศ Breach 2565 — ออกในวันใด",cat:"ประกาศ",c:["20 มิ.ย. 2565","15 ธ.ค. 2565","17 ส.ค. 2566","13 ส.ค. 2567"],ans:1,ex:"15 ธ.ค. 2565"},
+{q:"ประกาศ Breach — ประเภทการละเมิด",cat:"ประกาศ",c:["1","2","3 (CIA)","4"],ans:2,ex:"Confidentiality + Integrity + Availability"},
+{q:"ประกาศ Breach — แจ้งสำนักงานภายใน",cat:"ประกาศ",c:["48 ชม.","72 ชม.","30 วัน","ไม่ชักช้า"],ans:1,ex:"ข้อ 5(3) — 72 ชม."},
+{q:"ประกาศ Breach — เกิน 72 ชม. แจ้งภายใน",cat:"ประกาศ",c:["7 วัน","15 วัน","30 วัน","ไม่มีกำหนด"],ans:1,ex:"15 วัน + เหตุผล"},
+{q:"ประกาศ Breach — Burden of Proof",cat:"ประกาศ",c:["สคส.","Controller","DPO","ผู้บริโภค"],ans:1,ex:"ข้อ 9 วรรคสอง"},
+{q:"ประกาศ Cross-border ม.28 — ออกวัน",cat:"ประกาศ",c:["20 มิ.ย. 2565","17 ส.ค. 2566","25 ธ.ค. 2566","8 ม.ค. 2568"],ans:2,ex:"25 ธ.ค. 2566 — มีผลพ้น 90 วัน"},
+{q:"ประกาศ Cross-border ม.28 — มีผลกี่วันหลังประกาศ",cat:"ประกาศ",c:["ทันที","30 วัน","60 วัน","90 วัน"],ans:3,ex:"พ้น 90 วัน"},
+{q:"ประกาศ ม.29 — Appropriate Safeguards 3 รูปแบบ",cat:"ประกาศ",c:["Contractual / Certification / Public Org Agreement","Consent / Contract / Legal","SCC / BCR / Adequacy","DPA / DSA / NDA"],ans:0,ex:"3 รูปแบบ"},
+{q:"ประกาศ ม.29 — Standard Contractual Clauses ที่ยอมรับ",cat:"ประกาศ",c:["EU SCC + ASEAN MCC","EU SCC เท่านั้น","ASEAN เท่านั้น","Apple SCC"],ans:0,ex:"ทั้งสอง"},
+{q:"ประกาศ ม.29 — Certification ต้องเฉพาะเรื่อง",cat:"ประกาศ",c:["Privacy ทั่วไป","Cross-border โดยเฉพาะ","ISO 27001","ISO 27701"],ans:1,ex:"ต้อง Cross-border โดยเฉพาะ"},
+{q:"ประกาศ ลบ/ทำลาย 2567 — ออกวันใด",cat:"ประกาศ",c:["20 มิ.ย. 2565","13 ส.ค. 2567","8 ม.ค. 2568","25 ธ.ค. 2566"],ans:1,ex:"13 ส.ค. 2567"},
+{q:"ประกาศ ลบ — มีผลบังคับใช้",cat:"ประกาศ",c:["ทันที","30 วัน","11 พ.ย. 2567 (พ้น 90 วัน)","1 ปี"],ans:2,ex:"พ้น 90 วันนับจากประกาศ"},
+{q:"ประกาศ ลบ — ระยะเวลาดำเนินการ",cat:"ประกาศ",c:["30 วัน","60 วัน","90 วัน","180 วัน"],ans:2,ex:"ข้อ 3 — 90 วัน"},
+{q:"ประกาศ ลบ — 3 วิธีการ",cat:"ประกาศ",c:["ลบ / ทำลาย / Anonymize","Delete / Backup / Restore","Encrypt / Decrypt / Re-encrypt","Soft / Hard / Total"],ans:0,ex:"ข้อ 4"},
+{q:"ประกาศ ลบ — Direct Identifiers ที่ต้องลบ",cat:"ประกาศ",c:["ชื่อ + ID","ครอบคลุม 10 รายการ (รวม biometric)","เฉพาะ ID","เฉพาะที่อยู่"],ans:1,ex:"ข้อ 6(1)"},
+{q:"ประกาศ ลบ — Indirect Identifiers (วันเกิด, IP, สังกัด)",cat:"ประกาศ",c:["ไม่ต้องลบ","ต้องลบด้วยถ้าจะ Anonymize","แค่ Hash","แค่ Mask"],ans:1,ex:"ข้อ 6(2)"},
+{q:"ประกาศ DPO ม.41(2) 2566 — Core Activity",cat:"ประกาศ",c:["รวม Ancillary","ไม่รวม Ancillary","เฉพาะ Sensitive","เฉพาะ Public"],ans:1,ex:"ไม่รวมงานสนับสนุน HR/IT"},
+{q:"ประกาศ DPO — Regular Systematic Monitoring ต้องมี 3 องค์ประกอบ",cat:"ประกาศ",c:["Track + Profile + Monitor","Systematic + Regular + Core","Encrypt + Hash + Mask","Plan + Do + Check"],ans:1,ex:"ประกาศ DPO"},
+{q:"ประกาศ DPO — Large Scale ตัวอย่าง",cat:"ประกาศ",c:["Search Engine / Social Media / โทรคมนาคม Type 3 / 100,000+","ทุกบริษัท","เฉพาะรัฐ","เฉพาะธนาคาร"],ans:0,ex:"ประกาศ DPO ม.41(2) วรรคสอง"},
+{q:"ประกาศ Security 2566 (ม.4 วรรคสาม) — สำหรับ",cat:"ประกาศ",c:["ทุก Controller","หน่วยงานที่ได้รับยกเว้น ม.4(2)-(6)","SMEs","Cloud Providers"],ans:1,ex:"8 ธ.ค. 2566"},
+{q:"พ.ร.ฎ. ม.4 วรรคสอง 2566 — ม.6 ยกเว้นหน่วยงานใด",cat:"ประกาศ",c:["สรรพากร","ป.ป.ช./ป.ป.ท.","ตำรวจ","ทุกกระทรวง"],ans:1,ex:"พ.ร.ฎ. ม.6"},
+{q:"พ.ร.ฎ. ม.4 วรรคสอง 2566 — ม.7 ยกเว้นหน่วยงานใด",cat:"ประกาศ",c:["ป.ป.ช.","สรรพากร + ศุลกากร + สรรพสามิต","ตำรวจ","ครม."],ans:1,ex:"พ.ร.ฎ. ม.7"},
+{q:"ประกาศ RoPA Processor 2565 — มีผลพ้นกี่วัน",cat:"ประกาศ",c:["30","60","90","180"],ans:3,ex:"180 วันหลังประกาศ"},
+{q:"ประกาศ ยกเว้น RoPA SMEs (ใหม่ 2568) — มีผลพ้นกี่วัน",cat:"ประกาศ",c:["ทันที","30 วัน","60 วัน","90 วัน"],ans:3,ex:"8 ม.ค. 2568 + 90 วัน"},
+{q:"ประกาศ หลักเกณฑ์ออกคำสั่งปรับ (ฉบับปัจจุบัน 2568) — มีผลเมื่อใด",cat:"ประกาศ",c:["ทันที","พ้น 30 วัน","23 เม.ย. 2568 — ทันที","1 ปี"],ans:2,ex:"23 เม.ย. 2568 ทันที"},
+{q:"บริษัทเก็บลายมือชื่อพนักงานเพื่อทำสัญญาจ้าง",cat:"ฐานเข้ม",c:["Consent","Contract ม.24(3)","LI","Legal"],ans:1,ex:"ฐานสัญญาจ้าง"},
+{q:"HR เก็บใบรับรองแพทย์ของพนักงานเพื่อขออนุมัติลาป่วย",cat:"ฐานเข้ม",c:["Explicit Consent","ม.26(5)(ค) คุ้มครองแรงงาน","ม.24(6)","ม.24(3)"],ans:1,ex:"ตามกฎหมายแรงงาน — ม.32 พ.ร.บ.คุ้มครองแรงงาน"},
+{q:"HR เก็บภาพถ่ายผู้สมัครงานก่อนรับเข้าทำงาน",cat:"ฐานเข้ม",c:["Consent","Pre-contract ม.24(3)","Vital","Public Task"],ans:1,ex:"Pre-contract"},
+{q:"แจกของขวัญวันเกิดให้ลูกค้า — เก็บวันเกิด",cat:"ฐานเข้ม",c:["Contract","LI ผ่าน LIA + Privacy Notice","Vital","Public"],ans:1,ex:"LI — ความสัมพันธ์ลูกค้า"},
+{q:"โรงพยาบาลตรวจ COVID-19 ผู้ป่วยที่หมดสติ",cat:"ฐานเข้ม",c:["Explicit Consent","ม.26(1) Vital Interest","ม.26(5)(ก)","ม.26(5)(ข)"],ans:1,ex:"ผู้ป่วยให้ Consent ไม่ได้"},
+{q:"ใช้กล้อง CCTV เพื่อนับลูกค้า + ดูพฤติกรรม Marketing",cat:"ฐานเข้ม",c:["LI ทั่วไป","Consent (เกินคาดหมาย)","Public Task","Vital"],ans:1,ex:"Marketing เกินคาดหมาย → Consent"},
+{q:"กรมการปกครองออกบัตรประชาชน",cat:"ฐานเข้ม",c:["Consent","ม.24(4) Public Task + ม.24(6) Legal","LI","Vital"],ans:1,ex:"หน่วยงานรัฐ"},
+{q:"ห้างขอ ID เพื่อ Verify บัตรเครดิตปลอมแปลง",cat:"ฐานเข้ม",c:["Consent","ม.24(5) LI — ป้องกันการฉ้อฉล","ม.24(2)","ม.24(6)"],ans:1,ex:"Fraud Prevention"},
+{q:"พนักงานสอบสวนขอประวัติคนไข้",cat:"ฐานเข้ม",c:["Consent","ม.4(2)+(5) ยกเว้น","LI","Vital"],ans:1,ex:"ข้อหารือ 14/2566"},
+{q:"พนักงาน HR เก็บข้อมูลความเชื่อทางศาสนา (จัดอาหาร)",cat:"ฐานเข้ม",c:["LI","Explicit Consent ม.26 วรรคหนึ่ง","ม.24(3)","ม.26(5)(ค)"],ans:1,ex:"Sensitive — ต้อง Consent"},
+{q:"บริษัทขอใบสำคัญสมรสเพื่อขอยกเว้นภาษี",cat:"ฐานเข้ม",c:["Consent","ม.24(6) ปฏิบัติตามกฎหมาย","ม.26(5)(ค)","ม.24(3)"],ans:1,ex:"ประมวลรัษฎากร"},
+{q:"แอป Delivery เก็บ Location User",cat:"ฐานเข้ม",c:["LI","Contract ม.24(3) — บริการต้องใช้","Vital","Public"],ans:1,ex:"จำเป็นเพื่อให้บริการ"},
+{q:"ส่งใบเตือนค้างชำระให้ลูกค้า",cat:"ฐานเข้ม",c:["Consent","Contract + LI (ก่อตั้งสิทธิ)","Vital","Legal"],ans:1,ex:"Debt Collection"},
+{q:"ส่งโปรโมชั่นแบบ SMS Mass",cat:"ฐานเข้ม",c:["LI","Consent","Contract","Vital"],ans:1,ex:"Direct Marketing — Consent"},
+{q:"กรณี LinkedIn Profile (เปิดเผยต่อสาธารณะ) นำไปทำ AI Training",cat:"ฐานเข้ม",c:["LI ได้เสมอ","ขึ้นกับ Reasonable Expectation + Sensitive","Public Task","Vital"],ans:1,ex:"EDPB 1/2024 — เกินคาดหมาย → Consent"},
+{q:"ที่บ้านติดกล้องวงจรปิดมุมเฉพาะบ้านตน",cat:"ฐานเข้ม",c:["LI","ม.4(1) Private Use ยกเว้น","Consent","Vital"],ans:1,ex:"กิจกรรมส่วนตัวล้วน ๆ"},
+{q:"ที่บ้านติด CCTV หันออกถนนสาธารณะ จับใบหน้าคนเดิน",cat:"ฐานเข้ม",c:["ม.4(1) ยกเว้น","ไม่ยกเว้น — เพราะกระทบบุคคลอื่น","LI","Public"],ans:1,ex:"กระทบสาธารณะ → ใต้ PDPA"},
+{q:"คุณหมอเอกชนเก็บ DNA ผู้ป่วยเพื่อวินิจฉัย",cat:"ฐานเข้ม",c:["LI","ม.26(5)(ก) วินิจฉัย/รักษา","ม.24(2) Vital","Consent ทั่วไป"],ans:1,ex:"Genetic + Medical"},
+{q:"แอป HR เก็บลายนิ้วมือเพื่อสแกนเข้า-ออก",cat:"ฐานเข้ม",c:["LI","ม.26 Consent หรือ ม.26(5)(ค) คุ้มครองแรงงาน","ม.24(3)","Vital"],ans:1,ex:"ข้อหารือการทางพิเศษ — ใช้ ม.26(5)(ค) ได้ถ้าจำเป็นและไม่มีวิธีอื่น"},
+{q:"บริษัทตรวจสอบประวัติอาชญากรรมเฉพาะตำแหน่ง Cashier",cat:"ฐานเข้ม",c:["Explicit Consent ม.26 วรรคหนึ่ง + Necessity","LI ทั่วไป","ม.24(6)","Pre-contract"],ans:0,ex:"Sensitive + Necessity Test"},
+{q:"ธนาคารใช้ Voice Biometric ยืนยันตัวลูกค้า",cat:"ฐานเข้ม",c:["LI","Explicit Consent ม.26 วรรคหนึ่ง","ม.24(6) Legal","ม.24(3) Contract"],ans:1,ex:"Biometric = Sensitive"},
+{q:"ผู้ปกครองให้ Consent แทนลูกอายุ 15 ปี ใช้ App ที่ขอ Marketing",cat:"ฐานเข้ม",c:["ใช้ได้","Consent ลูกได้เอง (10+ ปีตามธุรกรรมที่ทำเองได้)","ห้าม","ผู้ปกครองทุกกรณี"],ans:1,ex:"ม.20 + ปพพ. — Marketing ไม่จำเป็นเด็กทำเองได้หรือไม่ขึ้นกับวุฒิภาวะ"},
+{q:"การส่ง Newsletter ในกลุ่มศิษย์เก่า",cat:"ฐานเข้ม",c:["LI Soft Opt-in (ขอออกได้)","Consent ทุกครั้ง","Public Task","Vital"],ans:0,ex:"ความสัมพันธ์เดิม + LI + Unsubscribe"},
+{q:"การจัดทำสถิติของกรมพินิจ",cat:"ฐานเข้ม",c:["Consent","ม.24(1) วิจัย/สถิติ + ม.24(4) Public Task","Vital","Contract"],ans:1,ex:"ภารกิจรัฐ"},
+{q:"ห้างเก็บข้อมูล Guest (ที่ไม่ใช่สมาชิก) เพื่อ Re-marketing",cat:"ฐานเข้ม",c:["LI ผ่าน LIA","Consent (Marketing)","Contract","Vital"],ans:1,ex:"Direct Marketing → Consent"},
+{q:"ร้านสะดวกซื้อขอ ID Verification ขายเหล้า/บุหรี่",cat:"ฐานเข้ม",c:["Consent","ม.24(6) ปฏิบัติตามกฎหมาย (เครื่องดื่มแอลกอฮอล์ฯ)","LI","Vital"],ans:1,ex:"Legal — ต้องเช็คอายุ"},
+{q:"แพทย์ส่งต่อข้อมูลผู้ป่วยไปยัง รพ. อื่น (Consult)",cat:"ฐานเข้ม",c:["Consent","ม.26(5)(ก) การรักษาทางการแพทย์","Vital","LI"],ans:1,ex:"การรักษาในเครือข่ายแพทย์"},
+{q:"กรมแรงงานเก็บข้อมูลแรงงานต่างด้าวใน Work Permit",cat:"ฐานเข้ม",c:["Consent","ม.24(6) Legal + ม.24(4) Public Task","LI","Vital"],ans:1,ex:"พ.ร.บ.การทำงานคนต่างด้าว"},
+{q:"ครูสอนภาษาเก็บคะแนนและบันทึกพัฒนาการเด็ก",cat:"ฐานเข้ม",c:["Consent","ม.24(3) Contract (สถานศึกษา)","Vital","Public Task หากรัฐ"],ans:1,ex:"สัญญาบริการการศึกษา"},
+{q:"นายจ้างขอใบ ปพ.7 ผู้สมัครงาน",cat:"ฐานเข้ม",c:["Consent","ม.24(3) Pre-contract","ม.24(6)","ม.26(5)(ก)"],ans:1,ex:"ก่อนทำสัญญาจ้าง"},
+{q:"ประกาศการลบ — ระยะเวลา",cat:"ลบเข้ม",c:["7 วัน","30 วัน","60 วัน","90 วัน"],ans:3,ex:"ข้อ 3"},
+{q:"การลบ — ครอบคลุม Backup ด้วยหรือไม่",cat:"ลบเข้ม",c:["ไม่ต้อง","ครอบคลุมสำเนา/Backup ด้วย","เฉพาะ Production","ขึ้นกับนโยบาย"],ans:1,ex:"ข้อ 3 วรรคสอง"},
+{q:"3 วิธีการตามประกาศการลบ",cat:"ลบเข้ม",c:["ลบ/ย้าย/Backup","ลบ/ทำลาย/Anonymize","Delete/Encrypt/Mask","Soft/Hard/Total"],ans:1,ex:"ข้อ 4"},
+{q:"Anonymization ตามประกาศ",cat:"ลบเข้ม",c:["Mask อย่างเดียว","ลบ Direct + Indirect Identifiers","ลบเฉพาะชื่อ","Hash"],ans:1,ex:"ข้อ 6"},
+{q:"การทำลายฮาร์ดดิสก์ที่เพี ยงพอ",cat:"ลบเข้ม",c:["ลบไฟล์","Format","Overwriting / Degaussing / Physical Destruction","Restart"],ans:2,ex:"ISO 21964-1"},
+{q:"ลบไฟล์ใน Recycle Bin เพี ยงพอหรือไม่",cat:"ลบเข้ม",c:["พอ","ไม่พอ — กู้คืนได้","พอกับข้อมูลทั่วไป","พอกับ Personal Data"],ans:1,ex:"ต้องทำลายให้กู้คืนไม่ได้"},
+{q:"ตอนลบข้อมูลรั่ว — Controller ต้องดำเนินการอย่างไร",cat:"ลบเข้ม",c:["ลบทันที","ลบ + แจ้งเจ้าของข้อมูล (โดยไม่อนุโลมข้อ 9 วรรคสอง)","ปกปิด","Anonymize"],ans:0,ex:"ข้อ 9 วรรคสอง — ใช้ลบโดยอนุโลม ไม่ต้องแจ้ง"},
+{q:"อายุการเก็บข้อมูลทางบัญชี",cat:"ลบเข้ม",c:["3 ปี","5 ปี","10 ปี","ตลอดไป"],ans:2,ex:"พ.ร.บ.การบัญชี — 5 ปี + ขยายได้ 2 ปี (รวม ~10 ปีในทางปฏิบัติ)"},
+{q:"อายุการเก็บข้อมูลภาษีตามประมวลรัษฎากร",cat:"ลบเข้ม",c:["3 ปี","5 ปี","10 ปี","20 ปี"],ans:1,ex:"5 ปี (ขยายได้ในกรณีเฉพาะ)"},
+{q:"ข้อมูล Visitor Log แนะนำเก็บ",cat:"ลบเข้ม",c:["1 วัน","30 วัน - 1 ปี","ตลอดไป","10 ปี"],ans:1,ex:"แนวปฏิบัติทั่วไป"},
+{q:"CCTV ทั่วไป — ระยะเวลาแนะนำ",cat:"ลบเข้ม",c:["1 วัน","30 วัน","1 ปี","ตลอดไป"],ans:1,ex:"แนวปฏิบัติ"},
+{q:"การลบไม่อยู่ในความสามารถของ Controller (Backup tape เก่า) ทำอย่างไร",cat:"ลบเข้ม",c:["ปฏิเสธ","แจ้งระยะเวลาลบ + จำกัด Access จนกว่าจะลบได้","ส่งให้ Vendor ทำลาย","Anonymize"],ans:1,ex:"ข้อ 4 — Restrict Access"},
+{q:"การลบในระบบ Cloud",cat:"ลบเข้ม",c:["DPA ครอบคลุม Sub-processor","ขึ้นกับ Cloud Provider","ทำเอง","Anonymize"],ans:0,ex:"DPA + ครอบคลุม Cloud"},
+{q:"Right to be Forgotten — ม.33 วรรคสาม",cat:"ลบเข้ม",c:["ไม่กำหนด","Controller ต้องรับผิดชอบเชิงเทคโนโลยี + ค่าใช้จ่าย + แจ้ง Controller รายอื่น","ส่งคำขอเอง","ปฏิเสธได้"],ans:1,ex:"ม.33 วรรคสาม"},
+{q:"ลบ vs Anonymize — ต่างกัน",cat:"ลบเข้ม",c:["เหมือนกัน","ลบ = ไม่มีข้อมูล / Anony = ข้อมูลยังอยู่แต่ไม่ระบุตัวได้","ลบใช้กับ Sensitive / Anony ทั่วไป","ลบเร็ว / Anony ช้า"],ans:1,ex:"แตกต่างที่การมีอยู่ของข้อมูล"},
+{q:"Pseudonymized data — ลบหรือคงอยู่ใต้ PDPA",cat:"ลบเข้ม",c:["ออกจาก PDPA","ยังอยู่ใต้ PDPA — เพราะ Re-identify ได้","ขึ้นกับเจ้าของ","ลบ"],ans:1,ex:"ยังอยู่ใต้ PDPA"},
+{q:"กรณีถอน Consent — Controller ต้องลบ?",cat:"ลบเข้ม",c:["ทันที","ตรวจว่ามีฐานอื่นไหม — มี = เก็บต่อ","ปฏิเสธ","ภายใน 7 วัน"],ans:1,ex:"ม.33(2) — ถอน + ไม่มีฐานอื่น"},
+{q:"การลบ Apple ID — ทำไม Apple เก็บ Hash Email ได้",cat:"ลบเข้ม",c:["ไม่ได้","LI Security + Compliance + Demonstrate Compliance","Consent","Vital"],ans:1,ex:"DPC Ireland — Apple ถูก แต่ต้องโปร่งใส"},
+{q:"กรณีไม่มีบริษัท Vendor แล้ว (เลิกกิจการ) — DPA ครอบคลุมไหม",cat:"ลบเข้ม",c:["ไม่จำเป็น","ครอบคลุมในตอนเลิกสัญญา — ระบุการลบ/คืนข้อมูล","ขึ้นกับ Vendor","ปฏิเสธ"],ans:1,ex:"ส่วนของ DPA"},
+{q:"กรณี Search Engine ต้องลบจาก Index",cat:"ลบเข้ม",c:["ไม่ใช่หน้าที่","ใช่ — Right to be Delisted (Google Spain Case)","ขึ้นกับเจ้าของข้อมูล","ปฏิเสธได้"],ans:1,ex:"Google Spain v AEPD"},
+{q:"การลบในระบบสารสนเทศใหญ่ที่ลบยาก",cat:"ลบเข้ม",c:["ปฏิเสธ","Restrict Access เป็นการชั่วคราว + ลบเมื่อทำได้","ลบทันที","ใช้ Anony"],ans:1,ex:"ข้อ 4 — แนวปฏิบัติ"},
+{q:"การลบ Audit Log ที่ใช้เพื่อความปลอดภัย",cat:"ลบเข้ม",c:["ลบทันที","คงไว้ตามกฎหมาย/ก่อตั้งสิทธิ — ไม่อยู่ใต้ DSR","ลบบางส่วน","ปฏิเสธ"],ans:1,ex:"ม.33 วรรคสอง"},
+{q:"การ Anonymize ภาพถ่ายใบหน้า",cat:"ลบเข้ม",c:["Mask ตา","Blur หรือ Pixelate ครอบคลุมเพี ยงพอ","ลบ Metadata","ครอบคลุมสามวิธีและตรวจสอบ Re-identify ไม่ได้"],ans:3,ex:"ต้องไม่สามารถ Re-identify"},
+{q:"กรณี Deceased Data (ผู้ตาย)",cat:"ลบเข้ม",c:["ลบทันที","ไม่อยู่ใน PDPA — แต่ Controller อาจมีนโยบาย","Anonymize เท่านั้น","ปฏิเสธ"],ans:1,ex:"ม.6 — ไม่ใช่ Personal Data"},
+{q:"ลบไฟล์ที่ Replicate ใน Cloud หลายภูมิภาค",cat:"ลบเข้ม",c:["ลบที่ Primary","ครอบคลุมทุก Region — ผ่าน DPA","Anonymize","ปฏิเสธ"],ans:1,ex:"ครอบคลุม Multi-region"},
+{q:"Cross-border ม.28 vs ม.29",cat:"Crossเข้ม",c:["ม.28 ทั่วไป / ม.29 BCR","ม.28 รัฐ / ม.29 เอกชน","เหมือนกัน","ม.28 EU / ม.29 USA"],ans:0,ex:"ม.29 = BCR"},
+{q:"Adequacy Decision (Whitelist) ออกโดย",cat:"Crossเข้ม",c:["รัฐมนตรี","กคส.","สคส.","ครม."],ans:1,ex:"คณะกรรมการคุ้มครองข้อมูลส่วนบุคคล"},
+{q:"Cloud Service ต่างประเทศ — Transit หรือ Transfer",cat:"Crossเข้ม",c:["Transit","Transfer","ไม่ใช่ทั้งคู่","ขึ้นกับ Provider"],ans:1,ex:"Transfer ตามประกาศ"},
+{q:"Data Transit คือ",cat:"Crossเข้ม",c:["Cloud Storage","ส่งผ่านโดยไม่มีเจตนาเข้าถึง","Backup","Migration"],ans:1,ex:"Transit ไม่ใช่ Transfer"},
+{q:"Remote Access จากต่างประเทศ — เป็น Transfer หรือไม่",cat:"Crossเข้ม",c:["ไม่ใช่","ใช่ — Controller อนุญาตให้บุคคลนอกเข้าถึงข้อมูล","ขึ้นกับ Tools","ขึ้นกับเวลา"],ans:1,ex:"ประกาศ — รวมการเข้าถึงระยะไกล"},
+{q:"BCR ต้องส่งให้ใครเห็นชอบก่อนใช้",cat:"Crossเข้ม",c:["ครม.","สำนักงาน คคส.","DPO","Auditor"],ans:1,ex:"ม.29"},
+{q:"Standard Contractual Clauses ที่ยอมรับใน ม.29",cat:"Crossเข้ม",c:["EU SCC + ASEAN MCC","Apple SCC","Microsoft SCC","ทุกอย่าง"],ans:0,ex:"ประกาศ ม.29"},
+{q:"Appropriate Safeguards (ม.29 วรรคสาม) มีกี่รูปแบบ",cat:"Crossเข้ม",c:["1","2","3 (Contractual + Certification + Public Org)","4"],ans:2,ex:"3 รูปแบบ"},
+{q:"Certification ม.29 ต้องเป็น",cat:"Crossเข้ม",c:["ISO 27001","Cross-border Cert โดยเฉพาะ","Privacy Cert ทั่วไป","Quality Cert"],ans:1,ex:"ต้องเฉพาะ Cross-border"},
+{q:"ม.28 ข้อยกเว้น (Derogations) มีกี่กรณี",cat:"Crossเข้ม",c:["3","4","5","6"],ans:3,ex:"6 ข้อยกเว้น"},
+{q:"การโอนเพื่อการก่อตั้งสิทธิเรียกร้อง — ใช้ฐานยกเว้นใด",cat:"Crossเข้ม",c:["Consent","Vital","Legal","ม.28 ข้อยกเว้น"],ans:3,ex:"ม.28 ข้อยกเว้น (สิทธิเรียกร้อง)"},
+{q:"ASEAN MCC คือ",cat:"Crossเข้ม",c:["ASEAN Modal Conference","ASEAN Model Contractual Clauses","ASEAN Master Cloud","ASEAN Mutual Cooperation"],ans:1,ex:"Standard Clauses ของอาเซียน"},
+{q:"EU GDPR SCC ใช้กับการโอน",cat:"Crossเข้ม",c:["ภายใน EU","นอก EEA","ทุกที่","เฉพาะ Microsoft"],ans:1,ex:"GDPR Art.46(2)(c)"},
+{q:"BCR ภายในเครือกิจการเดียวกัน — ขอบเขต",cat:"Crossเข้ม",c:["บริษัทเดียว","กลุ่มกิจการ/ธุรกิจเดียวกัน","ทุกบริษัท","ลูกค้า"],ans:1,ex:"ม.29 — เครือกิจการ"},
+{q:"การโอนข้อมูลสุขภาพข้ามประเทศ ต้องใช้ฐาน",cat:"Crossเข้ม",c:["ม.28 (ทั่วไป)","ม.28 + ม.26 (Sensitive)","ม.29 เท่านั้น","Vital"],ans:1,ex:"ต้องครบทั้ง Cross-border + Sensitive"},
+{q:"Cloud SaaS ที่ Server อยู่ Singapore — ใช้ ม.28 หรือ ม.29",cat:"Crossเข้ม",c:["ม.28 (ถ้าไม่ใช่เครือ)","ม.29","ทั้งสอง","ไม่อยู่ใต้"],ans:0,ex:"ม.28 + Adequacy/SCC"},
+{q:"กรณีโรงพยาบาลส่งภาพ MRI ให้แพทย์เฉพาะทางในญี่ปุ่นเพื่อ Consult",cat:"Crossเข้ม",c:["ฟรีไม่ต้องอะไร","ม.28 + ม.26 + Adequacy / SCC + Consent / Vital","Vital เพี ยงพอ","ขัด พ.ร.บ."],ans:1,ex:"ครบเงื่อนไข Cross-border + Sensitive"},
+{q:"Sub-processor ในต่างประเทศ — ต้องดำเนินการ",cat:"Crossเข้ม",c:["ไม่ต้อง","DPA ทอด + Adequacy + ขออนุญาต Controller","แค่ Notify","Anonymize"],ans:1,ex:"ครบ 3 ส่วน"},
+{q:"การส่งข้อมูลให้ Group HQ ที่ Japan",cat:"Crossเข้ม",c:["ใช้ ม.28","ใช้ ม.29 BCR (เครือกิจการ)","ฟรี","ห้าม"],ans:1,ex:"ม.29 BCR"},
+{q:"BCR ต้องมีองค์ประกอบ",cat:"Crossเข้ม",c:["3 ข้อ","กระบวนการ + ประเภทข้อมูล + ความรับผิดชอบ + การปกป้อง + Audit","5 ข้อย่อย","2 ข้อ"],ans:1,ex:"ประกาศ ม.29"},
+{q:"การส่งข้อมูลให้ลูกค้าในต่างประเทศตามคำขอเอง",cat:"Crossเข้ม",c:["ม.28 ข้อยกเว้น (จำเป็นเพื่อปฏิบัติตามสัญญาเพื่อประโยชน์ของเจ้าของ)","BCR","Consent","Vital"],ans:0,ex:"ม.28 ข้อยกเว้น"},
+{q:"การส่งข้อมูลให้ตำรวจต่างประเทศ (MLAT)",cat:"Crossเข้ม",c:["Consent","ม.28 ข้อยกเว้น (กฎหมาย/MLA)","Vital","BCR"],ans:1,ex:"ม.28 ข้อยกเว้น"},
+{q:"ASEAN MCC ใช้ได้กับการส่งข้อมูลใด",cat:"Crossเข้ม",c:["เฉพาะใน ASEAN","ระหว่างประเทศ — ตามประกาศ ม.29 อนุญาต","เฉพาะ EU","ห้าม"],ans:1,ex:"ประกาศ ม.29 อนุญาตทั้ง EU SCC + ASEAN MCC"},
+{q:"การส่งข้อมูลผ่าน Internet ไป Server ต่างประเทศ — Encryption ช่วยอะไร",cat:"Crossเข้ม",c:["ลด Risk + Demonstrate Security","ทำให้ไม่ต้องใช้ ม.28","Anonymize","ลด Compliance"],ans:0,ex:"ลด Risk แต่ยังเป็น Personal Data"},
+{q:"กรณีบริษัทไทยใช้ Mailchimp (USA) ส่ง Newsletter",cat:"Crossเข้ม",c:["ไม่ต้อง","ม.28 (Adequacy USA?) + DPA + Consent (Marketing)","ฟรีเพราะ Free Service","Vital"],ans:1,ex:"Cloud Service ในต่างประเทศ"},
+{q:"ม.30 — ระยะเวลาตอบ DSR",cat:"DSRเข้ม",c:["7 วัน","15 วัน","30 วัน","60 วัน"],ans:2,ex:"ม.30"},
+{q:"ม.30 ปฏิเสธได้กี่กรณี",cat:"DSRเข้ม",c:["1","2","3","4"],ans:1,ex:"ม.30 วรรคสอง — 2 กรณี (กฎหมาย/บุคคลอื่น)"},
+{q:"ม.31 ใช้กับฐาน",cat:"DSRเข้ม",c:["ทุกฐาน","Consent + Contract","Legal","LI"],ans:1,ex:"ม.31 จำกัด"},
+{q:"ม.31 — รูปแบบข้อมูลที่ต้องส่ง",cat:"DSRเข้ม",c:["PDF","JSON","Machine-readable","Word"],ans:2,ex:"อ่านได้ด้วยอัตโนมัติ"},
+{q:"ม.32(1) คัดค้านฐานใด",cat:"DSRเข้ม",c:["ทุกฐาน","Public Task + LI","Consent","Sensitive"],ans:1,ex:"ม.32(1)"},
+{q:"ม.32(2) Direct Marketing คัดค้าน",cat:"DSRเข้ม",c:["ปฏิเสธได้","สิทธิเด็ดขาด","ภายใน 30 วัน","ต้องส่งเอกสาร"],ans:1,ex:"ม.32(2)"},
+{q:"ม.33(2) — ขอลบเพราะถอน Consent + ไม่มีฐานอื่น",cat:"DSRเข้ม",c:["ปฏิเสธทันที","อนุมัติ — เว้นแต่ ม.33 วรรคสอง","Anonymize","ส่ง สคส."],ans:1,ex:"ม.33(2) + วรรคสอง"},
+{q:"ม.34 — ขอระงับการใช้ มีกี่กรณี",cat:"DSRเข้ม",c:["2","3","4","5"],ans:2,ex:"ม.34 — 4 กรณี"},
+{q:"ม.35 — Data Accuracy หน้าที่ของใคร",cat:"DSRเข้ม",c:["DPO","Controller","Processor","Data Subject"],ans:1,ex:"Controller"},
+{q:"ม.36 ปฏิเสธคำขอแก้ — บันทึกใน",cat:"DSRเข้ม",c:["DPO Log","RoPA (ม.39)","Privacy Notice","ส่งสคส."],ans:1,ex:"ม.36 + ม.39"},
+{q:"พนักงานขอแก้ Performance Score",cat:"DSRเข้ม",c:["แก้ทันที","Opinion ไม่ใช่ Factual — ปฏิเสธ + บันทึก RoPA","ลบ","ขอ Consent ใหม่"],ans:1,ex:"ม.36 ใช้กับ Factual"},
+{q:"การยืนยันตัวตนผู้ขอ DSR",cat:"DSRเข้ม",c:["ไม่ต้อง","ต้องยืนยัน — ป้องกัน Impersonation","Email พอ","ผู้บริหารยืนยัน"],ans:1,ex:"แนวปฏิบัติ"},
+{q:"DSR ผ่านทนายความ",cat:"DSRเข้ม",c:["ไม่ได้","ทำได้ + ตรวจหนังสือมอบอำนาจ","ผ่าน DPO","ผ่านศาล"],ans:1,ex:"ม.20"},
+{q:"ค่าธรรมเนียม DSR ครั้งแรก",cat:"DSRเข้ม",c:["100 บาท","ครั้งแรกฟรี","แล้วแต่ Controller","ขึ้นกับสิทธิ"],ans:1,ex:"แนวปฏิบัติ"},
+{q:"ตอบ DSR เกิน 30 วัน",cat:"DSRเข้ม",c:["ปฏิเสธ","ขยายเวลาได้ + แจ้งเหตุผล","คืนเงิน","ลงโทษ"],ans:1,ex:"แนวปฏิบัติ"},
+{q:"DSR ขอข้อมูลจาก CCTV",cat:"DSRเข้ม",c:["ให้ทั้งหมด","Partial + Mask บุคคลอื่น","ปฏิเสธทั้งหมด","ลบ"],ans:1,ex:"ม.30 วรรคสอง"},
+{q:"DSR ขอลบสำเนาบัตรประชาชน — Backup ยังเก็บอยู่",cat:"DSRเข้ม",c:["ลบ Live เท่านั้น","ครอบคลุม Backup ด้วย","Anonymize","ปฏิเสธ"],ans:1,ex:"ประกาศการลบ ข้อ 3 วรรคสอง"},
+{q:"DSR Anonymize Data — ยังขอใช้สิทธิได้?",cat:"DSRเข้ม",c:["ได้","ไม่ได้ — ออกจาก PDPA","บางกรณี","ขึ้นกับเจ้าของ"],ans:1,ex:"Anonymized ออกจาก PDPA"},
+{q:"DSR คัดค้าน LI — Controller ปฏิเสธ",cat:"DSRเข้ม",c:["ไม่ได้","ม.32(1)(ก) เหตุชอบยิ่งกว่า / (ข) สิทธิเรียกร้อง","30 วัน","Sensitive"],ans:1,ex:"ม.32(1)"},
+{q:"DSR ขอให้ Controller รายอื่น (ที่รับข้อมูลไป) ลบด้วย",cat:"DSRเข้ม",c:["ไม่ใช่หน้าที่","ม.33 วรรคสาม — Controller ต้องแจ้ง Controller รายอื่น","DPO ทำ","ปฏิเสธ"],ans:1,ex:"ม.33 วรรคสาม"},
+{q:"ม.37(1) Security ต้องมีกี่ด้าน",cat:"Sec/Breach/DPO",c:["1","2","3 (Tech + Org + Phys)","4"],ans:2,ex:"ม.37(1)"},
+{q:"ม.37(4) Breach Notification",cat:"Sec/Breach/DPO",c:["48 ชม.","72 ชม.","30 วัน","1 ปี"],ans:1,ex:"72 ชม."},
+{q:"Breach — Encrypted Data ที่ถอดไม่ได้",cat:"Sec/Breach/DPO",c:["ต้องแจ้ง Data Subject","อาจไม่ต้องแจ้ง Data Subject แต่ยังต้องแจ้ง สคส.","ไม่ต้องอะไร","ลบ"],ans:1,ex:"ประกาศ Breach"},
+{q:"Burden of Proof กรณีแจ้ง Breach",cat:"Sec/Breach/DPO",c:["สคส.","Controller","DPO","ลูกค้า"],ans:1,ex:"ข้อ 9 วรรคสอง"},
+{q:"DPO ตาม ม.41 กรณีต้องแต่งตั้งมีกี่กรณี",cat:"Sec/Breach/DPO",c:["1","2","3","4"],ans:2,ex:"3 กรณี"},
+{q:"DPO ในเครือกิจการ",cat:"Sec/Breach/DPO",c:["ละบริษัท","1 คนได้สำหรับทั้งกลุ่ม","ห้ามใช้ร่วม","2 คน"],ans:1,ex:"ข้อหารือ 5/2568"},
+{q:"DPO ครอบคลุมกิจกรรม",cat:"Sec/Breach/DPO",c:["เฉพาะที่ทำให้ต้องแต่งตั้ง","ทุกกิจกรรมของบริษัท","Sensitive เท่านั้น","Marketing"],ans:1,ex:"ข้อหารือ 5/2568"},
+{q:"คุณสมบัติ DPO ที่ดี",cat:"Sec/Breach/DPO",c:["IT","กฎหมาย","กฎหมาย + ธุรกิจ + อิสระ","Auditor"],ans:2,ex:"3 องค์ประกอบ"},
+{q:"DPO เลิกจ้าง — Allowed?",cat:"Sec/Breach/DPO",c:["ห้ามเลิกเพราะปฏิบัติหน้าที่ตาม พ.ร.บ. (ม.41 วรรคหก)","ได้ตามดุลพินิจ","ตามสัญญา","ตามผลงาน"],ans:0,ex:"ม.41 วรรคหก"},
+{q:"DPO รายงานต่อ",cat:"Sec/Breach/DPO",c:["HR","CEO/MD ผู้บริหารสูงสุด","CFO","CISO"],ans:1,ex:"ม.41 — Independence"},
+{q:"DPO หน้าที่ 4 ข้อตาม ม.42",cat:"Sec/Breach/DPO",c:["ให้คำแนะนำ + ตรวจสอบ + ประสานงาน + รักษาความลับ","Plan/Do/Check/Act","Identify/Protect/Detect/Respond","Read/Write/Update/Delete"],ans:0,ex:"ม.42"},
+{q:"Risk Assessment — ทำกี่ครั้งต่อปี",cat:"Sec/Breach/DPO",c:["ต่อเดือน","ต่อไตรมาส","อย่างน้อยปีละครั้ง","2 ปี"],ans:2,ex:"ประกาศ Security"},
+{q:"Audit Log — ระยะเวลาเก็บอย่างน้อย",cat:"Sec/Breach/DPO",c:["30 วัน","60 วัน","90 วัน","1 ปี"],ans:2,ex:"ประกาศ Security + พ.ร.บ.คอม"},
+{q:"MFA ต้องใช้กี่ Factor",cat:"Sec/Breach/DPO",c:["1","2+","3","4"],ans:1,ex:"Multi = 2+ factors"},
+{q:"กรณี Phishing ที่ทำให้พนักงานคลิก Link และข้อมูลรั่ว",cat:"Sec/Breach/DPO",c:["ไม่ใช่ Breach","Confidentiality Breach + แจ้ง 72 ชม.","Integrity","Availability"],ans:1,ex:"User Endpoint attack"},
+{q:"กรณีโรงพยาบาลถูก Ransomware — ทำอย่างไร",cat:"Sec/Breach/DPO",c:["จ่ายค่าไถ่","Incident Response + Backup + แจ้ง สคส. + Data Subject (Vital)","ปกปิด","Anonymize"],ans:1,ex:"NIST IR + ม.37(4)"},
+{q:"การลบข้อมูลใน Backup tape เก่า",cat:"Sec/Breach/DPO",c:["ครอบคลุมหรือ Restrict Access","ลบ Live เท่านั้น","Anonymize","ไม่ต้อง"],ans:0,ex:"ครอบคลุม + Risk-based"},
+{q:"กรณีพนักงานโดน Social Engineering ขอ Password",cat:"Sec/Breach/DPO",c:["ไม่ใช่ Breach","อาจเป็น Breach + Awareness","Anonymize","ลบ"],ans:1,ex:"User Awareness"},
+{q:"การกำหนดสิทธิเข้าถึง Database",cat:"Sec/Breach/DPO",c:["Open Access","RBAC + Least Privilege + Need-to-know","All Admin","Public"],ans:1,ex:"User Security"},
+{q:"การลบสื่อบันทึก (HDD/SSD) ตามมาตรฐาน",cat:"Sec/Breach/DPO",c:["Format","ISO 21964-1 / DIN 66399 — Shred / Degauss / Overwrite","ลบไฟล์","Restart"],ans:1,ex:"มาตรฐานการทำลาย"},
+{q:"บริษัท A ให้ Vendor B เก็บข้อมูลลูกค้า — Vendor B ทำข้อมูลรั่ว — ใครต้องแจ้ง สคส.",cat:"ScenarioPro",c:["Vendor B (Processor)","บริษัท A (Controller) — Processor ต้องแจ้ง Controller โดยไม่ชักช้า","ทั้งคู่แจ้งเอง","DPO ของ Vendor B"],ans:1,ex:"ม.40(1) Processor แจ้ง Controller / Controller แจ้ง สคส."},
+{q:"ลูกค้าขอให้ Controller ลบทุกข้อมูล — Controller ค้นพบว่าเก็บข้อมูลใน Backup tape — ทำอย่างไร",cat:"ScenarioPro",c:["ลบเฉพาะ Live","Restrict Access จนกว่า Backup จะหมดอายุ + ระบุระยะเวลา","ทำลาย Backup ทั้งหมด","ปฏิเสธ"],ans:1,ex:"ประกาศการลบ ข้อ 4 — Restrict Access ในกรณีลบยาก"},
+{q:"พนักงาน HR แอบสำเนาข้อมูลลูกค้าไปขายให้ภายนอก — เป็นความผิดอะไร",cat:"ScenarioPro",c:["Civil only","ม.79 + ม.80 (เพื่อแสวงหาประโยชน์) + ม.81 (ผู้บริหาร)","ตักเตือน","แค่วินัย"],ans:1,ex:"ใช้/เปิดเผยเพื่อแสวงหาประโยชน์ที่มิควรได้"},
+{q:"DPO รายงานการละเมิดให้ผู้บริหาร แต่ผู้บริหารปกปิดและไม่แจ้ง สคส. — ใครรับผิด",cat:"ScenarioPro",c:["DPO เท่านั้น","ผู้บริหารตาม ม.81 + นิติบุคคลตาม ม.83","DPO + ผู้บริหาร","สคส."],ans:1,ex:"ม.81 — ผู้บริหารสั่งการ/ละเว้น + นิติบุคคลรับผิดทาง ปกครอง"},
+{q:"ลูกค้าให้ Consent แต่ตอนหลังเปลี่ยนใจถอนผ่าน Email — Controller จะใช้ฐาน LI แทนได้หรือไม่",cat:"ScenarioPro",c:["ได้","ไม่ได้ — Switching ห้าม (ข้อหารือ 5/2566)","ได้ภายใน 30 วัน","ขึ้นกับ DPO"],ans:1,ex:"ห้าม Switching"},
+{q:"ผู้สมัครงานถูกปฏิเสธ — บริษัทเก็บใบสมัครไว้ 5 ปี เพื่อเสนอตำแหน่งอื่นในอนาคต — ใช้ฐานใด",cat:"ScenarioPro",c:["Pre-contract ม.24(3) — เกินขอบเขต","LI + Privacy Notice + Opt-out","Vital","Public Task"],ans:1,ex:"พ้น Pre-contract — ใช้ LI หรือ Consent ใหม่"},
+{q:"นาย A ทำงานบริษัทขายเสื้อผ้าออนไลน์ — ลูกค้าโทรขอข้อมูลที่บริษัทเก็บเกี่ยวกับตน — บริษัทควรทำอย่างไร",cat:"MockTest",c:["ส่งทันที","ยืนยันตัวตน + รวบรวมข้อมูล + ตอบภายใน 30 วัน","ปฏิเสธ","ขอเงิน 100 บาท"],ans:1,ex:"DSR Process ม.30"},
+{q:"นาง B พบว่าข้อมูลของตนถูกขายใน Dark Web — ฟ้องบริษัทใด",cat:"MockTest",c:["Dark Web","บริษัทที่เป็น Controller ที่รับผิดชอบ","DPO","สคส."],ans:1,ex:"Controller รับผิดทาง ปกครอง + แพ่ง"},
+{q:"บริษัท C ทำธุรกิจกับลูกค้า EU — ต้องปฏิบัติตาม",cat:"MockTest",c:["PDPA เท่านั้น","PDPA + GDPR","GDPR เท่านั้น","ไม่ต้อง"],ans:1,ex:"Both Apply"},
+{q:"DPO ของบริษัท D พบว่าผู้บริหารแอบขายข้อมูล — ควรทำ",cat:"MockTest",c:["รายงานผู้บริหาร","รายงาน CEO/Board + แจ้ง สคส.","ลาออก","ปกปิด"],ans:1,ex:"DPO มีหน้าที่ตามจริยธรรม"},
+{q:"บริษัท E ใช้ Vendor บัญชีในต่างประเทศ — ลูกค้าทำคำขอ DSR",cat:"MockTest",c:["ส่งให้ Vendor ตอบ","Controller รับผิดชอบ + Vendor ช่วยเหลือ","ปฏิเสธ","แจ้ง สคส."],ans:1,ex:"DPA + ม.40"},
+{q:"Marketing Team ใช้ Email List ที่ซื้อจากภายนอก",cat:"MockTest",c:["ทำได้","ตรวจ Source + Consent + เก็บหลักฐาน","ฟรี","ห้ามทุกกรณี"],ans:1,ex:"Lawful Source"},
+{q:"พนักงาน G ของโรงพยาบาลแอบดูเวชระเบียนคนรู้จัก — ผิดอะไร",cat:"MockTest",c:["ตักเตือน","ผิดวินัย + ม.79 + อาจ ม.80","ลด เงินเดือน","แค่เตือน"],ans:1,ex:"ใช้ Sensitive โดยมิชอบ"},
+{q:"บริษัท H ใช้ระบบ Cloud ในสหรัฐ — ต้องดำเนินการอย่างไร",cat:"MockTest",c:["ไม่ต้องอะไร","ม.28 + DPA + Privacy Notice","ห้าม","Vital"],ans:1,ex:"Cross-border Transfer"},
+{q:"นาย I เป็น Influencer ใช้รูปคนอื่นใน Content",cat:"MockTest",c:["ลิขสิทธิ์เท่านั้น","PDPA + ปพพ.","ฟรี","Marketing"],ans:1,ex:"เกินกิจกรรมส่วนตัว"},
+{q:"บริษัท J มีพนักงาน 50 คน — ต้องแต่งตั้ง DPO?",cat:"MockTest",c:["ต้อง","ขึ้นกับ Core Activity + Sensitive + จำนวนข้อมูล","ฟรี","ตามใจ"],ans:1,ex:"3 กรณี ม.41"},
+{q:"พนักงานรัฐวิสาหกิจ — ใช้ฐานใดในการเก็บข้อมูลพนักงาน",cat:"MockTest",c:["Vital","Contract + Public Task + Legal","Sensitive","Anonymize"],ans:1,ex:"ผสม"},
+{q:"บริษัท L ขอ Consent Marketing แบบ Pre-checked Box",cat:"MockTest",c:["ได้","ไม่ได้ — ต้อง Active Consent","ขึ้นกับ Tools","ฟรี"],ans:1,ex:"Active Consent"},
+{q:"DPO M รายงานต่อ HR Director — ถูกต้องไหม",cat:"MockTest",c:["ถูก","ไม่ถูก — ต้องรายงาน CEO/MD","ขึ้นกับบริษัท","ฟรี"],ans:1,ex:"ม.41 Independence"},
+{q:"บริษัท N ใช้ AI Credit Scoring — Customer ขอเหตุผลที่ถูกปฏิเสธ",cat:"MockTest",c:["ปฏิเสธ","อธิบายตาม Transparency + ม.23","Vital","Anonymize"],ans:1,ex:"Transparency"},
+{q:"Mobile App ขอ Permission ทุกอย่าง",cat:"MockTest",c:["ได้","Data Minimization + ขอเฉพาะที่จำเป็น","Vital","ฟรี"],ans:1,ex:"ม.22"},
+{q:"Sales เก็บข้อมูล Lead ใน Excel ส่วนตัว",cat:"MockTest",c:["ทำได้","ผิด — ต้องอยู่ในระบบของบริษัท","ฟรี","Anonymize"],ans:1,ex:"Security + Control"},
+{q:"ลูกค้าขอข้อมูลทางโทรศัพท์",cat:"MockTest",c:["ตอบทันที","ยืนยันตัวตน + ส่งช่องทางปลอดภัย","ปฏิเสธ","ขอเงิน"],ans:1,ex:"DSR Process"},
+{q:"Penetration Test ใช้ข้อมูลส่วนบุคคลจริง",cat:"MockTest",c:["ทำได้","ใช้ Pseudonymized + DPA","Vital","ฟรี"],ans:1,ex:"Privacy by Design"},
+{q:"พนักงานลาออก — เก็บ Email ตลอดไป",cat:"MockTest",c:["ทำได้","ผิด ม.37(3) — ต้องลบเมื่อหมดความจำเป็น","ฟรี","Anonymize"],ans:1,ex:"Lifecycle"},
+{q:"บริษัทมี CCTV ในโรงงาน",cat:"MockTest",c:["ติดง่าย ๆ","ป้าย + LIA + Notice + จำกัด Access + 30 วัน","ฟรี","Vital"],ans:1,ex:"CCTV Compliance"},
+{q:"พนักงาน IT มี Admin Privilege",cat:"MockTest",c:["ฟรี","Audit Log + 4-Eyes + Periodic Review","Anonymize","Vital"],ans:1,ex:"PAM"},
+{q:"Vendor ของ Vendor",cat:"MockTest",c:["ฟรี","DPA ทอด + Controller อนุญาต","Anonymize","ห้าม"],ans:1,ex:"DPA Chain"},
+{q:"Backup ข้อมูลใน Cloud ต่างประเทศ",cat:"MockTest",c:["ฟรี","ม.28 + DPA + Encryption","Vital","Anonymize"],ans:1,ex:"Backup = Transfer"},
+{q:"DPaaS — DPO Outsource",cat:"MockTest",c:["ใช้ไม่ได้","ใช้ได้ — ม.41 + คุณสมบัติ + อิสระ","ฟรี","Vital"],ans:1,ex:"Outsource OK"},
+{q:"RoPA ไม่ได้ Update 2 ปี",cat:"MockTest",c:["ฟรี","ผิด — ต้อง Update Evergreen","ลบ","Vital"],ans:1,ex:"RoPA Maintenance"},
+{q:"DPIA ครั้งเดียวตอนเริ่มโปรเจกต์",cat:"MockTest",c:["พอ","ต้อง Periodic Review","ฟรี","Anonymize"],ans:1,ex:"Continuous DPIA"},
+{q:"Email พิมพ์ผิดของลูกค้า",cat:"MockTest",c:["ใช้เลย","Verify ตาม ม.35 Accuracy","Anonymize","ลบ"],ans:1,ex:"Accuracy"},
+{q:"เว็บไซต์ใช้ Cookies",cat:"MockTest",c:["ฟรี","Cookie Banner + Consent (ยกเว้น Strictly Necessary)","Anonymize","Vital"],ans:1,ex:"Cookie Compliance"},
+{q:"Smart Watch ติดตามสุขภาพ — บริษัทขอข้อมูล",cat:"MockTest",c:["ฟรี","Sensitive + Explicit Consent","Vital","Anonymize"],ans:1,ex:"ม.26 Wellness"},
+{q:"Server in-house — Security เป็นของใคร",cat:"MockTest",c:["ผู้ขายเครื่อง","Controller ม.37(1)","Vital","Anonymize"],ans:1,ex:"Controller Liable"},
+{q:"Server น้ำท่วม",cat:"MockTest",c:["ไม่ใช่ Breach","Availability Breach + ประเมิน","Vital","Anonymize"],ans:1,ex:"Force Majeure"},
+{q:"อบรมพนักงาน PDPA ความถี่",cat:"MockTest",c:["ครั้งเดียว","ปีละครั้ง + เมื่อมีการเปลี่ยนแปลง","ตามใจ","Onboarding"],ans:1,ex:"Awareness"},
+{q:"บริษัทถูกควบรวม",cat:"MockTest",c:["ฟรี","แจ้ง Data Subject + Update Notice + Right to Object","Vital","Anonymize"],ans:1,ex:"Notification"},
+{q:"Controller เลิกกิจการ",cat:"MockTest",c:["ขายต่อ","ลบ/ทำลายตาม Storage Limitation + แจ้ง","Anonymize","ปกปิด"],ans:1,ex:"End of Lifecycle"},
+{q:"ลูกค้าเสียชีวิต — ครอบครัวขอข้อมูล",cat:"MockTest",c:["ให้ทันที","พิจารณา กม.อื่น — ผู้ตายไม่ใช่ PDPA","ปฏิเสธ","Anonymize"],ans:1,ex:"ม.6 — ไม่ใช่ PDPA"},
+{q:"พนักงานต่างชาติทำงานบริษัทไทย",cat:"MockTest",c:["กม.ต่างประเทศ","PDPA ใช้ — Controller ในไทย ม.5 วรรค 1","Vital","Anonymize"],ans:1,ex:"Territorial Scope"},
+{q:"บริษัทไทยมีสาขาในเวียดนาม",cat:"MockTest",c:["PDPA ทุกที่","PDPA สาขาไทย + กม.เวียดนามสาขาเวียดนาม + Cross-border","Vital","Anonymize"],ans:1,ex:"Per-country + Transfer"},
+{q:"Newsletter โดยไม่ Tracking",cat:"MockTest",c:["ฟรี","ลด Privacy Risk + Privacy by Design","Vital","Anonymize"],ans:1,ex:"Privacy by Design"},
+{q:"Voice Recognition ใน Call Center",cat:"MockTest",c:["ฟรี","Sensitive Biometric + Explicit Consent + DPIA","Vital","Anonymize"],ans:1,ex:"ม.26 + ม.41(3)"},
+{q:"Survey ความพึงพอใจ",cat:"MockTest",c:["ฟรี","Anonymous + Notice","Vital","Sensitive"],ans:1,ex:"PbD"},
+{q:"เปิดเผยรายชื่อ Top Sales บนเว็บ",cat:"MockTest",c:["ฟรี","ตรวจ Notice + Necessity + Consent","Vital","Anonymize"],ans:1,ex:"ผสม"},
+{q:"Slip เงินเดือนผ่าน Email ไม่เข้ารหัส",cat:"MockTest",c:["ฟรี","ผิด ม.37(1)","Vital","Anonymize"],ans:1,ex:"Security"},
+{q:"PDPA vs พ.ร.บ.ข้อมูลข่าวสาร 2540",cat:"กฎหมายเชื่อม",c:["PDPA","ใช้ทั้งคู่ตามขอบเขต","ข้อมูลข่าวสาร","กฎหมายใหม่กว่า"],ans:1,ex:"ใช้ร่วม"},
+{q:"PDPA vs ประมวลรัษฎากร",cat:"กฎหมายเชื่อม",c:["ขัดแย้ง","สอดคล้อง — ม.24(6)","Vital","Anonymize"],ans:1,ex:"Legal"},
+{q:"PDPA vs พ.ร.บ.การบัญชี — เก็บ 5 ปี",cat:"กฎหมายเชื่อม",c:["ขัดแย้ง","สอดคล้อง — ม.33 วรรคสอง","ลบทันที","Anonymize"],ans:1,ex:"ข้อยกเว้นการลบ"},
+{q:"PDPA vs พ.ร.บ.คอมพิวเตอร์ 2550",cat:"กฎหมายเชื่อม",c:["ขัดแย้ง","ใช้ทั้งคู่","แทน","ห้าม"],ans:1,ex:"ใช้ร่วม"},
+{q:"PDPA vs พ.ร.บ.ไซเบอร์ 2562",cat:"กฎหมายเชื่อม",c:["ขัดแย้ง","ม.4(2) ยกเว้นกิจกรรมความมั่นคงไซเบอร์รัฐ","แทน","ห้าม"],ans:1,ex:"ม.4(2)"},
+{q:"PDPA vs ธุรกรรมอิเล็กทรอนิกส์ 2544",cat:"กฎหมายเชื่อม",c:["ขัดแย้ง","สอดคล้อง — ลายเซ็นอิเล็ก + Consent","แทน","ห้าม"],ans:1,ex:"Digital Signature"},
+{q:"PDPA vs พ.ร.บ.ประกันสังคม 2533",cat:"กฎหมายเชื่อม",c:["ขัดแย้ง","สอดคล้อง — ม.26(5)(ค)","แทน","ห้าม"],ans:1,ex:"Sensitive วรรคห้า"},
+{q:"PDPA vs พ.ร.บ.เงินทดแทน",cat:"กฎหมายเชื่อม",c:["ขัดแย้ง","สอดคล้อง — ม.26(5)(ค)","แทน","ห้าม"],ans:1,ex:"Welfare"},
+{q:"PDPA vs หลักประกันสุขภาพ",cat:"กฎหมายเชื่อม",c:["ขัดแย้ง","สอดคล้อง — ม.26(5)(ค)","Anonymize","ห้าม"],ans:1,ex:"Sensitive"},
+{q:"PDPA vs ผู้ประสบภัยจากรถ",cat:"กฎหมายเชื่อม",c:["ขัดแย้ง","สอดคล้อง — ม.26(5)(ค)","Anonymize","ห้าม"],ans:1,ex:"Welfare"},
+{q:"PDPA vs สถานพยาบาล",cat:"กฎหมายเชื่อม",c:["ขัดแย้ง","สอดคล้อง — เวชระเบียน 5 ปี","แทน","ห้าม"],ans:1,ex:"Retention"},
+{q:"PDPA vs วิชาชีพเวชกรรม",cat:"กฎหมายเชื่อม",c:["ขัดแย้ง","สอดคล้อง — แพทย์รักษาความลับ","ห้าม","แทน"],ans:1,ex:"จริยธรรม"},
+{q:"PDPA vs ปปง. 2542",cat:"กฎหมายเชื่อม",c:["ขัดแย้ง","ม.4(2) บางส่วน + ม.24(6) AML","แทน","ห้าม"],ans:1,ex:"AML/CFT"},
+{q:"PDPA vs ข้อมูลเครดิต",cat:"กฎหมายเชื่อม",c:["ขัดแย้ง","ม.4(6) ยกเว้น (NCB)","ทั้งคู่","Anonymize"],ans:1,ex:"ม.4(6)"},
+{q:"PDPA vs โทรคมนาคม",cat:"กฎหมายเชื่อม",c:["ขัดแย้ง","ใช้ทั้งคู่ — กสทช.","แทน","ห้าม"],ans:1,ex:"กสทช + PDPA"},
+{q:"PDPA vs สุขภาพแห่งชาติ 2550",cat:"กฎหมายเชื่อม",c:["ขัดแย้ง","สอดคล้อง — ม.7","แทน","ห้าม"],ans:1,ex:"ม.7 + ม.26"},
+{q:"PDPA vs คุ้มครองแรงงาน 2541",cat:"กฎหมายเชื่อม",c:["ขัดแย้ง","สอดคล้อง — ม.108 + ม.24(3)","ลบ","ห้าม"],ans:1,ex:"กม.บังคับเก็บ"},
+{q:"PDPA vs การศึกษาแห่งชาติ",cat:"กฎหมายเชื่อม",c:["ขัดแย้ง","สอดคล้อง — Public Task","แทน","ห้าม"],ans:1,ex:"ผสม"},
+{q:"PDPA vs ทะเบียนราษฎร — สำเนาบัตร",cat:"กฎหมายเชื่อม",c:["ขัดแย้ง","สอดคล้อง — ม.24(6) + Data Minimization","ห้าม","Anonymize"],ans:1,ex:"ใช้ร่วม"},
+{q:"PDPA vs CoC วิชาชีพ DPO",cat:"กฎหมายเชื่อม",c:["ขัดแย้ง","CoC ส่งเสริม + จริยธรรม 6 ข้อ","แทน","ห้าม"],ans:1,ex:"ส่งเสริม"},
+{q:"PDPA vs จัดซื้อจัดจ้างภาครัฐ",cat:"กฎหมายเชื่อม",c:["ขัดแย้ง","สอดคล้อง — เปิดเผยตามกม. + Notice","แทน","ห้าม"],ans:1,ex:"Public Task"},
+{q:"PDPA vs ข้อมูลข่าวสาร 2540 — ขอข้อมูลรัฐ",cat:"กฎหมายเชื่อม",c:["PDPA แทน","ใช้ทั้งคู่ — รัฐเปิดบางส่วน + ปิดข้อมูลส่วนบุคคล","ห้าม","ฟรี"],ans:1,ex:"ใช้ร่วม"},
+{q:"PDPA vs ปพพ. ม.420 (ละเมิด)",cat:"กฎหมายเชื่อม",c:["ขัดแย้ง","ใช้ทั้งคู่ + Punitive ม.78","แทน","ห้าม"],ans:1,ex:"ใช้ร่วม"},
+{q:"PDPA vs อาญา (หมิ่นประมาท)",cat:"กฎหมายเชื่อม",c:["ขัดแย้ง","ใช้ทั้งคู่","แทน","ห้าม"],ans:1,ex:"Facebook posts"},
+{q:"PDPA vs ปพพ. — Consent ผู้เยาว์",cat:"กฎหมายเชื่อม",c:["ขัดแย้ง","สอดคล้อง — ม.20 + ม.22-24","แทน","ห้าม"],ans:1,ex:"ม.20"},
+{q:"PDPA vs Class Action",cat:"กฎหมายเชื่อม",c:["ขัดแย้ง","ทำได้ — ปวิแพ่ง + ม.78","แทน","ห้าม"],ans:1,ex:"Class Action"},
+{q:"PDPA vs กฎหมายบริษัท — กรรมการ",cat:"กฎหมายเชื่อม",c:["ขัดแย้ง","ใช้ทั้งคู่ — ม.81 + กม.บริษัท","แทน","ห้าม"],ans:1,ex:"กรรมการรับผิด"},
+{q:"PDPA vs สารบรรณ — เก็บเอกสารราชการ",cat:"กฎหมายเชื่อม",c:["ขัดแย้ง","สอดคล้อง — Notice + Storage Limitation","แทน","ห้าม"],ans:1,ex:"ใช้ร่วม"},
+{q:"PDPA vs สัญญาเช่า — สำเนาบัตร",cat:"กฎหมายเชื่อม",c:["ทำได้เสรี","ม.24(3) + Data Minimization","Vital","ห้าม"],ans:1,ex:"จำเป็น"},
+{q:"PDPA vs ลิขสิทธิ์",cat:"กฎหมายเชื่อม",c:["ขัดแย้ง","สอดคล้อง","แทน","ห้าม"],ans:1,ex:"ใช้ร่วม"},
+{q:"พ.ร.บ.PDPA ประกาศในราชกิจจา",cat:"ตัวเลข",c:["27 พ.ค. 2562","27 พ.ค. 2563","27 พ.ค. 2564","27 พ.ค. 2565"],ans:0,ex:"27 พ.ค. 2562"},
+{q:"พ.ร.บ.PDPA บังคับใช้เต็ม",cat:"ตัวเลข",c:["1 มิ.ย. 2563","1 มิ.ย. 2564","1 มิ.ย. 2565","1 มิ.ย. 2566"],ans:2,ex:"1 มิ.ย. 2565"},
+{q:"พ.ร.บ.มีกี่หมวด",cat:"ตัวเลข",c:["5","6","7","8"],ans:2,ex:"7 หมวด"},
+{q:"พ.ร.บ.มีกี่มาตรา",cat:"ตัวเลข",c:["80","90","96","100"],ans:2,ex:"96"},
+{q:"คณะกรรมการ กคส. รวม (ประมาณ)",cat:"ตัวเลข",c:["12","15","17","20"],ans:2,ex:"17 คน"},
+{q:"กรรมการผู้ทรงคุณวุฒิ",cat:"ตัวเลข",c:["7","8","9","10"],ans:2,ex:"9 คน"},
+{q:"กรรมการโดยตำแหน่ง",cat:"ตัวเลข",c:["3","4","5","6"],ans:2,ex:"5 คน"},
+{q:"วาระคณะกรรมการ",cat:"ตัวเลข",c:["3 ปี","4 ปี","5 ปี","6 ปี"],ans:1,ex:"4 ปี"},
+{q:"จำนวนวาระต่อเนื่องสูงสุด",cat:"ตัวเลข",c:["1","2","3","ไม่จำกัด"],ans:1,ex:"ไม่เกิน 2 วาระ"},
+{q:"ผู้เยาว์อายุที่ Consent เองได้",cat:"ตัวเลข",c:["7","10","15","18"],ans:1,ex:"10 ปี"},
+{q:"อายุบรรลุนิติภาวะ",cat:"ตัวเลข",c:["18","20","21","25"],ans:1,ex:"20 ปี ปพพ."},
+{q:"แจ้ง Privacy Notice เก็บจากแหล่งอื่น",cat:"ตัวเลข",c:["7","15","30","60"],ans:2,ex:"ม.25 — 30 วัน"},
+{q:"ตอบ DSR",cat:"ตัวเลข",c:["7","15","30","60"],ans:2,ex:"30 วัน"},
+{q:"แจ้ง Breach ต่อ สคส.",cat:"ตัวเลข",c:["24","48","72","120"],ans:2,ex:"72 ชั่วโมง"},
+{q:"Breach เกิน 72 ชม.",cat:"ตัวเลข",c:["7","15","30","60"],ans:1,ex:"15 วัน + เหตุผล"},
+{q:"ลบข้อมูลตามคำขอ",cat:"ตัวเลข",c:["30","60","90","180"],ans:2,ex:"90 วัน"},
+{q:"Audit Log อย่างน้อย",cat:"ตัวเลข",c:["30","60","90","180"],ans:2,ex:"90 วัน"},
+{q:"Risk Assessment",cat:"ตัวเลข",c:["เดือน","ไตรมาส","ปี","2 ปี"],ans:2,ex:"ปีละครั้ง"},
+{q:"อายุความฟ้องคดีแพ่งนับแต่รู้",cat:"ตัวเลข",c:["1","2","3","5"],ans:2,ex:"3 ปี"},
+{q:"อายุความสูงสุดนับแต่ละเมิด",cat:"ตัวเลข",c:["5","7","10","15"],ans:2,ex:"10 ปี"},
+{q:"ค่าเสียหายเชิงลงโทษไม่เกินกี่เท่า",cat:"ตัวเลข",c:["1","2","3","5"],ans:1,ex:"2 เท่า"},
+{q:"โทษปกครอง Sensitive",cat:"ตัวเลข",c:["1","3","5","10"],ans:2,ex:"5 ล้าน"},
+{q:"โทษปกครอง DSR",cat:"ตัวเลข",c:["500K","1 ล้าน","3 ล้าน","5 ล้าน"],ans:1,ex:"1 ล้าน"},
+{q:"โทษอาญาสูงสุด (จำคุก)",cat:"ตัวเลข",c:["6 เดือน","1 ปี","2 ปี","5 ปี"],ans:1,ex:"1 ปี"},
+{q:"Large Scale ตามประกาศ DPO",cat:"ตัวเลข",c:["10K","50K","100K","1M"],ans:2,ex:"100,000+"},
+{q:"USB ที่มีข้อมูลลูกค้าหายในร้านอาหาร",cat:"ScenarioPro",c:["ไม่ใช่ Breach","Confidentiality + Availability + แจ้ง 72 ชม.","Vital","Public"],ans:1,ex:"Loss of Device"},
+{q:"Slack รั่ว — ข้อความระหว่างพนักงาน",cat:"ScenarioPro",c:["ไม่ใช่ Breach","Personal Data Breach","ส่วนตัว","Vital"],ans:1,ex:"Slack = PD"},
+{q:"HR เผยรายชื่อ Top Performer",cat:"ScenarioPro",c:["ทำได้","ตรวจ Notice + Purpose + Necessity","Vital","ห้าม"],ans:1,ex:"Privacy"},
+{q:"รพ. ส่งผลตรวจทาง Email ไม่เข้ารหัส",cat:"ScenarioPro",c:["ทำได้","ผิด ม.37(1) + Sensitive","Vital","LI"],ans:1,ex:"Encrypt"},
+{q:"HR ใช้ ChatGPT วิเคราะห์ใบสมัคร — ใส่ชื่อจริง",cat:"ScenarioPro",c:["ทำได้","ผิด — Cross-border + ไม่มี DPA","Vital","Anonymize"],ans:1,ex:"AI + Cross-border"},
+{q:"SMEs ที่ได้รับยกเว้น RoPA",cat:"ScenarioPro",c:["ฟรี","ยกเว้น แต่ยังต้องบันทึก (8) Security","ฟรีหมด","ไม่อยู่ใต้ PDPA"],ans:1,ex:"ม.39 ยกเว้นเฉพาะ"},
+{q:"VIP ขอ Premium Service",cat:"ScenarioPro",c:["เก็บมากกว่าปกติ","Data Minimization + Notice","ฟรี","Vital"],ans:1,ex:"ม.22"},
+{q:"Hacker ขู่เรียกค่าไถ่ — บริษัทจ่ายแล้วไม่รั่ว",cat:"ScenarioPro",c:["ไม่เป็น Breach","เป็น Breach — เข้าถึงโดยมิชอบ","Anonymize","Vital"],ans:1,ex:"Ransom ≠ ลบสถานะ Breach"},
+{q:"Phishing ทำให้รั่ว 5,000 ราย",cat:"ScenarioPro",c:["ไม่สูง","สูง — Identity Theft Risk","กลาง","ต่ำ"],ans:1,ex:"High Risk"},
+{q:"พ่อค้าออนไลน์ส่ง SMS ลูกค้าเก่า",cat:"ScenarioPro",c:["ผิด","Soft Opt-in + Unsubscribe","ห้าม","DPO"],ans:1,ex:"Soft Opt-in"},
+{q:"Re-marketing คนที่ไม่เคยซื้อ",cat:"ScenarioPro",c:["LI","Consent (Marketing)","Pre-contract","Vital"],ans:1,ex:"ไม่มีความสัมพันธ์"},
+{q:"นักข่าวเขียนข่าวเปิดโปงนักการเมือง",cat:"ScenarioPro",c:["ทำได้","ม.4(3) ยกเว้นสื่อมวลชน","Vital","Public"],ans:1,ex:"ม.4(3)"},
+{q:"นักการเมืองฟ้องนักข่าว PDPA",cat:"ScenarioPro",c:["ชนะ","แพ้ — ม.4(3) ยกเว้น","ขึ้นกับศาล","Anonymize"],ans:1,ex:"ม.4(3)"},
+{q:"ติด GPS ในรถภริยาที่สงสัยคบชู้",cat:"ScenarioPro",c:["ม.4(1)","ผิด — ปพพ./อาญา","LI","Vital"],ans:1,ex:"Stalking"},
+{q:"หน่วยงานรัฐขอข้อมูลจาก รพ. เพื่อสอบสวน",cat:"ScenarioPro",c:["Consent","ม.4(2)+(5) ยกเว้น","Vital","LI"],ans:1,ex:"ข้อหารือ 14/2566"},
+{q:"ลูกค้าโทรขอลบข้อมูล",cat:"ScenarioPro",c:["ลบทันที","ยืนยันตัวตน + DPO + 30 วัน","ปฏิเสธ","Manager"],ans:1,ex:"DSR"},
+{q:"Vendor ลาออก",cat:"ScenarioPro",c:["ลบ Vendor account","DPA Termination + คืน/ลบ + Audit","Anonymize","แจ้ง สคส."],ans:1,ex:"Termination Clause"},
+{q:"รพ. ส่งใบรับรองแพทย์ผิดที่อยู่",cat:"ScenarioPro",c:["ไม่ใช่ Breach","Confidentiality + Sensitive + แจ้ง","ลบ","Anonymize"],ans:1,ex:"Misdelivery = Breach"},
+{q:"Cloud ในยุโรป (GDPR Compliant)",cat:"ScenarioPro",c:["ไม่ต้อง","ม.28 + EU Adequate + DPA","Vital","Consent"],ans:1,ex:"DPA ยังต้อง"},
+{q:"พ่อแม่ขอข้อมูลของลูก 17 ปี จาก รพ.",cat:"ScenarioPro",c:["ให้ทันที","พิจารณาอำนาจปกครอง + วุฒิภาวะ + ถามลูก","ปฏิเสธ","Anonymize"],ans:1,ex:"ม.20"},
+{q:"นายจ้างเก็บลายนิ้วมือ Time Attendance",cat:"ScenarioPro",c:["LI","Necessity + ม.26(5)(ค) หรือ Forced Consent","Vital","Public"],ans:1,ex:"การทางพิเศษ"},
+{q:"HR Background Check ผ่านบริษัทภายนอก",cat:"ScenarioPro",c:["DPA + Explicit Consent + Necessity","DPA","Pre-contract","Vital"],ans:0,ex:"ครบ"},
+{q:"ลูกค้าให้ Email สมัครสมาชิก — ใช้ส่งโปรโมชัน",cat:"ScenarioPro",c:["ใช้ฟรี","ตรวจ Notice + ม.32(2) Opt-out","Vital","Public"],ans:1,ex:"Purpose Limitation"},
+{q:"โรงเรียนถ่ายภาพนักเรียนลงเว็บ",cat:"ScenarioPro",c:["Consent พ่อแม่","Public Task + Consent + Mask","ห้าม","Vital"],ans:1,ex:"ผสม"},
+{q:"รพ. ถูก Cyber Attack — ระบบล่ม 3 วัน",cat:"ScenarioPro",c:["ไม่ใช่ Breach","Availability Breach + แจ้ง","Confidentiality","Integrity"],ans:1,ex:"Availability"},
+{q:"Vendor ใช้ Sub-processor โดยไม่แจ้ง",cat:"ScenarioPro",c:["ไม่ผิด","ผิด ม.40 + DPA","ขึ้นกับสัญญา","Anonymize"],ans:1,ex:"Sub-processor notify"},
+{q:"Email Phishing อ้างเป็น สคส. ขอข้อมูล",cat:"ScenarioPro",c:["ส่งทันที","ตรวจสอบ + ติดต่อ สคส. ทางที่เป็นทางการ","ลบ","Anonymize"],ans:1,ex:"Phishing"},
+{q:"พนักงาน HR แอบดูข้อมูลคนรู้จัก",cat:"ScenarioPro",c:["ตักเตือน","ผิด ม.79 + วินัย","ลด เงินเดือน","แค่เตือน"],ans:1,ex:"ใช้ Sensitive โดยมิชอบ"},
+{q:"DPO รายงานผู้บริหาร — ผู้บริหารปกปิด — ใครรับผิด",cat:"ScenarioPro",c:["DPO","ผู้บริหาร ม.81 + นิติบุคคล ม.83","DPO + ผู้บริหาร","สคส."],ans:1,ex:"ม.81"},
+{q:"ลูกค้าให้ Consent — ถอนผ่าน Email — ใช้ LI ต่อ",cat:"ScenarioPro",c:["ได้","ไม่ได้ — Switching ห้าม","ภายใน 30 วัน","DPO"],ans:1,ex:"Switching ห้าม"},
+{q:"ผู้สมัครถูกปฏิเสธ — เก็บใบสมัคร 5 ปี",cat:"ScenarioPro",c:["Pre-contract","LI + Notice + Opt-out","Vital","Public"],ans:1,ex:"พ้น Pre-contract"},
+{q:"Face ID ในมือถือ — Controller สำหรับ Biometric Template",cat:"ScenarioPro",c:["ธนาคาร","Apple/Google (Secure Enclave)","Joint","ผู้ใช้"],ans:1,ex:"On-device"},
+{q:"คณะกรรมการสรรหาผู้บริหาร — เก็บประวัติเชิงลึก",cat:"ScenarioPro",c:["Pre-contract + LI + Explicit Consent","Public","Vital","Legal"],ans:0,ex:"ผสม"},
+{q:"นายจ้างเปิด Email ส่วนตัวพนักงาน",cat:"ScenarioPro",c:["ไม่ผิด","ผิด — เว้นแต่มีนโยบาย + LIA","ขึ้นกับเวลา","ขึ้นกับเครื่อง"],ans:1,ex:"Privacy at Work"},
+{q:"Controller จะส่งข้อมูลพนักงานไปจีน",cat:"ScenarioPro",c:["ทำได้","ม.29 BCR + Explicit Consent + Notice","Vital","ห้าม"],ans:1,ex:"BCR"},
+{q:"อดีตพนักงานขอลบ Email สื่อสารลูกค้า 3 ปีที่แล้ว",cat:"ScenarioPro",c:["ลบ","ปฏิเสธ — ก่อตั้งสิทธิ + บัญชี","Anonymize","สคส."],ans:1,ex:"ม.33 วรรคสอง"},
+{q:"Controller ใช้ AI วิเคราะห์ลูกค้าโดยไม่แจ้ง",cat:"ScenarioPro",c:["ทำได้","ผิด ม.21 + ม.23","LI","AI"],ans:1,ex:"Transparency"},
+{q:"ทำลายเอกสารโดยทิ้งในถังขยะ",cat:"ScenarioPro",c:["ม.37(1) + ม.37(3)","ม.37(2)","ม.37(4)","ม.37(5)"],ans:0,ex:"ทิ้งโดยมิชอบ"},
+
+// ============ 🎯 เก็งข้อสอบ — แนวกรรมการ (55 ข้อ) ============
+{q:"[ตัวอย่างกรรมการ #1] ข้อตกลงการประมวลผลข้อมูลส่วนบุคคล (DPA) ตาม พ.ร.บ. คุ้มครองข้อมูลส่วนบุคคล พ.ศ. 2562 จำเป็นต้องทำขึ้นในกรณีใด",cat:"เก็งข้อสอบ",c:["เมื่อหน่วยงานให้พนักงานภายในหน่วยงานเข้าถึงข้อมูลส่วนบุคคล","เมื่อหน่วยงานจ้างผู้พัฒนาระบบงานภายในที่มีการเก็บรวบรวม ใช้ หรือเปิดเผยข้อมูลส่วนบุคคลในนามหน่วยงาน","เมื่อหน่วยงานเปิดเผยข้อมูลลูกค้าให้กับคู่ค้าทางธุรกิจ","เมื่อหน่วยงานมีการเปิดเผยข้อมูลสู่สาธารณะ"],ans:1,ex:"ม.40 วรรคสาม — DPA ทำระหว่าง Controller-Processor / ผู้พัฒนาระบบที่ทำตามคำสั่งบริษัท = Processor"},
+{q:"[ตัวอย่างกรรมการ #2] ข้อใดต่อไปนี้ไม่ใช่หลักเกณฑ์ที่ผู้ควบคุมและผู้ประมวลผลต้องจัดให้มี DPO ตามมาตรา 41 PDPA",cat:"เก็งข้อสอบ",c:["เป็นหน่วยงานเอกชนที่จัดให้มีการเก็บรวบรวม ใช้ หรือเปิดเผยข้อมูลส่วนบุคคลโดยระบบอัตโนมัติ","เป็นหน่วยงานของรัฐตามที่คณะกรรมการคุ้มครองข้อมูลส่วนบุคคลประกาศกำหนด","เป็นหน่วยงานที่มีการดำเนินกิจกรรมในการเก็บรวบรวม ใช้ หรือเปิดเผย จำเป็นต้องตรวจสอบข้อมูลส่วนบุคคลหรือระบบอย่างสม่ำเสมอ โดยเหตุที่มีข้อมูลส่วนบุคคลเป็นจำนวนมาก","กิจกรรมหลักของหน่วยงานเป็นการเก็บรวบรวม ใช้ หรือเปิดเผยข้อมูลส่วนบุคคลตามมาตรา 26"],ans:0,ex:"ม.41 มี 3 กรณี (รัฐ/Large Monitoring/Sensitive) — การจัดเก็บอัตโนมัติเฉย ๆ ไม่ใช่เกณฑ์"},
+{q:"[ตัวอย่างกรรมการ #3] ฐานทางกฎหมายข้อใดเหมาะสมที่สุดที่นายจ้างอาจนำมาใช้ในการส่งข้อมูลพนักงานเกี่ยวกับการหักภาษี ณ ที่จ่ายและฐานอัตราเงินเดือนของลูกจ้าง ไปยังกรมสรรพากร",cat:"เก็งข้อสอบ",c:["ความยินยอมโดยชัดแจ้งของพนักงาน","เป็นการจำเป็นในการปฏิบัติตามกฎหมายของนายจ้าง","ดำเนินภารกิจเพื่อประโยชน์สาธารณะ","ประโยชน์สาธารณะที่สำคัญ"],ans:1,ex:"ม.24(6) ปฏิบัติตามกฎหมาย — ประมวลรัษฎากรบังคับนายจ้างหักภาษีและส่งให้สรรพากร"},
+{q:"[ตัวอย่างกรรมการ #4] การจัดให้มีการตรวจประเมินด้านการคุ้มครองข้อมูลส่วนบุคคล (Compliance Audit) ของหน่วยงาน จัดเป็นมาตรการรักษาความมั่นคงปลอดภัยของข้อมูลประเภทใด",cat:"เก็งข้อสอบ",c:["มาตรการเชิงองค์กร (Organizational measure)","มาตรการเชิงเทคนิค (Technical measure)","มาตรการทางกายภาพ (Physical measures)","มาตรการรักษาความปลอดภัย (Security Measures)"],ans:0,ex:"Compliance Audit = Organizational Measure / Technical = Encryption,MFA / Physical = Lock,CCTV"},
+{q:"[ตัวอย่างกรรมการ #5] ข้อใดเป็นหน้าที่ของ DPO ตามที่บัญญัติไว้ในมาตรา 42 PDPA",cat:"เก็งข้อสอบ",c:["จัดทำและเก็บรักษาบันทึกรายการกิจกรรมการประมวลผล (RoPA)","จัดทำรายงานผลกระทบด้านการคุ้มครองข้อมูลส่วนบุคคล (DPIA/PIA) ในกิจกรรมที่มีความเสี่ยงสูง","ตรวจสอบการดำเนินงานของผู้ควบคุมข้อมูลส่วนบุคคลเกี่ยวกับการเก็บรวบรวม ใช้ หรือเปิดเผยข้อมูล","จัดทำแผนการแจ้งเหตุและการแจ้งเหตุการละเมิดข้อมูลส่วนบุคคล"],ans:2,ex:"ม.42(2) — ตรวจสอบการดำเนินงาน / RoPA ม.39 หน้าที่ Controller / DPIA ไม่บังคับใน PDPA / Breach Plan ม.37(4)"},
+
+{q:"[ฐาน 1/8] HR เก็บประวัติการศึกษาของผู้สมัครงานเพื่อพิจารณารับเข้าทำงาน ใช้ฐานใดเหมาะสมที่สุด",cat:"เก็งข้อสอบ",c:["ความยินยอม","ม.24(3) Pre-contract — ดำเนินการตามคำขอก่อนเข้าทำสัญญา","ม.24(5) Legitimate Interest","ม.24(6) Legal Obligation"],ans:1,ex:"ม.24(3) รวมถึง Pre-contract"},
+{q:"[ฐาน 2/8] บริษัทติด CCTV ในโรงงานเพื่อรักษาความปลอดภัย ใช้ฐานใดเหมาะสมที่สุด",cat:"เก็งข้อสอบ",c:["ม.24(2) Vital Interest","ม.24(3) Contract","ม.24(5) Legitimate Interest + LIA","ม.24(7) Consent"],ans:2,ex:"CCTV Security = LI + LIA + ติดป้ายแจ้งเตือน"},
+{q:"[ฐาน 3/8] โรงพยาบาลส่งข้อมูลผู้ป่วยที่หมดสติให้แพทย์ฉุกเฉินในรพ.อื่น ใช้ฐานใด",cat:"เก็งข้อสอบ",c:["ม.24(2) Vital Interest","ม.26(1) Vital Interest (เจ้าของให้ Consent ไม่ได้)","ม.26(5)(ก) เวชศาสตร์","ม.24(7) Consent"],ans:1,ex:"ผู้ป่วยหมดสติ = ให้ Consent ไม่ได้ — ม.26(1) Vital Interest"},
+{q:"[ฐาน 4/8] บริษัทยื่นแบบ ภ.ง.ด.1 และเงินสมทบประกันสังคม ใช้ฐานใด",cat:"เก็งข้อสอบ",c:["ม.24(3) Contract","ม.24(5) LI","ม.24(6) Legal Obligation","ม.24(7) Consent"],ans:2,ex:"ประมวลรัษฎากร + พ.ร.บ.ประกันสังคม"},
+{q:"[ฐาน 5/8] บริษัทคัดกรอง KYC/Sanction List ของกรรมการคู่ค้า — สำหรับข้อมูลประวัติคดี (Sensitive) ใช้ฐานใด",cat:"เก็งข้อสอบ",c:["ม.24(5) LI พอ","ม.26 วรรคหนึ่ง Explicit Consent","ม.26(1) Vital","ม.24(7) Consent"],ans:1,ex:"ประวัติคดี = Sensitive ต้อง Explicit Consent ตาม ม.26 วรรคหนึ่ง"},
+{q:"[ฐาน 6/8] บริษัทส่งข้อความ SMS โฆษณาขายสินค้าใหม่ให้ลูกค้าเก่า ใช้ฐานใด",cat:"เก็งข้อสอบ",c:["LI","Contract","Consent (Direct Marketing)","Vital"],ans:2,ex:"Direct Marketing ต้องใช้ Consent"},
+{q:"[ฐาน 7/8] HR ตรวจสุขภาพประจำปีพนักงานสายการผลิต ใช้ฐาน ม.26 ใด",cat:"เก็งข้อสอบ",c:["วรรคหนึ่ง Explicit Consent","ม.26(5)(ก) อาชีวเวชศาสตร์/การประเมินความสามารถในการทำงาน","ม.26(5)(ข) ประโยชน์สาธารณะด้านสาธารณสุข","ม.26(1) Vital"],ans:1,ex:"ม.26(5)(ก) — อาชีวเวชศาสตร์ตามกฎหมายความปลอดภัย"},
+{q:"[ฐาน 8/8] กรณี Switching Lawful Basis — บริษัทเลือก Consent แล้วลูกค้าไม่ให้ Consent",cat:"เก็งข้อสอบ",c:["สลับไป LI ได้","ห้าม Switching — ต้องเลือกฐานตั้งแต่ต้น","สลับได้ภายใน 30 วัน","ขึ้นกับ DPO"],ans:1,ex:"ข้อหารือ 5/2566 ธนาคาร จ. — ห้าม Switching"},
+
+{q:"[DSR 1/6] ผู้ควบคุมต้องตอบคำขอใช้สิทธิเข้าถึงข้อมูลภายในกี่วัน",cat:"เก็งข้อสอบ",c:["7 วัน","15 วัน","30 วัน","60 วัน"],ans:2,ex:"ม.30 — 30 วัน"},
+{q:"[DSR 2/6] สิทธิคัดค้าน Direct Marketing ตาม ม.32(2) มีลักษณะอย่างไร",cat:"เก็งข้อสอบ",c:["ปฏิเสธได้หากมีเหตุชอบยิ่งกว่า","สิทธิเด็ดขาด — ผู้ควบคุมต้องหยุดทันที","ใช้ได้เฉพาะลูกค้าที่ลงทะเบียน","ต้องส่งเอกสารยืนยัน"],ans:1,ex:"ม.32(2) Absolute Right — ไม่มีข้อยกเว้น"},
+{q:"[DSR 3/6] สิทธิ Data Portability ตาม ม.31 ใช้ได้กับฐานใด",cat:"เก็งข้อสอบ",c:["ทุกฐาน","Consent + Contract เท่านั้น","Legal Obligation","Public Task"],ans:1,ex:"ม.31 จำกัดเฉพาะ Consent + Contract"},
+{q:"[DSR 4/6] เจ้าของข้อมูลขอให้ลบข้อมูลที่ใช้เพื่อปฏิบัติตามกฎหมาย ผู้ควบคุมต้องทำอย่างไร",cat:"เก็งข้อสอบ",c:["ลบทันที","ปฏิเสธได้ตาม ม.33 วรรคสอง — ปฏิบัติตามกฎหมาย","ลบบางส่วน","ส่งให้สำนักงาน"],ans:1,ex:"ม.33 วรรคสอง — 7 ข้อยกเว้น รวมการปฏิบัติตามกฎหมาย"},
+{q:"[DSR 5/6] พนักงานขอแก้ไขคะแนน Performance Review จาก 'ต่ำกว่าเป้า' เป็น 'เกินเป้า'",cat:"เก็งข้อสอบ",c:["แก้ไขทันที","ปฏิเสธ — Opinion ไม่ใช่ Factual + บันทึกใน RoPA","ลบทั้งหมด","ส่ง สคส."],ans:1,ex:"ม.36 ใช้กับข้อมูลที่ไม่ถูกต้อง/ไม่เป็นปัจจุบัน — Opinion ไม่ได้"},
+{q:"[DSR 6/6] เจ้าของข้อมูลใช้สิทธิระงับการใช้ข้อมูล (ม.34) — ผู้ควบคุมต้องทำอะไร",cat:"เก็งข้อสอบ",c:["ลบข้อมูลทันที","ระงับการใช้ — แยกส่วนออกจากข้อมูลอื่นอย่างชัดเจนในทันที","ปฏิเสธทุกกรณี","ส่ง DPO"],ans:1,ex:"ม.34 + ม.32 วรรคสอง"},
+
+{q:"[Security 1/9] มาตรการรักษาความมั่นคงปลอดภัยตามประกาศ พ.ศ. 2565 ต้องครอบคลุมอะไรบ้าง",cat:"เก็งข้อสอบ",c:["เฉพาะเทคนิค","Organizational + Technical (รวม Physical ตามที่จำเป็น)","เฉพาะ Organizational","เฉพาะ Physical"],ans:1,ex:"ข้อ 4(2) — ครอบคลุม 2-3 มิติ"},
+{q:"[Security 2/9] หลัก CIA Triad ของประกาศ Security ประกอบด้วย",cat:"เก็งข้อสอบ",c:["Compliance / Integrity / Availability","Confidentiality / Integrity / Availability","Control / Identity / Authority","Confidentiality / Identity / Audit"],ans:1,ex:"ข้อ 3 + ข้อ 4(4)"},
+{q:"[Security 3/9] หลัก 'Need-to-know' + 'Principle of Least Privilege' อยู่ในข้อใดของประกาศ",cat:"เก็งข้อสอบ",c:["ข้อ 4(5) Defense in Depth","ข้อ 4(6)(ก) Access Control","ข้อ 4(6)(ข) User Management","ข้อ 4(6)(ค) User Responsibilities"],ans:1,ex:"ข้อ 4(6)(ก) — Authorization"},
+{q:"[Security 4/9] หลัก Defense in Depth (Multiple Layers) อยู่ในข้อใด",cat:"เก็งข้อสอบ",c:["ข้อ 4(3)","ข้อ 4(4)","ข้อ 4(5)","ข้อ 4(6)"],ans:2,ex:"ข้อ 4(5) — Defense in Depth"},
+{q:"[Security 5/9] Risk Assessment ตามประกาศต้องทำอย่างน้อย",cat:"เก็งข้อสอบ",c:["เดือนละครั้ง","ไตรมาสละครั้ง","ปีละครั้ง","ไม่กำหนด"],ans:2,ex:"ปีละครั้ง"},
+{q:"[Security 6/9] Audit Log ตามประกาศควรเก็บอย่างน้อย",cat:"เก็งข้อสอบ",c:["30 วัน","60 วัน","90 วัน","180 วัน"],ans:2,ex:"90 วัน + พ.ร.บ.คอมพิวเตอร์"},
+{q:"[Security 7/9] Compliance Audit จัดเป็นมาตรการประเภทใด",cat:"เก็งข้อสอบ",c:["มาตรการเชิงองค์กร (Organizational)","มาตรการเชิงเทคนิค (Technical)","มาตรการทางกายภาพ (Physical)","Cryptographic"],ans:0,ex:"Audit = Organizational Measure"},
+{q:"[Security 8/9] Encryption เป็นมาตรการประเภทใด",cat:"เก็งข้อสอบ",c:["Organizational","Technical","Physical","Compliance"],ans:1,ex:"Encryption = Technical Measure"},
+{q:"[Security 9/9] ห้อง Server + Lock + CCTV เป็นมาตรการประเภทใด",cat:"เก็งข้อสอบ",c:["Organizational","Technical","Physical","Compliance"],ans:2,ex:"Physical Measure"},
+
+{q:"[Breach 1/10] ผู้ควบคุมต้องแจ้งเหตุละเมิดต่อสำนักงานภายในกี่ชั่วโมง",cat:"เก็งข้อสอบ",c:["24 ชั่วโมง","48 ชั่วโมง","72 ชั่วโมง","30 วัน"],ans:2,ex:"ม.37(4) + ประกาศ — 72 ชม."},
+{q:"[Breach 2/10] กรณีแจ้งเหตุละเมิดเกิน 72 ชั่วโมง ต้องดำเนินการอย่างไร",cat:"เก็งข้อสอบ",c:["ห้ามแจ้ง","แจ้งโดยเร็ว ไม่เกิน 15 วัน + ระบุเหตุผลความล่าช้า","แจ้งทันที","ไม่ต้องแจ้ง"],ans:1,ex:"ประกาศ — เกิน 72 ชม. แจ้งภายใน 15 วัน"},
+{q:"[Breach 3/10] กรณีใดต้องแจ้งเจ้าของข้อมูล 'โดยไม่ชักช้า'",cat:"เก็งข้อสอบ",c:["ทุกกรณี","กรณีมีความเสี่ยงสูงต่อสิทธิและเสรีภาพของบุคคล","กรณี Sensitive เท่านั้น","กรณีเสียหายเกิน 1 ล้าน"],ans:1,ex:"ความเสี่ยงสูง = แจ้ง Data Subject + แนวทางเยียวยา"},
+{q:"[Breach 4/10] 3 ประเภทการละเมิดข้อมูลส่วนบุคคล",cat:"เก็งข้อสอบ",c:["High/Med/Low","Confidentiality / Integrity / Availability","External/Internal/Mixed","Tech/Process/People"],ans:1,ex:"CIA Breach"},
+{q:"[Breach 5/10] กรณีข้อมูล Encrypted รั่วและถอดไม่ได้ — ต้องแจ้งเจ้าของข้อมูลหรือไม่",cat:"เก็งข้อสอบ",c:["ต้องแจ้งทุกกรณี","อาจไม่ต้องแจ้ง — แต่ยังต้องแจ้งสำนักงาน","ห้ามแจ้ง","ภายใน 24 ชม."],ans:1,ex:"Encrypted ที่ถอดไม่ได้ = ลดความเสี่ยง"},
+{q:"[Breach 6/10] ภาระการพิสูจน์ (Burden of Proof) เหตุยกเว้นการแจ้ง Breach",cat:"เก็งข้อสอบ",c:["สำนักงาน","ผู้ควบคุมข้อมูลส่วนบุคคล (Controller)","DPO","Auditor"],ans:1,ex:"ข้อ 9 วรรคสอง — Controller ต้องส่งหลักฐานให้ PDPC"},
+{q:"[Breach 7/10] กรณี Hacker เข้าถึงเซิร์ฟเวอร์ + Export ข้อมูล จัดเป็น Breach ประเภทใด",cat:"เก็งข้อสอบ",c:["Confidentiality Breach","Integrity Breach","Availability Breach","ทั้งสามแบบ"],ans:0,ex:"การเข้าถึง/เปิดเผยโดยไม่ชอบ = Confidentiality"},
+{q:"[Breach 8/10] กรณี Ransomware ทำให้ระบบเข้าไม่ได้ 3 วัน จัดเป็น Breach ประเภทใด",cat:"เก็งข้อสอบ",c:["Confidentiality","Integrity","Availability Breach","ไม่ใช่ Breach"],ans:2,ex:"Availability — เข้าไม่ได้ตามปกติ"},
+{q:"[Breach 9/10] กรณีพนักงานแก้ไขข้อมูลให้ไม่ถูกต้องโดยมิชอบ จัดเป็น Breach ประเภทใด",cat:"เก็งข้อสอบ",c:["Confidentiality","Integrity Breach","Availability","ไม่ใช่ Breach"],ans:1,ex:"Integrity — แก้ไขให้ไม่ถูกต้อง"},
+{q:"[Breach 10/10] เมื่อผู้ควบคุมได้รับแจ้งข้อมูลเบื้องต้นเรื่อง Breach ต้องดำเนินการขั้นแรกอย่างไร",cat:"เก็งข้อสอบ",c:["แจ้งสำนักงานทันที","ประเมินความน่าเชื่อถือ + ตรวจสอบข้อเท็จจริงโดยไม่ชักช้า","ลบข้อมูล","ปกปิด"],ans:1,ex:"ข้อ 5(1) ของประกาศ — ประเมินก่อน"},
+
+{q:"[Cross-border 1/5] ม.28 vs ม.29 ต่างกันอย่างไร",cat:"เก็งข้อสอบ",c:["ม.28 ทั่วไป — ม.29 BCR เครือกิจการ","ม.28 รัฐ — ม.29 เอกชน","เหมือนกัน","ม.28 EU — ม.29 USA"],ans:0,ex:"ม.29 = Binding Corporate Rules"},
+{q:"[Cross-border 2/5] Data Transit ต่างจาก Data Transfer อย่างไร",cat:"เก็งข้อสอบ",c:["เหมือนกัน","Transit = ส่งผ่านโดยไม่มีเจตนาเข้าถึง / Transfer = มีเจตนาเข้าถึง","Transit เร็วกว่า","Transfer ใช้ Cloud เท่านั้น"],ans:1,ex:"นิยามตามประกาศ ม.28-29"},
+{q:"[Cross-border 3/5] Cloud Service ต่างประเทศ + Remote Access จัดเป็น Transfer หรือไม่",cat:"เก็งข้อสอบ",c:["ไม่ใช่","ใช่ Transfer","Transit","ไม่ใช่ Personal Data"],ans:1,ex:"ประกาศรวม Cloud + Remote Access"},
+{q:"[Cross-border 4/5] Appropriate Safeguards (ม.29 วรรคสาม) มีกี่รูปแบบ",cat:"เก็งข้อสอบ",c:["1","2","3 (Contractual + Certification + Public Org Agreement)","4"],ans:2,ex:"3 รูปแบบ"},
+{q:"[Cross-border 5/5] Standard Contractual Clauses ที่ยอมรับใน ม.29 ของไทย",cat:"เก็งข้อสอบ",c:["EU SCC + ASEAN MCC","เฉพาะ EU SCC","เฉพาะ ASEAN MCC","ทุกแบบที่บริษัทเขียนเอง"],ans:0,ex:"ประกาศ ม.29 อนุญาตทั้ง EU SCC + ASEAN MCC"},
+
+{q:"[กลไกบังคับ 1/3] โทษปกครองสูงสุดสำหรับการฝ่าฝืนเรื่อง Sensitive Data (ม.26)",cat:"เก็งข้อสอบ",c:["1 ล้านบาท","3 ล้านบาท","5 ล้านบาท","10 ล้านบาท"],ans:2,ex:"ม.84 — 5 ล้าน"},
+{q:"[กลไกบังคับ 2/3] ค่าเสียหายเชิงลงโทษ (Punitive Damages) ตาม ม.78 สูงสุด",cat:"เก็งข้อสอบ",c:["1 เท่า","2 เท่าของค่าเสียหายที่แท้จริง","3 เท่า","5 เท่า"],ans:1,ex:"ม.78 — ไม่เกิน 2 เท่า"},
+{q:"[กลไกบังคับ 3/3] กรณีนิติบุคคลทำผิด ผู้บริหารรับผิดในกรณีใด",cat:"เก็งข้อสอบ",c:["ทุกกรณี","กรณีสั่งการ/มีส่วนรู้เห็น/ละเว้น","เฉพาะกรณีเจตนา","ไม่รับผิดเลย"],ans:1,ex:"ม.81 ผู้บริหารรับผิด"},
+
+{q:"[หลักการพื้นฐาน 1/1] หลักการ 'Accountability' ใน PDPA หมายถึงอะไร",cat:"เก็งข้อสอบ",c:["ผู้ควบคุมต้องรับผิดชอบและสามารถแสดงให้เห็นการปฏิบัติตามกฎหมาย","Controller ตอบเฉพาะคำถามของลูกค้า","Processor รับผิดชอบทุกอย่าง","DPO รับผิดเอง"],ans:0,ex:"Demonstrate Compliance — เก็บหลักฐานการปฏิบัติตาม"},
+
+{q:"[ลบ/ทำลาย 1/1] ผู้ควบคุมต้องลบข้อมูลตามคำขอภายในกี่วัน (ประกาศ พ.ศ.2567)",cat:"เก็งข้อสอบ",c:["30 วัน","60 วัน","90 วัน","180 วัน"],ans:2,ex:"ข้อ 3 — 90 วัน"},
+
+{q:"[ม.26 1/1] ข้อใดต่อไปนี้ไม่ใช่ข้อมูลส่วนบุคคลอ่อนไหวตามมาตรา 26",cat:"เก็งข้อสอบ",c:["ข้อมูลสุขภาพ","ความคิดเห็นทางการเมือง","เลขบัตรประชาชน","ประวัติอาชญากรรม"],ans:2,ex:"เลขบัตรประชาชน = Personal Data ทั่วไป (ม.6) ไม่ใช่ Sensitive"},
+
+{q:"[ม.5 1/1] บริษัทอเมริกันขายของออนไลน์ให้คนในประเทศไทย ต้องปฏิบัติตาม PDPA ไทยหรือไม่",cat:"เก็งข้อสอบ",c:["ไม่ต้อง — อยู่ต่างประเทศ","ต้อง — ตาม ม.5 วรรคสอง (เสนอสินค้าให้คนในไทย)","ต้องเฉพาะถ้ามีสาขา","ต้องเฉพาะ Sensitive"],ans:1,ex:"ม.5 วรรคสอง Extra-territorial"},
+
+{q:"[ม.4 1/1] กรณีใดได้รับยกเว้นการบังคับใช้ตาม ม.4(1)",cat:"เก็งข้อสอบ",c:["บริษัทเอกชนเก็บข้อมูลพนักงาน","บุคคลธรรมดาเก็บข้อมูลเพื่อนเพื่อใช้ส่วนตัวในมือถือ","ห้างทำสมาชิก","สมาคมไม่แสวงกำไร"],ans:1,ex:"ม.4(1) ยกเว้นเพื่อประโยชน์ส่วนตน/ครอบครัวล้วน ๆ"},
+
+{q:"[ม.40 1/2] ผู้ประมวลผลข้อมูล (Processor) ต้องดำเนินการอย่างไรตามมาตรา 40",cat:"เก็งข้อสอบ",c:["ดำเนินการเองอิสระ","ดำเนินการตามคำสั่งที่ได้รับจากผู้ควบคุมข้อมูล (เป็นหนังสือ)","แจ้งสำนักงานก่อน","ขอ Consent ลูกค้า"],ans:1,ex:"ม.40(1) — ตามคำสั่ง Controller"},
+{q:"[ม.40 2/2] กรณี Processor ดำเนินการนอกคำสั่ง Controller จะมีผลอย่างไร",cat:"เก็งข้อสอบ",c:["ไม่มีผล","ถือว่า Processor เป็น Controller สำหรับการประมวลผลนั้น","ส่งคืนข้อมูล","แจ้งสำนักงาน"],ans:1,ex:"ม.40 วรรคสอง"},
+
+{q:"[ม.41 1/1] กรณีใดต่อไปนี้บังคับให้บริษัทต้องแต่งตั้ง DPO",cat:"เก็งข้อสอบ",c:["ทุกบริษัท","กิจกรรมหลักของบริษัทเป็นการประมวลผล Sensitive Data ตาม ม.26","มีพนักงานมากกว่า 50 คน","ขายสินค้าออนไลน์"],ans:1,ex:"ม.41(3) — Core = Sensitive"},
+
+{q:"[ม.42 1/1] หน้าที่หลักของ DPO ตาม ม.42 มีกี่ข้อ",cat:"เก็งข้อสอบ",c:["3","4 (ให้คำแนะนำ/ตรวจสอบ/ประสานงาน สคส./รักษาความลับ)","5","6"],ans:1,ex:"ม.42 — 4 หน้าที่หลัก"}
+];
+
+const STORAGE_KEY="dpo_master_quiz_v3_500";
+const list=document.getElementById("quiz-list");
+let userAnswers=JSON.parse(localStorage.getItem(STORAGE_KEY)||"{}");
+let currentFilter="all";
+document.getElementById("quiz-count").textContent=QUESTIONS.length;
+document.getElementById("stat-total").textContent=QUESTIONS.length;
+
+function render(){
+  list.innerHTML="";
+  const filtered=currentFilter==="all"?QUESTIONS:QUESTIONS.filter(q=>q.cat===currentFilter);
+  filtered.forEach(q=>{
+    const realIdx=QUESTIONS.indexOf(q);
+    const card=document.createElement("div");
+    card.className="q-card";
+    card.dataset.idx=realIdx;
+    const ua=userAnswers[realIdx];
+    if(typeof ua!=="undefined"){
+      if(ua===q.ans)card.classList.add("correct");
+      else card.classList.add("wrong");
+    }
+    let html=`<div class="q-num">ข้อที่ ${realIdx+1}/${QUESTIONS.length}<span class="q-cat">${q.cat}</span></div>`;
+    html+=`<div class="q-text">${q.q}</div>`;
+    html+=`<div class="choices">`;
+    const labels=["ก","ข","ค","ง","จ"];
+    q.c.forEach((c,i)=>{
+      const isUserAns=ua===i;
+      const isCorrect=i===q.ans;
+      let cls="choice";
+      if(isUserAns)cls+=" selected";
+      if(typeof ua!=="undefined"){
+        if(isCorrect)cls+=" correct-ans";
+        else if(isUserAns&&!isCorrect)cls+=" wrong-ans";
+      }
+      html+=`<label class="${cls}" data-i="${i}"><input type="radio" name="q${realIdx}" value="${i}" ${isUserAns?"checked":""}><span class="choice-label">${labels[i]}.</span><span>${c}</span></label>`;
+    });
+    html+=`</div>`;
+    html+=`<div class="explain ${typeof ua!=="undefined"?"show":""}"><b>เฉลย:</b> ${q.ex}</div>`;
+    card.innerHTML=html;
+    list.appendChild(card);
+  });
+  updateStats();
+}
+
+function updateStats(){
+  const total=QUESTIONS.length;
+  let answered=0,correct=0;
+  QUESTIONS.forEach((q,i)=>{
+    if(typeof userAnswers[i]!=="undefined"){
+      answered++;
+      if(userAnswers[i]===q.ans)correct++;
+    }
+  });
+  const wrong=answered-correct;
+  const pct=answered>0?Math.round(correct/answered*100):0;
+  document.getElementById("stat-answered").textContent=answered;
+  document.getElementById("stat-correct").textContent=correct;
+  document.getElementById("stat-wrong").textContent=wrong;
+  const pctEl=document.getElementById("stat-percent");
+  pctEl.textContent=pct+"%";
+  pctEl.className="score-badge "+(pct>=80?"good":pct>=60?"fair":"bad");
+  document.getElementById("progress-bar").style.width=(answered/total*100)+"%";
+  document.getElementById("progress-text").textContent=answered+"/"+total;
+}
+
+function save(){localStorage.setItem(STORAGE_KEY,JSON.stringify(userAnswers))}
+
+list.addEventListener("change",e=>{
+  if(e.target.matches("input[type=radio]")){
+    const card=e.target.closest(".q-card");
+    const idx=parseInt(card.dataset.idx);
+    userAnswers[idx]=parseInt(e.target.value);
+    save();
+    render();
+  }
+});
+
+document.getElementById("btn-check-all").addEventListener("click",()=>{
+  document.querySelectorAll(".explain").forEach(e=>e.classList.add("show"));
+  render();
+});
+document.getElementById("btn-reveal-all").addEventListener("click",()=>{
+  document.querySelectorAll(".explain").forEach(e=>e.classList.add("show"));
+});
+document.getElementById("btn-hide-all").addEventListener("click",()=>{
+  document.querySelectorAll(".explain").forEach(e=>e.classList.remove("show"));
+});
+document.getElementById("btn-reset").addEventListener("click",()=>{
+  if(!confirm("ล้างคำตอบทั้งหมด?"))return;
+  userAnswers={};save();render();
+});
+document.getElementById("btn-shuffle").addEventListener("click",()=>{
+  for(let i=QUESTIONS.length-1;i>0;i--){
+    const j=Math.floor(Math.random()*(i+1));
+    [QUESTIONS[i],QUESTIONS[j]]=[QUESTIONS[j],QUESTIONS[i]];
+  }
+  render();
+});
+
+document.querySelectorAll(".cat-btn").forEach(btn=>{
+  btn.addEventListener("click",()=>{
+    document.querySelectorAll(".cat-btn").forEach(b=>b.classList.remove("active"));
+    btn.classList.add("active");
+    currentFilter=btn.dataset.cat;
+    render();
+  });
+});
+
+render();
+</script>
+
+</body>
+</html>
