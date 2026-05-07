@@ -106,6 +106,11 @@ footer{padding:30px 16px;text-align:center;color:var(--muted);font-size:13px;bor
   nav.tabs,.quiz-toolbar,footer{display:none}
   .section{display:block !important}
 }
+
+@keyframes pulse {
+  0%,100% { box-shadow: 0 0 0 0 rgba(220,38,38,0.6); }
+  50% { box-shadow: 0 0 0 8px rgba(220,38,38,0); }
+}
 </style>
 </head>
 <body>
@@ -117,7 +122,8 @@ footer{padding:30px 16px;text-align:center;color:var(--muted);font-size:13px;bor
 </header>
 
 <nav class="tabs">
-  <button class="tab-btn active" data-tab="plan">📅 แผนอ่าน</button>
+  <button class="tab-btn active" data-tab="burning" style="color:#dc2626;font-weight:800;background:#fee2e2;border:2px solid #dc2626;animation:pulse 2s infinite">🔥 เนื้อหาไฟไหม้!</button>
+  <button class="tab-btn" data-tab="plan">📅 แผนอ่าน</button>
   <button class="tab-btn" data-tab="day1">📘 Day 1 อบรม</button>
   <button class="tab-btn" data-tab="day2">📗 Day 2 อบรม</button>
   <button class="tab-btn" data-tab="cheat">🎯 Cheat Sheet</button>
@@ -135,8 +141,594 @@ footer{padding:30px 16px;text-align:center;color:var(--muted);font-size:13px;bor
 
 <main>
 
+<!-- ========== TAB: เนื้อหาไฟไหม้อ่านก่อนสอบ ========== -->
+<section class="section" id="tab-burning">
+  <div class="card">
+    <h2 style="color:#dc2626">🔥 เนื้อหาไฟไหม้อ่านก่อนสอบ — สรุปแก่นแท้ตามขอบข่ายกรรมการ 14 หัวข้อ</h2>
+
+    <div class="warn-box">
+      <b>📌 สูตรการอ่าน:</b> อ่านแก่น → จำตัวเลข → จำเลขมาตรา → ฝึกหา "คำลวง" ในตัวเลือก<br>
+      <b>⏱ เวลาอ่าน:</b> 60-90 นาที / รอบ · อ่านซ้ำ 2 รอบ ก่อนเข้าห้องสอบ
+    </div>
+
+    <!-- ============ 1. ฐานทางกฎหมาย 8 ข้อ ============ -->
+    <h3 style="color:#dc2626;border-left:5px solid #dc2626;padding-left:10px">1️⃣ ฐานทางกฎหมาย (Lawful Basis) — ออก 8 ข้อ</h3>
+    <div class="hl">
+      <b>📚 มาตราหลัก:</b> ม.24 (ข้อมูลทั่วไป 7 ฐาน) + ม.26 (Sensitive 5 ข้อยกเว้น)<br><br>
+
+      <b>🎯 ม.24 — 7 ฐาน (ข้อมูลทั่วไป):</b>
+      <table>
+        <tr><th>ฐาน</th><th>ใช้เมื่อ</th><th>ตัวอย่าง</th></tr>
+        <tr><td><b>ม.24(1) Consent</b></td><td>ไม่มีฐานอื่นใช้ได้</td><td>ส่ง Marketing คนใหม่, Sensitive Marketing</td></tr>
+        <tr><td><b>ม.24(2) Vital</b></td><td>ป้องกันชีวิต/สุขภาพ เจ้าของให้ Consent ไม่ได้</td><td>ผู้ป่วยหมดสติ, อุบัติเหตุ</td></tr>
+        <tr><td><b>ม.24(3) Contract</b></td><td>จำเป็นต่อสัญญา + Pre-contract</td><td>สมัครงาน CV, ส่งของตามออเดอร์, จ้างงาน</td></tr>
+        <tr><td><b>ม.24(4) Public Task</b></td><td>ภารกิจของรัฐ</td><td>ทะเบียนราษฎร, ตำรวจสืบคดี</td></tr>
+        <tr><td><b>ม.24(5) LI</b></td><td>ประโยชน์โดยชอบ + LIA + ไม่กระทบสิทธิเกินควร</td><td>CCTV ความปลอดภัย, IT Security, Marketing ลูกค้าเก่า</td></tr>
+        <tr><td><b>ม.24(6) Legal Obligation</b></td><td>กฎหมายบังคับ</td><td>ภาษี, ประกันสังคม, AML/ปปง., รายงาน อย.</td></tr>
+        <tr><td><b>ม.24(7) Public Interest/Research</b></td><td>วิจัย-สถิติตามจริยธรรม</td><td>วิจัยทางการแพทย์/สังคม</td></tr>
+      </table>
+
+      <b>🎯 ม.26 — Sensitive Data (ความยินยอมโดยชัดแจ้ง + 5 ข้อยกเว้น):</b>
+      <table>
+        <tr><th>ฐาน</th><th>ใช้เมื่อ</th></tr>
+        <tr><td><b>ม.26 วรรค 1</b></td><td><b>Explicit Consent</b> — เป็นค่าตั้งต้น</td></tr>
+        <tr><td><b>ม.26(1) Vital</b></td><td>ป้องกันชีวิตเมื่อให้ Consent ไม่ได้ (ผู้ป่วยหมดสติ)</td></tr>
+        <tr><td><b>ม.26(2) ภารกิจไม่แสวงกำไร</b></td><td>มูลนิธิ-สมาคม ใช้ของสมาชิก</td></tr>
+        <tr><td><b>ม.26(3) เปิดเผยต่อสาธารณะโดยเจ้าของเอง</b></td><td>เจ้าของโพสต์เอง</td></tr>
+        <tr><td><b>ม.26(4) คดีความ-สิทธิเรียกร้อง</b></td><td>ฟ้องคดี/ต่อสู้คดี</td></tr>
+        <tr><td><b>ม.26(5)(ก) อาชีวเวชศาสตร์/รักษา</b></td><td>ตรวจสุขภาพประจำปี, รักษาผู้ป่วย</td></tr>
+        <tr><td><b>ม.26(5)(ข) สาธารณสุข</b></td><td>ป้องกันโรคระบาด</td></tr>
+        <tr><td><b>ม.26(5)(ค) Labor Law/SocSec</b></td><td>ประกันสังคม, แรงงาน, สวัสดิการ</td></tr>
+        <tr><td><b>ม.26(5)(ง) วิจัยทางวิทย์</b></td><td>มี IRB</td></tr>
+        <tr><td><b>ม.26(5)(จ) ประโยชน์สาธารณะที่สำคัญ</b></td><td>ตามกฎหมาย</td></tr>
+      </table>
+
+      <b>⚠️ Sensitive Data ตาม ม.26:</b> เชื้อชาติ · ศาสนา · ความเชื่อ · พฤติกรรมทางเพศ · ประวัติอาชญากรรม · สุขภาพ · ความพิการ · สหภาพ · พันธุกรรม · Biometric (ลายนิ้วมือ-Face ID) · ความเห็นทางการเมือง<br><br>
+
+      <b>🚨 Trap Cards:</b>
+      <ul>
+        <li><b>"Marketing ลูกค้าเก่า"</b> = LI ม.24(5) ได้ แต่ <b>ต้องให้ Opt-out ฟรี</b></li>
+        <li><b>"Marketing ลูกค้าใหม่"</b> = ต้อง Consent ม.24(1)</li>
+        <li><b>"CCTV ลานจอด/ทางเข้า"</b> = LI ม.24(5) <b>+ ติดป้ายแจ้ง</b></li>
+        <li><b>"พนักงานหักภาษี"</b> = Legal Obligation ม.24(6) <b>ไม่ใช่ Contract</b></li>
+        <li><b>"ผู้ป่วยหมดสติ"</b> = Vital ม.26(1) <b>ไม่ใช่ ม.24(2)</b> ถ้าเป็นข้อมูลสุขภาพ</li>
+        <li><b>"Biometric เข้างาน"</b> = Sensitive ต้อง Explicit Consent หรือ ม.26(5)(ค)</li>
+        <li><b>"KYC ประวัติคดี"</b> = Sensitive ต้อง Explicit Consent</li>
+      </ul>
+    </div>
+
+    <!-- ============ 2. สิทธิเจ้าของข้อมูล ม.30-36 — ออก 6 ข้อ ============ -->
+    <h3 style="color:#dc2626;border-left:5px solid #dc2626;padding-left:10px">2️⃣ สิทธิเจ้าของข้อมูล (DSR) ม.30-36 — ออก 6 ข้อ</h3>
+    <div class="hl">
+      <table>
+        <tr><th>มาตรา</th><th>สิทธิ</th><th>คำลวง / Trick</th></tr>
+        <tr><td><b>ม.30</b></td><td>Right to <b>Access</b> + ขอสำเนา</td><td>ตอบใน <b>30 วัน</b> · ขยายได้ 30 วัน · ปฏิเสธต้องให้เหตุผล</td></tr>
+        <tr><td><b>ม.31</b></td><td>Right to <b>Data Portability</b></td><td>เฉพาะ <b>Consent / Contract</b> · รูปแบบ Machine-Readable</td></tr>
+        <tr><td><b>ม.32</b></td><td>Right to <b>Object</b> (คัดค้าน)</td><td>คัดค้าน LI / Direct Marketing / Public Task / วิจัย</td></tr>
+        <tr><td><b>ม.33</b></td><td>Right to <b>Erasure</b> (ลบ)</td><td>ลบเมื่อหมดความจำเป็น/ถอน Consent · ปฏิเสธได้ถ้ายังต้องเก็บตามกฎหมาย</td></tr>
+        <tr><td><b>ม.34</b></td><td>Right to <b>Restriction</b> (ระงับ)</td><td>ระงับชั่วคราว เช่น ระหว่างตรวจสอบความถูกต้อง</td></tr>
+        <tr><td><b>ม.35</b></td><td>Right to <b>Rectification</b> (แก้ไข)</td><td>ทำให้ถูกต้อง-เป็นปัจจุบัน-สมบูรณ์</td></tr>
+        <tr><td><b>ม.36</b></td><td>หน้าที่ Controller</td><td>แจ้งบุคคลที่สาม-ผู้รับโอนเมื่อมีการแก้/ลบ</td></tr>
+      </table>
+
+      <b>📌 ตัวเลขทอง DSR:</b> <span style="color:#dc2626;font-size:18px;font-weight:800">30 วัน + ขยาย 30 วัน</span> · ฟรี (เว้นแต่ขอซ้ำ/เกินเหตุ)<br><br>
+
+      <b>⚠️ ม.19 — Withdraw Consent:</b> เพิกถอนได้ทุกเวลา · ง่ายเหมือนตอนให้ · ไม่กระทบการประมวลผลที่ทำไปแล้วโดยชอบ<br><br>
+
+      <b>🚨 Trap Cards:</b>
+      <ul>
+        <li>Portability ใช้ได้ <b>เฉพาะ Consent/Contract</b> เท่านั้น (ไม่ใช่ทุกฐาน)</li>
+        <li>Erasure ปฏิเสธได้ถ้ามี Legal Obligation/Public Task/วัตถุประสงค์ยังจำเป็น</li>
+        <li>เด็ก &lt;10 ปี ขอ Consent <b>ผู้แทนโดยชอบธรรม</b> เท่านั้น (ม.20)</li>
+        <li>เด็ก 10-20 ปี ขอเอง <b>+ ผู้แทน</b> ในเรื่องสำคัญ</li>
+      </ul>
+    </div>
+
+    <!-- ============ 3. ประกาศ Security 2565 — ออก 9 ข้อ ============ -->
+    <h3 style="color:#dc2626;border-left:5px solid #dc2626;padding-left:10px">3️⃣ ประกาศ กคส. มาตรการความมั่นคงปลอดภัย พ.ศ.2565 — ออก 9 ข้อ</h3>
+    <div class="hl">
+      <b>📚 ฐาน:</b> ออกตาม ม.37(1) — Controller ต้องจัดให้มีมาตรการรักษาความมั่นคงปลอดภัย<br><br>
+
+      <b>🎯 3 ประเภทมาตรการ (CIA Triad):</b>
+      <table>
+        <tr><th>ประเภท</th><th>ตัวอย่าง</th></tr>
+        <tr><td><b>Organizational Measure (เชิงองค์กร)</b></td><td>นโยบาย · Compliance Audit · Awareness Training · DPO · DPA · ROPA · Privacy Notice · Incident Response Plan</td></tr>
+        <tr><td><b>Technical Measure (เชิงเทคนิค)</b></td><td>Encryption · MFA · Access Control · Firewall · Anti-virus · Backup · DLP · SIEM · Logging · Pseudonymization</td></tr>
+        <tr><td><b>Physical Measure (เชิงกายภาพ)</b></td><td>กุญแจ · CCTV · เก็บเอกสารในตู้เซฟ · Access Card เข้าห้อง Server · ทำลายเอกสารแบบ Shred</td></tr>
+      </table>
+
+      <b>🎯 หลักการ CIA Triad:</b>
+      <ul>
+        <li><b>Confidentiality</b> = ความลับ (รั่ว = อีเมลผิดคน)</li>
+        <li><b>Integrity</b> = ความถูกต้อง (แก้ไขโดยมิชอบ)</li>
+        <li><b>Availability</b> = ความพร้อมใช้ (DDoS, Ransomware, ไฟไหม้)</li>
+      </ul>
+
+      <b>🎯 องค์ประกอบของมาตรการตามประกาศ:</b>
+      <ol>
+        <li>ทบทวนความเสี่ยง (<b>Risk Assessment</b>)</li>
+        <li>มาตรการต้องเหมาะกับ <b>ประเภท ปริมาณ ความเสี่ยง</b></li>
+        <li>การควบคุมการเข้าถึง (<b>Access Control</b>) — Identification → Authentication → Authorization</li>
+        <li>การกำหนด <b>หน้าที่และความรับผิดชอบ</b></li>
+        <li>การ <b>ทบทวน/ปรับปรุง</b> มาตรการอย่างสม่ำเสมอ</li>
+        <li><b>การสร้างความตระหนัก</b> (Awareness)</li>
+      </ol>
+
+      <b>🚨 Trap Cards:</b>
+      <ul>
+        <li><b>"Compliance Audit"</b> = <b>Organizational Measure</b> (ไม่ใช่ Technical)</li>
+        <li><b>"Awareness Training"</b> = Organizational</li>
+        <li><b>"Encryption / MFA / Anti-virus"</b> = Technical</li>
+        <li><b>"กุญแจ / CCTV / Access Card"</b> = Physical</li>
+        <li>ต้องคำนึงถึง <b>"ความเสี่ยงที่อาจเกิดต่อสิทธิเสรีภาพ"</b> ของเจ้าของข้อมูล</li>
+      </ul>
+    </div>
+
+    <!-- ============ 4. ประกาศ Breach 2565 — ออก 10 ข้อ ============ -->
+    <h3 style="color:#dc2626;border-left:5px solid #dc2626;padding-left:10px">4️⃣ ประกาศ กคส. แจ้งเหตุละเมิด พ.ศ.2565 — ออก 10 ข้อ (เยอะที่สุด)</h3>
+    <div class="hl">
+      <b>📚 ฐาน:</b> ม.37(4) — แจ้ง <b>สำนักงาน กคส.</b> ภายใน <b>72 ชั่วโมง</b> นับแต่ <b>ทราบเหตุ</b> (Aware) — ยกเว้นไม่เสี่ยงต่อสิทธิเสรีภาพ<br><br>
+
+      <b>🎯 ตัวเลขทอง:</b>
+      <ul>
+        <li><b>72 ชั่วโมง</b> — แจ้ง PDPC นับแต่ "ทราบเหตุ" (ไม่ใช่ตั้งแต่เกิดเหตุ)</li>
+        <li><b>15 วัน</b> — เกิน 72 ชม. ต้องส่งเหตุผลล่าช้า</li>
+        <li><b>เสี่ยงสูง</b> = แจ้งทั้ง <b>PDPC + เจ้าของข้อมูล</b> โดยไม่ชักช้า</li>
+      </ul>
+
+      <b>🎯 3 ระดับเหตุละเมิด:</b>
+      <table>
+        <tr><th>ระดับ</th><th>เกณฑ์</th><th>การแจ้ง</th></tr>
+        <tr><td>ไม่เสี่ยง</td><td>ไม่กระทบสิทธิเสรีภาพ</td><td><b>ไม่ต้องแจ้ง</b> แต่ต้องบันทึก</td></tr>
+        <tr><td>เสี่ยง</td><td>กระทบสิทธิ</td><td>แจ้ง <b>PDPC ภายใน 72 ชม.</b></td></tr>
+        <tr><td>เสี่ยงสูง</td><td>เสี่ยงต่อสิทธิเสรีภาพอย่างมาก</td><td>แจ้ง <b>PDPC + เจ้าของข้อมูล</b></td></tr>
+      </table>
+
+      <b>🎯 เนื้อหาการแจ้ง PDPC ต้องมี:</b>
+      <ol>
+        <li>ลักษณะ + ประเภท + ปริมาณ ของข้อมูลที่ละเมิด</li>
+        <li>ผลกระทบที่อาจเกิดขึ้น</li>
+        <li>มาตรการเยียวยา-ลดความเสียหาย</li>
+        <li>ผู้ติดต่อ (DPO) + ช่องทาง</li>
+      </ol>
+
+      <b>🎯 ขั้นตอนรับมือ Breach (IRP):</b>
+      <ol>
+        <li><b>Detect</b> (ตรวจพบ)</li>
+        <li><b>Contain</b> (จำกัดความเสียหาย)</li>
+        <li><b>Assess Risk</b> (ประเมินความเสี่ยงต่อสิทธิเสรีภาพ)</li>
+        <li><b>Notify</b> (PDPC ภายใน 72 ชม. / เจ้าของข้อมูลถ้าเสี่ยงสูง)</li>
+        <li><b>Remediate + Lessons Learned</b></li>
+      </ol>
+
+      <b>🎯 ตัวอย่างเหตุละเมิด:</b>
+      <ul>
+        <li>อีเมลส่งผิดคน (Confidentiality)</li>
+        <li>โน๊ตบุ๊กหายที่ยังไม่เข้ารหัส (Confidentiality)</li>
+        <li>Ransomware เข้ารหัสข้อมูล (Availability + อาจ Confidentiality)</li>
+        <li>Phishing ทำให้ Account หลุด (Confidentiality)</li>
+        <li>พนักงานเปิดเผยโดยมิชอบ (Confidentiality)</li>
+        <li>Database ถูกแก้ไขโดยไม่ได้รับอนุญาต (Integrity)</li>
+      </ul>
+
+      <b>🚨 Trap Cards:</b>
+      <ul>
+        <li>72 ชม. นับจาก <b>"ทราบเหตุ" (Aware)</b> ไม่ใช่ "เกิดเหตุ"</li>
+        <li>หาก <b>Processor</b> พบเหตุ → แจ้ง <b>Controller</b> โดยไม่ชักช้า (Controller เป็นผู้แจ้ง PDPC)</li>
+        <li>เครื่องหายแต่ <b>Encrypted ครบ</b> → อาจ <b>ไม่ต้องแจ้ง</b> เจ้าของข้อมูล</li>
+        <li>ไม่แจ้ง = โทษทางปกครอง <b>ปรับสูงสุด 3 ล้าน</b> (ม.83(2))</li>
+        <li>การแจ้งเจ้าของข้อมูล ต้องใช้ <b>ภาษาเข้าใจง่าย (Plain Language)</b></li>
+      </ul>
+    </div>
+
+    <!-- ============ 5. Cross-Border ม.28-29 — ออก 5 ข้อ ============ -->
+    <h3 style="color:#dc2626;border-left:5px solid #dc2626;padding-left:10px">5️⃣ ส่ง/โอนข้อมูลไปต่างประเทศ ม.28-29 + ประกาศ 2566 — ออก 5 ข้อ</h3>
+    <div class="hl">
+      <b>📚 ม.28:</b> ปลายทางต้องมีมาตรฐาน <b>คุ้มครองเพียงพอ</b> (Adequacy) ตาม PDPC ประกาศ<br>
+      <b>📚 ม.29:</b> หากไม่ Adequacy ต้องใช้ <b>มาตรการคุ้มครองที่เพียงพอและบังคับใช้ได้จริง</b><br><br>
+
+      <b>🎯 ข้อยกเว้น ม.28 (ส่งได้แม้ไม่ Adequacy):</b>
+      <ol>
+        <li>ปฏิบัติตาม <b>กฎหมาย</b></li>
+        <li>ได้รับ <b>Consent</b> โดยแจ้งความเสี่ยง (Informed Consent)</li>
+        <li>จำเป็นต่อ <b>สัญญา</b> ที่เจ้าของข้อมูลเป็นคู่สัญญา/ขอก่อนทำสัญญา</li>
+        <li>จำเป็นต่อสัญญา <b>เพื่อประโยชน์เจ้าของข้อมูล</b></li>
+        <li>ป้องกัน <b>อันตรายต่อชีวิต/ร่างกาย/สุขภาพ</b> เจ้าของข้อมูลให้ Consent ไม่ได้</li>
+        <li><b>ประโยชน์สาธารณะ</b> ที่สำคัญ</li>
+      </ol>
+
+      <b>🎯 มาตรการคุ้มครอง ม.29 (ทางเลือก):</b>
+      <table>
+        <tr><th>เครื่องมือ</th><th>ใช้เมื่อ</th></tr>
+        <tr><td><b>BCRs</b> (Binding Corporate Rules)</td><td>โอนภายใน <b>เครือบริษัท</b> ข้ามชาติ · PDPC อนุมัติ</td></tr>
+        <tr><td><b>SCCs</b> (Standard Contractual Clauses)</td><td>สัญญามาตรฐานที่ PDPC กำหนดหรือยอมรับ</td></tr>
+        <tr><td>ข้อกำหนดของ <b>Code of Conduct / Certification</b></td><td>ที่ PDPC รับรอง</td></tr>
+        <tr><td><b>กลไกอื่น</b></td><td>ที่ PDPC ยอมรับ</td></tr>
+      </table>
+
+      <b>🎯 ประกาศ 2566 (ม.28):</b>
+      <ul>
+        <li>กำหนดเกณฑ์ <b>"Adequacy"</b> ที่ PDPC จะใช้พิจารณา</li>
+        <li>พิจารณา: หลักนิติธรรม · หน่วยงานกำกับ · สิทธิเจ้าของข้อมูล · กลไกบังคับใช้</li>
+      </ul>
+
+      <b>🎯 ประกาศ 2566 (ม.29):</b>
+      <ul>
+        <li>กำหนดรูปแบบ <b>BCRs / SCCs</b></li>
+        <li>BCRs ต้องผ่าน <b>การรับรองจาก PDPC</b></li>
+        <li>SCCs ต้องครอบคลุม: บทบาท Controller-Processor · สิทธิเจ้าของข้อมูล · ความรับผิด · กลไกระงับข้อพิพาท</li>
+      </ul>
+
+      <b>🚨 Trap Cards:</b>
+      <ul>
+        <li>ม.28 = Adequacy / ม.29 = มาตรการคุ้มครองอื่น (BCRs/SCCs)</li>
+        <li><b>"กลุ่มบริษัทเดียวกัน"</b> → ใช้ <b>BCRs</b></li>
+        <li><b>"คู่ค้าต่างประเทศ"</b> → ใช้ <b>SCCs</b></li>
+        <li>Cloud Service (AWS/GCP/Azure) → ดู <b>Region</b> + DPA + SCCs</li>
+      </ul>
+    </div>
+
+    <!-- ============ 6. กลไกบังคับใช้กฎหมาย — ออก 3 ข้อ ============ -->
+    <h3 style="color:#dc2626;border-left:5px solid #dc2626;padding-left:10px">6️⃣ กลไกบังคับใช้กฎหมาย — ออก 3 ข้อ</h3>
+    <div class="hl">
+      <b>🎯 3 โทษ:</b>
+      <table>
+        <tr><th>ประเภท</th><th>ตัวเลข</th><th>มาตรา</th></tr>
+        <tr><td><b>โทษอาญา</b></td><td>จำคุกไม่เกิน <b>1 ปี</b> ปรับไม่เกิน <b>1 ล้าน</b> หรือทั้งจำทั้งปรับ (Sensitive: 6 เดือน-1 ปี)</td><td>ม.79-81</td></tr>
+        <tr><td><b>โทษทางปกครอง</b></td><td>ปรับสูงสุด <b>1 / 3 / 5 ล้านบาท</b></td><td>ม.82-87</td></tr>
+        <tr><td><b>โทษทางแพ่ง</b></td><td><b>ค่าสินไหม + Punitive</b> สูงสุด 2 เท่า</td><td>ม.77-78</td></tr>
+      </table>
+
+      <b>🎯 หน่วยงานกำกับ:</b>
+      <ul>
+        <li><b>คณะกรรมการคุ้มครองข้อมูลส่วนบุคคล (กคส.)</b> — ออกประกาศ + พิจารณาอุทธรณ์</li>
+        <li><b>คณะกรรมการผู้เชี่ยวชาญ (Specialist Committee)</b> — รับเรื่องร้องเรียน + สั่งปรับ</li>
+        <li><b>สำนักงาน กคส. (PDPC Office)</b> — งานสนับสนุน + รับแจ้งเหตุ Breach</li>
+      </ul>
+
+      <b>🎯 กระบวนการร้องเรียน:</b>
+      <ol>
+        <li>ผู้เสียหายร้องต่อ <b>คณะกรรมการผู้เชี่ยวชาญ</b></li>
+        <li>คณะกรรมการสอบสวน → สั่งระงับ/แก้ไข/ปรับ</li>
+        <li>อุทธรณ์ต่อ <b>กคส.</b> ภายใน <b>30 วัน</b></li>
+        <li>ฟ้องศาลปกครอง</li>
+      </ol>
+
+      <b>🎯 โทษเฉพาะ Sensitive Data:</b>
+      <ul>
+        <li>ใช้ Sensitive โดยไม่ Consent → <b>ปรับสูงสุด 5 ล้าน</b> + อาจ <b>จำคุก</b></li>
+        <li>ส่ง Sensitive ออกนอกประเทศโดยไม่เป็นไปตาม ม.28-29 → <b>ปรับสูงสุด 5 ล้าน</b></li>
+      </ul>
+
+      <b>🚨 Trap Cards:</b>
+      <ul>
+        <li>ผู้บริหารรับผิด <b>ร่วม</b> ตาม ม.81 หากปล่อยปละ</li>
+        <li>หากร่วมมือกับ PDPC → <b>บรรเทาโทษ</b> ได้</li>
+        <li>โทษอาญาต้อง <b>ทำให้ผู้อื่นเสียหายโดยรู้</b> หรือ <b>เสียหายต่อชื่อเสียง</b></li>
+      </ul>
+    </div>
+
+    <!-- ============ 7. หลักการพื้นฐาน — ออก 1 ข้อ ============ -->
+    <h3 style="color:#dc2626;border-left:5px solid #dc2626;padding-left:10px">7️⃣ หลักการพื้นฐาน (Principles) — ออก 1 ข้อ</h3>
+    <div class="hl">
+      <b>🎯 7 หลักการ GDPR/PDPA (ต้องท่อง):</b>
+      <ol>
+        <li><b>Lawfulness, Fairness, Transparency</b> — ชอบด้วยกฎหมาย/เป็นธรรม/โปร่งใส</li>
+        <li><b>Purpose Limitation</b> — ใช้ตามวัตถุประสงค์ที่แจ้ง</li>
+        <li><b>Data Minimization</b> — เก็บเท่าที่จำเป็น</li>
+        <li><b>Accuracy</b> — ถูกต้อง-เป็นปัจจุบัน</li>
+        <li><b>Storage Limitation</b> — ไม่เก็บนานเกินจำเป็น</li>
+        <li><b>Integrity & Confidentiality (Security)</b> — มั่นคงปลอดภัย</li>
+        <li><b>Accountability</b> — รับผิดชอบและพิสูจน์ได้</li>
+      </ol>
+
+      <b>🎯 หลัก PbD (Privacy by Design) — 7 Principles ของ Cavoukian:</b>
+      <ol>
+        <li>Proactive not Reactive</li>
+        <li>Privacy as Default Setting</li>
+        <li>Privacy Embedded into Design</li>
+        <li>Full Functionality (Win-Win)</li>
+        <li>End-to-End Security</li>
+        <li>Visibility & Transparency</li>
+        <li>Respect for User Privacy</li>
+      </ol>
+
+      <b>🚨 Trap Cards:</b>
+      <ul>
+        <li>"เก็บเผื่อใช้ในอนาคต" = ผิด <b>Purpose Limitation</b></li>
+        <li>"เก็บไว้ตลอดชีวิต" = ผิด <b>Storage Limitation</b></li>
+        <li>"Pre-ticked Consent" = ผิด <b>Lawfulness/Fairness</b></li>
+      </ul>
+    </div>
+
+    <!-- ============ 8. ประกาศ การลบ 2567 — ออก 1 ข้อ ============ -->
+    <h3 style="color:#dc2626;border-left:5px solid #dc2626;padding-left:10px">8️⃣ ประกาศ กคส. การลบ/ทำให้ไม่ระบุตัวตน พ.ศ.2567 — ออก 1 ข้อ</h3>
+    <div class="hl">
+      <b>📚 ฐาน:</b> ออกตาม ม.33 + ม.37 — Controller ต้องลบ/ทำลาย/ทำให้ไม่ระบุตัวตน<br><br>
+
+      <b>🎯 3 วิธี:</b>
+      <table>
+        <tr><th>วิธี</th><th>ความหมาย</th><th>ตัวอย่าง</th></tr>
+        <tr><td><b>ลบ (Delete)</b></td><td>ลบออกจากระบบ</td><td>ลบ record จาก DB</td></tr>
+        <tr><td><b>ทำลาย (Destroy)</b></td><td>ทำลายสื่อบันทึก</td><td>Shred กระดาษ · Wipe HDD</td></tr>
+        <tr><td><b>Anonymization</b></td><td>ทำให้ไม่ระบุตัวบุคคล <b>โดยถาวร</b></td><td>ลบ ID + ตัดข้อมูลเฉพาะ</td></tr>
+      </table>
+
+      <b>🎯 ความแตกต่าง:</b>
+      <ul>
+        <li><b>Anonymization</b> = <b>กลับคืนไม่ได้</b> (Irreversible) → ออกจากขอบเขต PDPA</li>
+        <li><b>Pseudonymization</b> = แทนด้วยรหัส แต่ <b>กลับคืนได้</b> → ยังเป็น Personal Data</li>
+      </ul>
+
+      <b>🎯 ปัจจัยที่ต้องคำนึง:</b>
+      <ol>
+        <li>ประเภท + ปริมาณ ของข้อมูล</li>
+        <li>ความเสี่ยง</li>
+        <li>เทคโนโลยีที่ใช้</li>
+        <li>ค่าใช้จ่ายและความเหมาะสม</li>
+        <li>ระยะเวลาเก็บตามกฎหมาย</li>
+      </ol>
+
+      <b>🚨 Trap Cards:</b>
+      <ul>
+        <li>"Pseudonymization" ≠ "Anonymization" — ยังต้องคุ้มครอง</li>
+        <li>Backup ลบไม่ได้ทันที → ใช้ <b>Restriction</b> + ลบในรอบ Backup ถัดไป</li>
+        <li>กฎหมายอื่นบังคับเก็บ (เช่น บัญชี 5-10 ปี) → ปฏิเสธการลบได้</li>
+      </ul>
+    </div>
+
+    <!-- ============ 9. ม.26 Sensitive — ออก 1 ข้อ ============ -->
+    <h3 style="color:#dc2626;border-left:5px solid #dc2626;padding-left:10px">9️⃣ ประเภทข้อมูล Sensitive ตาม ม.26 — ออก 1 ข้อ</h3>
+    <div class="hl">
+      <b>🎯 11 ประเภท Sensitive Data:</b>
+      <ol>
+        <li><b>เชื้อชาติ</b> (Race)</li>
+        <li><b>เผ่าพันธุ์</b> (Ethnic Origin)</li>
+        <li><b>ความคิดเห็นทางการเมือง</b> (Political Opinion)</li>
+        <li><b>ความเชื่อ</b> ในลัทธิ ศาสนา หรือปรัชญา</li>
+        <li><b>พฤติกรรมทางเพศ</b> (Sexual Behaviour)</li>
+        <li><b>ประวัติอาชญากรรม</b> (Criminal Record)</li>
+        <li><b>ข้อมูลสุขภาพ</b> (Health Data)</li>
+        <li><b>ความพิการ</b> (Disability)</li>
+        <li>ข้อมูล <b>สหภาพแรงงาน</b> (Trade Union)</li>
+        <li>ข้อมูล <b>พันธุกรรม</b> (Genetic Data)</li>
+        <li>ข้อมูล <b>ชีวภาพ (Biometric)</b> ที่ระบุตัวบุคคล</li>
+      </ol>
+
+      <b>🎯 Biometric ที่เป็น Sensitive:</b>
+      <ul>
+        <li>ลายนิ้วมือ · Face ID · ม่านตา · ลายฝ่ามือ · เสียง (เพื่อระบุตัว) · DNA</li>
+      </ul>
+
+      <b>🚨 Trap Cards:</b>
+      <ul>
+        <li><b>"เลขบัตรประชาชน"</b> ≠ Sensitive (เป็น PII ทั่วไป)</li>
+        <li><b>"ลายเซ็น Digital"</b> ≠ Sensitive (เว้นแต่ใช้ Biometric)</li>
+        <li><b>"ข้อมูลเด็ก"</b> ≠ Sensitive ตาม ม.26 แต่ต้องระวังพิเศษ ม.20</li>
+        <li><b>"ความพิการ" = Sensitive</b> (ข้อมูลสุขภาพ)</li>
+      </ul>
+    </div>
+
+    <!-- ============ 10. ม.5 — ออก 1 ข้อ ============ -->
+    <h3 style="color:#dc2626;border-left:5px solid #dc2626;padding-left:10px">🔟 มาตรา 5 PDPA — ขอบเขตการบังคับใช้ — ออก 1 ข้อ</h3>
+    <div class="hl">
+      <b>📚 หลัก:</b> PDPA ใช้บังคับกับ Controller / Processor ใน <b>2 กรณี</b><br><br>
+
+      <b>🎯 ม.5 วรรค 1 — ในประเทศ:</b>
+      <ul>
+        <li>Controller / Processor ที่อยู่ <b>ในราชอาณาจักร</b> ไม่ว่าจะประมวลผลในหรือนอกประเทศ</li>
+      </ul>
+
+      <b>🎯 ม.5 วรรค 2 — นอกประเทศ (Extraterritorial):</b>
+      <ul>
+        <li>Controller / Processor ที่อยู่ <b>นอกราชอาณาจักร</b> หากเป็น
+        <ol>
+          <li>การ <b>เสนอสินค้า/บริการ</b> ให้เจ้าของข้อมูลในไทย (มี/ไม่มีเงิน)</li>
+          <li>การ <b>เฝ้าติดตามพฤติกรรม</b> เจ้าของข้อมูลที่อยู่ในไทย</li>
+        </ol>
+        </li>
+      </ul>
+
+      <b>🎯 ข้อยกเว้น (ไม่บังคับใช้):</b>
+      <ul>
+        <li>ใช้เพื่อ <b>กิจการครอบครัวส่วนตัว</b></li>
+        <li>หน่วยงานรัฐ ด้านความมั่นคง / ป้องกันปราบปรามอาชญากรรม</li>
+        <li>สื่อมวลชน-ศิลปกรรม-วรรณกรรม ตาม <b>จริยธรรมสื่อ</b></li>
+        <li>สภาผู้แทน-วุฒิสภา-รัฐสภา</li>
+        <li>การพิจารณาคดีของศาล</li>
+        <li><b>Credit Bureau</b></li>
+      </ul>
+
+      <b>🚨 Trap Cards:</b>
+      <ul>
+        <li>เว็บต่างประเทศที่ขายของให้คนไทย = <b>เข้าข่าย</b> PDPA</li>
+        <li>กิจการส่วนตัวในบ้าน = <b>ไม่เข้าข่าย</b></li>
+        <li>Credit Bureau อยู่ภายใต้ <b>กฎหมายเฉพาะ</b> ไม่ใช่ PDPA</li>
+      </ul>
+    </div>
+
+    <!-- ============ 11. ม.4 — ออก 1 ข้อ ============ -->
+    <h3 style="color:#dc2626;border-left:5px solid #dc2626;padding-left:10px">1️⃣1️⃣ มาตรา 4 PDPA — ข้อยกเว้นการบังคับใช้ — ออก 1 ข้อ</h3>
+    <div class="hl">
+      <b>📚 หลัก:</b> ม.4 กำหนด <b>ข้อยกเว้น</b> ที่ PDPA ไม่ใช้บังคับ<br><br>
+
+      <b>🎯 6 ข้อยกเว้นตาม ม.4:</b>
+      <ol>
+        <li><b>(1)</b> เพื่อประโยชน์ <b>ส่วนตัว</b> หรือ <b>กิจการครอบครัว</b></li>
+        <li><b>(2)</b> หน่วยงานของรัฐ <b>ความมั่นคง</b> + <b>ป้องกันและปราบปรามการฟอกเงิน</b> + ความปลอดภัยของรัฐ</li>
+        <li><b>(3)</b> บุคคล/นิติบุคคลที่ใช้/เปิดเผยเพื่อ <b>กิจกรรมสื่อมวลชน · ศิลปกรรม · วรรณกรรม</b> ตาม <b>จริยธรรมสื่อ</b> หรือเพื่อ <b>สาธารณประโยชน์</b></li>
+        <li><b>(4)</b> สภาผู้แทนราษฎร · วุฒิสภา · รัฐสภา + คณะกรรมาธิการ</li>
+        <li><b>(5)</b> การพิจารณาคดีของ <b>ศาล</b> และเจ้าหน้าที่ในกระบวนการยุติธรรม</li>
+        <li><b>(6)</b> ข้อมูลของ <b>บริษัทข้อมูลเครดิต</b> (Credit Bureau) และสมาชิก ตามกฎหมายเฉพาะ</li>
+      </ol>
+
+      <b>⚠️ แม้ได้ยกเว้นจาก PDPA แต่ยังต้องมี <b>มาตรการรักษาความมั่นคงปลอดภัย</b> ตาม ม.4 วรรค 2</b><br><br>
+
+      <b>🚨 Trap Cards:</b>
+      <ul>
+        <li>ม.4 = <b>ข้อยกเว้นโดยทั้งหมด</b> (PDPA ไม่ใช้)</li>
+        <li>ม.5 = <b>ขอบเขตการใช้บังคับ</b></li>
+        <li>ม.4 ≠ ม.24 (ฐานทางกฎหมาย)</li>
+        <li>"กิจการส่วนตัว" = ใช้บันทึกในมือถือส่วนตัว ไม่ใช่ในนามบริษัท</li>
+      </ul>
+    </div>
+
+    <!-- ============ 12. ม.40 — ออก 2 ข้อ ============ -->
+    <h3 style="color:#dc2626;border-left:5px solid #dc2626;padding-left:10px">1️⃣2️⃣ มาตรา 40 PDPA — Processor + DPA — ออก 2 ข้อ</h3>
+    <div class="hl">
+      <b>📚 หลัก:</b> Processor มีหน้าที่ตามคำสั่ง Controller + ต้องมี <b>DPA (Data Processing Agreement)</b><br><br>
+
+      <b>🎯 หน้าที่ Processor (ม.40):</b>
+      <ol>
+        <li>ดำเนินการ <b>ตามคำสั่ง Controller</b> เท่านั้น (เว้นแต่ขัดกฎหมาย)</li>
+        <li>จัดให้มี <b>มาตรการรักษาความมั่นคงปลอดภัย</b> (ตาม ม.37(1))</li>
+        <li>แจ้ง <b>Controller</b> เมื่อพบเหตุละเมิด <b>โดยไม่ชักช้า</b></li>
+        <li>จัดทำ <b>RoPA</b> เฉพาะส่วนของ Processor</li>
+      </ol>
+
+      <b>🎯 DPA (ม.40 วรรค 3) — ต้องมีอย่างน้อย:</b>
+      <ol>
+        <li>ขอบเขต / ระยะเวลา / ลักษณะ + วัตถุประสงค์การประมวลผล</li>
+        <li>ประเภท + ปริมาณข้อมูล</li>
+        <li>หน้าที่ + ความรับผิดของ Processor</li>
+        <li>มาตรการ <b>ความปลอดภัย</b></li>
+        <li>การใช้ <b>Sub-processor</b> (ต้องได้รับอนุญาตจาก Controller)</li>
+        <li>การ <b>คืน/ลบ</b> ข้อมูลเมื่อสิ้นสุดสัญญา</li>
+        <li>การ <b>ตรวจสอบ (Audit)</b> ของ Controller</li>
+        <li>การช่วย Controller ตอบ <b>DSR</b></li>
+      </ol>
+
+      <b>🎯 กรณีที่ต้องทำ DPA:</b>
+      <ul>
+        <li>จ้าง <b>ผู้พัฒนาระบบ</b> ที่เข้าถึงข้อมูล</li>
+        <li>ใช้ <b>Cloud Service</b> (AWS, GCP, Azure)</li>
+        <li>จ้างทำ <b>Payroll / Call Center / IT Support</b></li>
+        <li>ส่ง Marketing ผ่าน Vendor</li>
+      </ul>
+
+      <b>🚨 Trap Cards:</b>
+      <ul>
+        <li>ตัวอย่างกรรมการ #1 → <b>"จ้างผู้พัฒนาระบบ"</b> = ต้องมี DPA</li>
+        <li>"พนักงานภายใน" ≠ Processor → ไม่ต้องมี DPA (เป็น HR Policy)</li>
+        <li>"คู่ค้าธุรกิจที่เป็น Controller ของตัวเอง" = <b>ไม่ใช่ DPA</b> (เป็น Joint Controllers หรือแยก Controller)</li>
+        <li><b>Sub-processor</b> ต้อง <b>ได้รับอนุญาต</b> Controller ก่อน</li>
+        <li>หาก Processor ใช้ข้อมูลนอกขอบเขต → กลายเป็น <b>Controller</b> ทันที</li>
+      </ul>
+    </div>
+
+    <!-- ============ 13. ม.41 — ออก 1 ข้อ ============ -->
+    <h3 style="color:#dc2626;border-left:5px solid #dc2626;padding-left:10px">1️⃣3️⃣ มาตรา 41 PDPA — DPO Appointment — ออก 1 ข้อ</h3>
+    <div class="hl">
+      <b>📚 หลัก:</b> Controller / Processor ต้องตั้ง DPO ใน <b>3 กรณี</b><br><br>
+
+      <b>🎯 ม.41 วรรค 1 — เกณฑ์ตั้ง DPO:</b>
+      <ol>
+        <li><b>(1)</b> เป็น <b>หน่วยงานของรัฐ</b> ที่ PDPC ประกาศกำหนด</li>
+        <li><b>(2)</b> กิจกรรมหลัก = การประมวลผลข้อมูลที่ต้อง <b>ตรวจสอบอย่างสม่ำเสมอ</b> โดยมี <b>ปริมาณข้อมูลจำนวนมาก</b> (Large-scale Monitoring)</li>
+        <li><b>(3)</b> กิจกรรมหลัก = ประมวลผล <b>ข้อมูล Sensitive ม.26</b></li>
+      </ol>
+
+      <b>🎯 ม.41 วรรค 2-5:</b>
+      <ul>
+        <li>DPO เป็น <b>พนักงานภายใน</b> หรือ <b>Outsource</b> ก็ได้</li>
+        <li>กรณี <b>เครือบริษัท</b> ตั้ง DPO ร่วมกันได้</li>
+        <li>ต้องประกาศ <b>ข้อมูลติดต่อ DPO</b> ให้เจ้าของข้อมูล + แจ้ง PDPC</li>
+        <li>DPO ต้อง <b>เข้าถึงทรัพยากร</b> + <b>เข้าถึงผู้บริหารระดับสูงสุด</b></li>
+      </ul>
+
+      <b>🎯 ม.41 วรรค 6 — คุ้มครอง DPO:</b>
+      <ul>
+        <li><b>ห้ามไล่ออก</b> หรือลงโทษเพราะปฏิบัติหน้าที่ตาม PDPA</li>
+        <li>หากเลิกจ้าง → ต้องระบุเหตุที่ไม่เกี่ยวกับการทำหน้าที่</li>
+      </ul>
+
+      <b>🚨 Trap Cards:</b>
+      <ul>
+        <li>ตัวอย่างกรรมการ #2 → <b>"ระบบอัตโนมัติเฉย ๆ"</b> ≠ เกณฑ์ตั้ง DPO</li>
+        <li>"พนักงาน 50 คน" ≠ เกณฑ์ตั้ง DPO (ดูที่กิจกรรมหลัก ไม่ใช่ขนาด)</li>
+        <li>"ขายของออนไลน์" ทั่วไป ≠ เกณฑ์ตั้ง DPO (เว้นแต่ Large + Monitoring)</li>
+        <li>DPO ต้องเป็น <b>อิสระ</b> ไม่มี <b>Conflict of Interest</b> (CEO/CIO/HR Head ไม่ควรเป็น DPO)</li>
+        <li>DPO Outsource = ต้องระบุ <b>บุคคลที่ติดต่อจริง</b> ไม่ใช่แค่ชื่อบริษัท</li>
+      </ul>
+    </div>
+
+    <!-- ============ 14. ม.42 — ออก 1 ข้อ ============ -->
+    <h3 style="color:#dc2626;border-left:5px solid #dc2626;padding-left:10px">1️⃣4️⃣ มาตรา 42 PDPA — หน้าที่ DPO — ออก 1 ข้อ</h3>
+    <div class="hl">
+      <b>📚 หลัก:</b> DPO มี <b>4 หน้าที่หลัก</b><br><br>
+
+      <b>🎯 ม.42 วรรค 1 — 4 หน้าที่:</b>
+      <ol>
+        <li><b>(1) ให้คำแนะนำ (Advise)</b> — แก่ Controller / Processor / พนักงาน เกี่ยวกับการปฏิบัติตาม PDPA</li>
+        <li><b>(2) ตรวจสอบ (Monitor)</b> — การปฏิบัติงานของ Controller / Processor / ลูกจ้าง</li>
+        <li><b>(3) ประสานงาน (Cooperate)</b> — กับ <b>สำนักงาน กคส. (PDPC)</b> เมื่อพบปัญหา</li>
+        <li><b>(4) รักษาความลับ (Confidentiality)</b> — ข้อมูลส่วนบุคคลที่ดูแลในการทำหน้าที่</li>
+      </ol>
+
+      <b>🎯 ม.42 วรรค 2:</b> Controller / Processor ต้อง <b>ไม่กลั่นแกล้ง / ไม่เลิกจ้าง</b> DPO เพราะปฏิบัติหน้าที่<br><br>
+
+      <b>🎯 ม.42 วรรค 3:</b> เจ้าของข้อมูล <b>ติดต่อ DPO</b> ในเรื่องที่เกี่ยวกับการประมวลผล + การใช้สิทธิ<br><br>
+
+      <b>🎯 หน้าที่อื่นที่ <b>ไม่ใช่</b>หน้าที่ DPO ตาม ม.42 (Trap):</b>
+      <ul>
+        <li><b>RoPA</b> (ม.39) = หน้าที่ <b>Controller</b> ไม่ใช่ DPO (DPO แค่ให้คำปรึกษา)</li>
+        <li><b>DPIA</b> = ไม่บังคับใน PDPA (DPO ให้คำปรึกษาได้)</li>
+        <li><b>Breach Notification</b> (ม.37(4)) = หน้าที่ <b>Controller</b> (DPO ช่วยประสาน)</li>
+        <li><b>Privacy Notice</b> (ม.23) = หน้าที่ <b>Controller</b></li>
+        <li><b>DSR Response</b> = หน้าที่ <b>Controller</b> (DPO เป็น POC)</li>
+      </ul>
+
+      <b>🚨 Trap Cards:</b>
+      <ul>
+        <li>ตัวอย่างกรรมการ #5 → หน้าที่ DPO = <b>"ตรวจสอบการดำเนินงาน"</b> (ม.42(2))</li>
+        <li>"จัดทำ RoPA" = หน้าที่ Controller (ม.39)</li>
+        <li>"ทำ DPIA" = ไม่บังคับ + ไม่ใช่หน้าที่หลัก DPO</li>
+        <li>"จัดทำแผน Breach" = Controller (DPO ช่วย)</li>
+        <li>DPO = <b>Advisor + Monitor</b> ไม่ใช่ <b>Decision Maker</b></li>
+      </ul>
+    </div>
+
+    <!-- ============ สูตรท่องก่อนเข้าห้องสอบ ============ -->
+    <h3 style="color:#dc2626;border-left:5px solid #dc2626;padding-left:10px">⭐ สูตรท่องก่อนเข้าห้องสอบ (5 นาที)</h3>
+    <div class="ok-box">
+      <b>📌 ตัวเลขทอง 5 ตัว:</b>
+      <ul>
+        <li><b>30 วัน</b> — DSR Response (ม.30) + ขยาย 30 วัน + อุทธรณ์ กคส.</li>
+        <li><b>72 ชั่วโมง</b> — แจ้ง Breach (ม.37(4)) นับจาก "ทราบเหตุ"</li>
+        <li><b>15 วัน</b> — เกิน 72 ชม. ต้องส่งเหตุผล</li>
+        <li><b>1-3-5 ล้าน</b> — โทษทางปกครอง (ม.82-84)</li>
+        <li><b>1 ปี / 1 ล้าน</b> — โทษอาญา (ม.79)</li>
+      </ul>
+
+      <b>📌 มาตราที่ออกบ่อย:</b>
+      <ul>
+        <li><b>ม.4</b> ข้อยกเว้น | <b>ม.5</b> ขอบเขต | <b>ม.6</b> นิยาม</li>
+        <li><b>ม.19-20</b> Consent | <b>ม.23</b> Privacy Notice | <b>ม.24</b> 7 ฐาน | <b>ม.26</b> Sensitive 11 ประเภท</li>
+        <li><b>ม.28-29</b> Cross-border | <b>ม.30-36</b> DSR | <b>ม.37</b> หน้าที่ Controller</li>
+        <li><b>ม.39</b> RoPA | <b>ม.40</b> Processor + DPA | <b>ม.41</b> ตั้ง DPO | <b>ม.42</b> 4 หน้าที่ DPO</li>
+        <li><b>ม.77-78</b> ทางแพ่ง | <b>ม.79-81</b> ทางอาญา | <b>ม.82-87</b> ทางปกครอง</li>
+      </ul>
+
+      <b>📌 คำลวงที่เจอบ่อย:</b>
+      <ul>
+        <li><b>"ทุกบริษัทต้องตั้ง DPO"</b> — ผิด (เฉพาะ 3 กรณี ม.41)</li>
+        <li><b>"พนักงาน 50 คน → ต้องตั้ง DPO"</b> — ผิด (PDPA ไม่ใช้เกณฑ์จำนวน)</li>
+        <li><b>"DSR ต้องตอบใน 7 วัน"</b> — ผิด (30 วัน)</li>
+        <li><b>"แจ้ง Breach ภายใน 24 ชั่วโมง"</b> — ผิด (72 ชั่วโมง)</li>
+        <li><b>"DPO ออกคำสั่งให้ Controller ได้"</b> — ผิด (DPO เป็น Advisor)</li>
+        <li><b>"Pre-ticked Consent ใช้ได้"</b> — ผิด (ม.19)</li>
+        <li><b>"Anonymized = Pseudonymized"</b> — ผิด (Anonymized = ถาวร)</li>
+        <li><b>"Compliance Audit = Technical Measure"</b> — ผิด (Organizational)</li>
+      </ul>
+
+      <b style="color:#dc2626;font-size:18px">💪 อ่านจบแล้ว — กดปุ่ม "🎯 Quiz" เพื่อทดสอบความเข้าใจ!</b>
+    </div>
+  </div>
+</section>
+
+
 <!-- ========== TAB 1: READING PLAN ========== -->
-<section class="section active" id="tab-plan">
+<section class="section" id="tab-plan">
   <div class="card">
     <h2>📅 แผนการอ่านที่แนะนำ — เหลือ 1-2 วัน</h2>
     <p>ผมจัดลำดับให้คุณตามความสำคัญ — เน้น <b>สไลด์อบรมจริงจากวิทยากร</b> ก่อน เพราะวิทยากรบอกว่าออกสอบ</p>
