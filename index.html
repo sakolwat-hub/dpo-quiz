@@ -1820,6 +1820,14 @@ document.querySelectorAll(".tab-btn").forEach(btn=>{
     btn.classList.add("active");
     document.getElementById("tab-"+tab).classList.add("active");
     window.scrollTo({top:0,behavior:"smooth"});
+    // เมื่อเข้า Tab Quiz → ตั้ง Filter เริ่มเป็น "เก็งข้อสอบ" อัตโนมัติ
+    if(tab==="quiz" && typeof currentFilter!=="undefined"){
+      currentFilter="เก็งข้อสอบ";
+      document.querySelectorAll(".cat-btn").forEach(b=>b.classList.remove("active"));
+      const examBtn=document.querySelector('.cat-btn[data-cat="เก็งข้อสอบ"]');
+      if(examBtn) examBtn.classList.add("active");
+      if(typeof render==="function") render();
+    }
   });
 });
 </script>
@@ -2779,6 +2787,7 @@ document.querySelectorAll(".cat-btn").forEach(btn=>{
 });
 
 render();
+
 </script>
 
 </body>
